@@ -1,0 +1,2491 @@
+---
+catalog:
+  uuid: f47cf312-7324-47a9-8870-7b6a2e9f19a6
+  metadata:
+    title: "Catalogo PCI-DSS v4.0.1"
+    last-modified: "2025-10-25T12:20:00+02:00"
+    version: "2.0"
+    oscal-version: "1.1.3"
+    remarks: "Fonte per lo standard: https://www.pcisecuritystandards.org/document_library"
+        # link alla pagina ufficiale del PCI Security Standard Council per poter scaricare il pdf dello standard
+  groups:
+  - id: Requisito-1
+    title: Install and Maintain Network Security Controls
+    groups:
+      - id: "r1.1"
+        title: Processes and mechanisms for installing and maintaining network security controls are defined and understood
+        controls:
+          - id: "r_1.1.1"
+            title: Gestione e manutenzione efficace delle varie procedure
+            parts:
+            - name: statement
+              prose: Definire, documentare e mantenere i diagrammi di rete aggiornati che mostrino tutte le connessioni al CDE e i flussi di dati autorizzati
+            - name: objective
+              prose: Garantire che i diagrammi di rete siano mantenuti accurati e aggiornati per riflettere lo stato attuale del CDE e le sue interconnessioni
+            - name: assessment
+              prose: Esaminare i diagrammi di rete per verificarne l'accuratezza rispetto all'infrastruttura implementata ed esaminare la documentazione relativa agli aggiornamenti periodici (6 mesi minimo) e dopo modifiche significative
+            - name: guidance
+              prose: Mantenere un processo formalizzato per la revisione e l'aggiornamento dei diagrammi, usare strumenti di documentazione che facilitino la coerenza e la tracciabilità delle modifiche
+          - id: "r_1.1.2"
+            title: Ruoli e responsabilità
+            parts:
+            - name: statement
+              prose: Assegnare ruoli e responsabilità per l'esecuzione di tutte le attività. Il personale è responsabile per il funzionamento continuo
+            - name: assessment
+              prose: I ruoli e le responsabilità possono essere documentati
+            - name: guidance
+              prose: Formare il personale per far comprendere il proprio ruolo e responsabilità
+            - name: objective
+              prose: Garantire che i ruoli e le responsabilità della gestione dei controlli di rete siano definiti, documentati e compresi dal personale
+      - id: "r1.2"
+        title: Network security controls (NSCs) are configured and maintained.
+        controls:
+          - id: "r_1.2.1"
+            title: Standard di configurazione per controllare il traffico di rete in ingresso e in uscita
+            parts:
+            - name: statement
+              prose: Implementare standard di configurazione
+            - name: assessment
+              prose: Esaminare gli standard di configurazione per le regole NSC per assicurare che siano conformi con il requisito
+            - name: guidance
+              prose: Gli standard definiscono i protocolli accettabili, le porte che possono essere usate, quale entità sia accettabile e a quale non è consentito l'accesso
+            - name: objective
+              prose: Stabilire standard coerenti di configurazione della rete per assicurare che solo i protocolli e i servizi autorizzati siano usati nel CDE
+          - id: "r_1.2.2"
+            title: Le modifiche non devono comportare un errore di configurazione, implementazione o connessioni non autorizzate
+            parts:
+            - name: statement
+              prose: Ridurre il rischio che una modifica possa introdurre vulnerabilità alla sicurezza
+            - name: assessment
+              prose: Le verifiche devono essere approvate e verificate aggiornando la documentazione opportuna, esaminare la configurazione di rete per identificare le modifiche
+            - name: guidance
+              prose: I cambiamenti dovrebbero essere approvati da chi ha l'autorità e le conoscenze appropriate, le modifiche includono l'aggiunta, la rimozione o la modifica di una connessione. Le modifiche possono influenzare il modo in cui il componente svolge la sua funzione di sicurezza
+            - name: objective
+              prose: Ridurre il rischio di vulnerabilità dovute a modifiche non controllate, ogni cambiamento delle regole deve essere gestito in modo verificabile
+          - id: "r_1.2.3"
+            title: Diagramma delle connessioni attendibili
+            parts:
+            - name: statement
+              prose: Avere una rappresentazione dei confini tra CDE e tutte le reti attendibili e non
+            - name: assessment
+              prose: Mantenere un diagramma di rete accurato che mostra tutte le connessioni tra il CDE e altre reti, tutte le connessioni devono essere identificate
+            - name: guidance
+              prose: Esaminare i diagrammi e le configurazioni, i diagrammi devono essere aggiornati dal personale autorizzato
+            - name: objective
+              prose: Mantenere una visione chiara e aggiornata dei confini del CDE per garantire che tutte le connessioni siano documentate, controllate e approvate
+          - id: "r_1.2.4"
+            title: Diagramma di flusso di dati aggiornato
+            parts:
+            - name: statement
+              prose: Mantenere aggiornato e disponibile il diagramma di flusso per comprendere e tenere traccia di come i dati fluiscono tra le reti, i sistemi e i dispositivi
+            - name: assessment
+              prose: Esaminare la documentazione per verificare che il diagramma sia accurato e aggiornato
+            - name: guidance
+              prose: "I diagrammi dovrebbero: includere tutti i punti di connessione in cui i dati vengono ricevuti/inviati; i tipi di dati"
+            - name: objective
+              prose: Definire e mantenere politiche e configurazioni che assicurino un controllo costante del traffico di rete verso e dal CDE
+          - id: "r_1.2.5"
+            title: Evitare il traffico non autorizzato
+            parts:
+            - name: statement
+              prose: "Identificare i servizi, protocolli e le porte necessarie e garantire che tutti gli altri servizi/protocolli/porte siano disabilitati"
+            - name: assessment
+              prose: Esaminare la documentazione per controllare che esisti un elenco con tutti i servizi, protocolli e porte consentiti, esaminare le impostazioni di configurazioni
+            - name: guidance
+              prose: Le approvazioni dovrebbero essere concesse dal personale indipendentemente da chi gestisce la configurazione
+            - name: objective
+              prose: Assicurare che solo i servizi, protocolli e porte necessari siano attivi, prevenendo traffico non autorizzato
+          - id: "r_1.2.6"
+            title: I rischi
+            parts:
+            - name: statement
+              prose: Le funzionalità sono definite e implementate per tutti i servizi, protocolli e porte in uso e considerate insicure per mitigare il rischio
+            - name: assessment
+              prose: Esaminare la documentazione e le impostazioni di configurazione per verificare che siano implementate le funzionalità di sicurezza definite
+            - name: guidance
+              prose: Comprendere, valutare e mitigare i rischi associati all'uso di servizi, protocolli e porte non sicure
+            - name: objective
+              prose: Valutare e mitigare i rischi legati all'uso di servizi, protocolli e porte non sicuri, adottando contromisure appropriate
+          - id: "r_1.2.7"
+            title: Le configurazioni che limitano l'accesso alle reti verificate periodicamente
+            parts:
+            - name: statement
+              prose: Controllare le configurazioni NSC almeno una volta ogni 6 mesi per confermare che sono pertinenti ed efficaci
+            - name: assessment
+              prose: Esaminare la documentazione e le configurazioni NSC
+            - name: guidance
+              prose: Può essere implementata usando metodi manuali o automatizzati, con lo scopo di confermare le impostazioni che gestiscono le regole del traffico
+            - name: objective
+              prose: Garantire che le configurazioni NSC rimangano efficaci nel tempo attraverso verifiche periodiche e correzioni tempestive
+          - id: "r_1.2.8"
+            title: Evitare le configurazioni non autorizzate
+            parts:
+            - name: statement
+              prose: I NSC non possono essere definiti o modificati usando oggetti di configurazione non attendibili
+            - name: assessment
+              prose: Verificare che i file di configurazione per gli NSC siano conformi
+            - name: guidance
+              prose: I file di configurazione dovrebbero essere tenuti aggiornati e garantiti da modifiche non autorizzate
+            - name: objective
+              prose: Evitare l'introduzione e la distribuzione di configurazioni non autorizzate mediante controlli di integrità e processi di gestione delle modifiche
+      - id: "r1.3"
+        title: Network access to and from the cardholder data environment is restricted
+        controls:
+          - id: "r_1.3.1"
+            title: Impedire a malintenzionati di accedere alla rete
+            parts:
+            - name: statement
+              prose: Il traffico in ingresso è limitato, tutto il resto deve essere specificamente negato
+            - name: assessment
+              prose: Esaminare gli standard e le configurazioni NSC
+            - name: guidance
+              prose: Tutto il traffico in entrata deve essere valutato
+            - name: objective
+              prose: Impedire accessi non autorizzati limitando il traffico in ingresso ai soli flussi necessari
+          - id: "r_1.3.2"
+            title: Impedire a malintenzionati e componenti compromessi di comunicare con host esterni non attendibili
+            parts:
+            - name: statement
+              prose: Il traffico in uscita è limitato, tutto il resto deve essere specificamente negato
+            - name: assessment
+              prose: Esaminare gli standard e le configurazioni NSC
+            - name: guidance
+              prose: Tutto il traffico in uscita deve essere valutato, ad esempio con una regola che neghi tutto il traffico in entrata e in uscita non necessario
+            - name: objective
+              prose: Prevenire comunicazioni non autorizzate con host esterni non attendibili per ridurre il rischio di esfiltrazione o comando da parte di attori compromessi
+          - id: "r_1.3.3"
+            title: Impedire a reti o dispositivi wireless di facilitare l'ingresso alla rete a malintenzionati
+            parts:
+            - name: statement
+              prose: Traffico non autorizzato non deve attraversare i confini di rete tra reti wireless e ambienti sicuri
+            - name: assessment
+              prose: Esaminare le impostazioni di configurazione e i diagrammi di rete
+            - name: guidance
+              prose: Tutto il traffico wireless negato per impostazione di default, permesso solo quello a scopo aziendale autorizzato
+            - name: objective
+              prose: Mitigare i rischi derivanti da reti o dispositivi wireless impedendo che traffico non autorizzato attraversi i confini della rete
+      - id: "r1.4"
+        title: Network connections between trusted and untrusted networks are controlled.
+        controls:
+          - id: "r_1.4.1"
+            title: L'implementazione di NSC
+            parts:
+            - name: statement
+              prose: "Gli NSC devono essere implementati tra reti attendibili e non attendibili: il traffico non autorizzato non può attraversare il confine"
+            - name: assessment
+              prose: Analizzare gli standard di configurazione e i diagrammi di rete
+            - name: guidance
+              prose: L'implementazione di NSC a ogni connessione in entrata e in uscita da reti attendibili consente all'entità di monitorare e controllare l'accesso e riduce al minimo le possibilità che un individuo malintenzionato ottenga l'accesso alla rete interna tramite una connessione non protetta.
+            - name: objective
+              prose: Monitorare e controllare tutte le connessioni tra reti attendibili e non attendibili per ridurre il rischio di accesso non autorizzato
+          - id: "r_1.4.2"
+            title: L'accesso pubblico a un componente di sistema deve essere specificamente autorizzato
+            parts:
+            - name: statement
+              prose: Traffico in ingresso da reti non attendibili a quelle attendibili limitato a comunicazioni con componenti autorizzati o solo ciò che è una risposta a un componenti nella rete attendibile, il resto negato
+            - name: assessment
+              prose: Esaminare la documentazione del fornitore e le configurazioni degli NSC
+            - name: guidance
+              prose: Componenti più vulnerabili sono collocati all'interno di una rete dedicata e attendibile, separata da altri sistemi interni sensibili
+            - name: objective
+              prose: Limitare l'esposizione di componenti pubblici assicurando che l'accesso pubblico sia esplicitamente autorizzato e controllato
+          - id: "r_1.4.3"
+            title: Filtraggio dei pacchetti in ingresso
+            parts:
+            - name: statement
+              prose: Misure anti-spoofing implementate per rilevare e impedire ad indirizzi IP falsi di accedere
+            - name: assessment
+              prose: Esaminare la documentazione e le configurazioni del fornitore per gli NSC
+            - name: guidance
+              prose: Anti-spoofing impostato di default
+            - name: objective
+              prose: Rilevare e prevenire indirizzi IP falsificati mediante misure anti-spoofing per preservare l'integrità del traffico in ingresso
+          - id: "r_1.4.4"
+            title: I componenti che archiviano i dati dei titolari delle carte accessibili solo da reti attendibili
+            parts:
+            - name: statement
+              prose: I componenti che archiviano i dati non devono essere accessibili da reti non attendibili
+            - name: assessment
+              prose: Esaminare i diagrammi di flusso e di rete e le configurazioni delle NSC
+            - name: guidance
+              prose: Da applicare ai componenti di sistema che riguardano la memoria persistente no la memoria volatile
+            - name: objective
+              prose: Assicurare che i componenti che memorizzano dati dei titolari siano accessibili solo da reti attendibili, riducendo il rischio di accesso non autorizzato ai dati sensibili
+          - id: "r_1.4.5"
+            title: Limitare la divulgazione di indirizzi IP interni e privati
+            parts:
+            - name: statement
+              prose: La divulgazione degli indirizzi IP è limitata solo nelle parti autorizzate
+            - name: assessment
+              prose: Esaminare le configurazioni NSC e la documentazione per verificare che siano implementati i controlli
+            - name: guidance
+              prose: Oscurare l'indirizzo IP, ad esempio con NAT, server proxy
+            - name: objective
+              prose: Minimizzare la divulgazione degli indirizzi IP interni per limitare le opportunità di ricognizione degli asset interni
+      - id: "r1.5"
+        title: Risks to the CDE from computing devices that are able to connect to both untrusted networks and the CDE are mitigated.
+        controls:
+          - id: "r_1.5.1"
+            title: I dispositvi che si connettono sia a reti non attendibili che al CDE non devono rappresentare minacce
+            parts:
+            - name: statement
+              prose: Definire impostazioni di configurazione specifiche, verificare che i controlli di sicurezza sono in esecuzione e che non sono modificabili da utenti che non siano autorizzati
+            - name: assessment
+              prose: Esaminare le policy e le impostazioni di configurazione sui dispositivi informatici che si connettono sia a reti non attendibili sia al CDE. I controlli possono essere disabilitati solo per scopi specifici dopo autorizzazione
+            - name: guidance
+              prose: Impostazioni di configurazione specifiche. Ad esempio uso di VPN
+            - name: objective
+              prose: Ridurre il rischio di compromissione dei dispositivi di sicurezza di rete assicurando che siano protetti da accessi non autorizzati e mantenuti aggiornati.
+  - id: Requisito-2
+    title: Apply Secure Configurations to All System Components
+    groups:
+      - id: "r2.1"
+        title: Processes and mechanisms for applying secure configurations to all system components are defined and understood.
+        controls:
+          - id : "r_2.1.1"
+            title: Gestione e mantenimento efficaci delle varie policy e procedure
+            parts:
+            - name: statement
+              prose: Mantenere documentate, aggiornate e diffuse a tutte le parti interessate le policy di sicurezza e le procedure
+            - name: assessment
+              prose: Esaminare la documentazione
+            - name: guidance
+              prose: Aggiornare il prima possibile
+            - name: objective
+              prose: Il personale interessato definisce se tutte le attività di supporto sono ripetibili, applicate in modo coerente e conformi
+          - id : "r_2.1.2"
+            title: I ruoli e le responsabilità per l'esecuzione delle attività
+            parts:
+            - name: statement
+              prose: Assegnare e assicurarsi che siano stati compresi ruoli e responsabilità
+            - name: assessment
+              prose: Esaminare la documentazione e colloqui con il personale
+            - name: guidance
+              prose: Ruoli e responsabilità documentati e far sì che il personale comprenda il proprio ruolo e responsabilità assegnate
+            - name: objective
+              prose: Vengono assegnate le responsabilità quotidiane per l'esecuzione di tutte le attività previste, il personale è responsabile del corretto funzionamento
+      - id: "r2.2"
+        title: System components are configured and managed securely.
+        controls: 
+          - id : "r_2.2.1"
+            title: Configurare componenti di sistema per correggere le vulnerabilità, ridurre le opportunità di un aggressore
+            parts:
+            - name: statement
+              prose: Sviluppare standard di configurazione per tutti i componenti del sistema, affrontare vulnerabilità nore, essere coerenti e aggiornati con standard già esistenti nel settore
+            - name: assessment
+              prose: Esaminare gli standard del sistema e le policy e le procedure per verificare che gli standard del sistema siano aggiornati quando vengono identificate nuove vulnerabilità
+            - name: guidance
+              prose: Mnatenersi aggiornati con le linee guida del settore per mantenere le configurazioni sicure
+            - name: objective
+              prose: Far sì che tutti i componenti del sistema siano configurati in modo sicuro e coerente con gli standard di protezione accettati dal settore o con le raccomandazioni del fornitore del componente
+          - id : "r_2.2.2"
+            title: Configurazione in modo sicurea dei sistemi
+            parts:
+            - name: statement
+              prose: Applicare standard di configurazione sicura per tutti i componenti di sistema e disabilitare servizi o protocolli non necessari
+            - name: assessment
+              prose:  Verificare la documentazione degli standard di configurazione e confrontarli con i sistemi in produzione
+            - name: guidance
+              prose: Fare riferimento a dei segni di riferimento di sicurezza riconosciuti per la definizione delle configurazioni
+            - name: objective
+              prose: Ridurre la superficie di attacco garantendo che le configurzioni dei sistemi siano coerenti, sicure e approvate formalmente
+          - id : "r_2.2.3"
+            title: Le configurazioni devono essere progettate per limitare i servizi, le porte, i protocolli e le funzioni ai soli elementi necessari per il corretto funzionamento
+            parts:
+            - name: statement
+              prose: Limitare i servizi, protocolli e porte di rete ai soli componenti strettamente necessari per il funzionamento
+            - name: assessment
+              prose: Esaminare le configurazioni dei sistemi e la documentazione per verificare la disattivazione dei protocolli non necessari e la presenza di controlli per eventuali eccezioni
+            - name: guidance
+              prose: Non usare protocolli non sicuri per esigenze operative ma applicare misure di mitigazione come crittografia e documentare la decisione
+            - name: objective
+              prose: Ridurre la superficie di attacco usando solo servizi e protocolli essenziali e documentare e mitigare ciò che non è sicuro
+          - id : "r_2.2.4"
+            title: Mantenere uniformità nelle configurazioni di sicurezza tra ambienti differenti
+            parts:
+            - name: statement
+              prose: Applicare configurazioni coerenti e sicure in tutti gli ambienti, garantendo che le differenze siano giustificate, approvate e documentate
+            - name: assessment
+              prose: Esaminare le configurazioni dei diversi ambienti e la documentazione per verificare l'allineamento agli standard approvati
+            - name: guidance
+              prose: Usare sistemi di controllo versione e processi formali di approvazione per garantire che le configurazioni restino sincronizzate
+            - name: objective
+              prose: Prevenire le vulnerabilità derivanti da differenze di configurazione tra ambienti e assicurare la tracciabilità delle modifiche
+          - id : "r_2.2.5"
+            title: Gestione sicura dei servizi condivisi
+            parts:
+            - name: statement
+              prose: Applicare configurazioni sicure e coerenti per tutti i servizi e componenti condivisi che supportano più sistemi, garantendo l'isolamento e la protezione del CDE
+            - name: assessment
+              prose: Esaminare la documentazione, le configurazioni e i controlli di sicurezza per verificare l'allineamento con gli standard aziendali e la presenza di isolamento tra ambienti
+            - name: guidance
+              prose: Applicare politiche di segmentazione di rete, accesss control e aggiornamento continuo per mantenere la sicurezza e minimizzare l'impatto di vulnerabilità
+            - name: objective
+              prose: Prevenire vulnerabilità che derivano da configurazioni errate di servizi condivisi e assicurare che tali servizi non siano un punto unico di compromissione
+          - id : "r_2.2.6"
+            title: Configurazioni sicure anche per componenti esterni al CDE ma collegati
+            parts:
+            - name: statement
+              prose: Applicare configurazioni sicure e standardizzate ai componenti che interagiscono con il CDE anche se non se fanno parte direttamente
+            - name: assessment
+              prose: Esaminare le configurazioni, le policy e i registri di accesso per verificare che i componenti esterni al CDE rispettino le stesse misure di sicurezza adottate
+            - name: guidance
+              prose: Applicare le stesse regole di autenticazione e monitoraggio ai sistemi che interagiscono indirettamente con il CDE, inclusi server di gestione, logging e backup
+            - name: objective
+              prose: Prevenire che i sistemi di supporto o le infrastrutture ausiliare diventino punti di ingresso per attacchi verso il CDE
+          - id : "r_2.2.7"
+            title: Solo le funzioni e i moduli strettamente necessari al funzionamento sicuro del sistema devono essere abilitati
+            parts:
+            - name: statement
+              prose: Disabilitare o rimuovere tutte le funzionalita, i moduli e i servizi non necessari al funzionamento
+            - name: assessment
+              prose: Esaminare la configurazione dei sistemi e i registri di auditing per verificare che le funzioni non necessarie siano disabilitate e che le eccezioni siano giustificate
+            - name: guidance
+              prose: Applicare il principio di minima funzionalità in ogni fase del ciclo di vita del sistema, valutando periodicamente la necessità di ogni funzione
+            - name: objective
+              prose: Ridurre la superficie di attacco mantenendo solo le funzioanlità essenziali e controllando le eccezioni con processi approvati
+      - id: "r2.3"
+        title: Wireless environments are configured and managed securely
+        controls: 
+          - id : "r_2.3.1"
+            title: I dispositivi wireless nell'ambiente dei dati del titolare della carta e quelli che si connettono al CDE sono identificati e autorizzati
+            parts:
+            - name: statement
+              prose: Mantenere un archivio aggiornato e documentato di tutti i dispositivi wireless presenti assicurando che siano autorizzati e configurati in modo sicuro
+            - name: assessment
+              prose: Esaminare l'archivio, le configurazioni e i log per verificare che tutti i dispositivi wireless siano identificati e autorizzati
+            - name: guidance
+              prose: Implementare i processi per rilevare la presenza di dispositivi non autorizzati, usare una gestione centralizzata per monitorare e controllare i dispositivi, definire una policy chiare, eseguire scansioni periodiche per identificare dispositivi non riconosciuti
+            - name: objective
+              prose: Assicurare che solo i dispositivi autorizzari e sicuri siano presenti o si connettono al CDE, prevedendo punti di accesso non controllati per potenziali attacchi
+          - id : "r_2.3.2"
+            title: I dispositivi wireless usati per accedere o trasmettere i dati usano crittografia e autenticazione forte
+            parts:
+            - name: statement
+              prose: I dispositivi wireless usati per accedere o trasmettere dati devono usare crittografia robusta e maccanismi di autenticazione forti
+            - name: assessment
+              prose: Esaminare le configurazioni dei dispositivi, le policy di sicurezza e i log per verificre l'uso di protocolli di crittografia e autenticazione forti
+            - name: guidance
+              prose: Usare protocolli di sicurezza di ultima generazione, implementare l'autenticazione a più fattori, assicurarsi che le chiavi di crittografia siano gestite in modo sicuro, disabilitare l'uso di protocolli insicuri
+            - name: objective
+              prose: Garantire la riservatezza e l'integrità dei dati trasmessi via wireless e l'autenticazione sicura degli utenti e dei dispositivi riducendo il rischio di intercettazione e accesso non autorizzato
+  - id: Requisito-3
+    title: Protect Stored Account Data
+    groups:
+      - id: "r3.1"
+        title: Processes and mechanisms for protecting stored account data are defined and understood
+        controls:
+          - id: "r_3.1.1"
+            title: Le organizzazioni devono limitare la conservazione dei dati dei titolari di carta
+            parts:
+            - name: statement
+              prose: Conservare i dati dei titolari di carta solo per il tempo strettamente necessario a scopi aziendali e legali
+            - name: assessment
+              prose: Esaminare la documentazione e i registri di archiviazione per verificare che i dati dei titolari di carta siano mantenuti solo per i periodi previsti dalle policy aziendali
+            - name: guidance
+              prose: Definire politiche formali che specifichimo i tempi massimi di conservazione e processi automatici di eliminazione sicura dei dati non più necessari
+            - name: objective
+              prose: Ridurre il rischio di esposizione dei dati limitando la quantità e la durata della conservazione
+          - id: "r_3.1.2"
+            title: Le organizzazioni devono definire e mantenere documentate le policy di conservazione dei dati
+            parts:
+            - name: statement
+              prose: Definire e mantenere policy documentate che specifichino i tempi di conservazione e i metodi di cancellazione sicura dei dati
+            - name: assessment
+              prose: Esaminare le policy aziendali e verificare che includano responsabilità, tempi di conservazione, metodi di eliminazione e documentazione delle operazioni di cancellazione
+            - name: guidance
+              prose: Usare metodi di distruzione sicura conformi agli standard riconosciuti, assicurare che le policy siano comunicate al responsabile della gestione dei dati
+            - name: objective
+              prose: Assicurare che i dati siano conservati solo per il tempo necessario e vengano eliminati in modo sicuro e verificabile quando non sono più necessari
+      - id: "r3.2"
+        title: Storage of account data is kept to a minimum
+        controls:
+          - id: "r_3.2.1"
+            title: I dati sensibili di autenticazione non devono mai essere conservati dopo il completamenteo dell'autorizzazione della transazione
+            parts:
+            - name: statement
+              prose: I dati sensibili di autenticazione, come codici di verifica, track data e PIN, non devono mai essere conservati dopo il completamento dell’autorizzazione, anche se cifrati
+            - name: assessment
+              prose: Esaminare i sistemi di pagamento, i registri di log e i database per confermare che i dati sensibili non siano memorizzati dopo l’autorizzazione
+            - name: guidance
+              prose: Implementare meccanismi di cancellazione automatica immediatamente dopo la risposta di autorizzazione e assicurarsi che nessuna copia temporanea o di debug contenga dati sensibili
+            - name: objective
+              prose: Garantire che i dati utilizzati per autenticare transazioni non siano conservati oltre il necessario, riducendo il rischio di compromissione
+      - id: "r3.3"
+        title: Sensitive authentication data (SAD) is not stored after authorization
+        controls:
+          - id: "r_3.3.1"
+            title: Non memorizzare i dati sensibili dopo l'autorizzazione
+            parts:
+            - name: statement
+              prose: Dopo l'autorizzazione non deve essere memorizzato nessun dato sensibile come codice di verifica della carta (CVV), i dati della banda magnetica, il PIN e il blocco PIN
+            - name: assessment
+              prose: Verificare che non ci siano processi che memorizzano i dati di autenticazione sensibile come l'esame di archivi dati, log di sistema e backup, assicurarsi che le policy e le procedure aziendali rispettino il divieto'
+            - name: guidance
+              prose: Implementare contrlli tecnici e procedurali per impedire la memorizzazione, usare crittografia irreversibile per i dati che potrebbero derivare da SAD, formare il personale, eseguire scansioni regolari dei sistemi e degli archivi dati
+            - name: objective
+              prose: Prevenire la compromissione dei dati di autenticazione sensibili in caso di violazione della sicurezza, riducendo il rischio di frodi
+          - id: "r_3.3.2"
+            title: Implementare processi per mascherare il PAN
+            parts:
+            - name: statement 
+              prose: Il PAN deve essere mascherato ovunque, mostrando solo al massimo le prime sei e le ultime quattro cifre
+            - name: assessment
+              prose: Esaminare le applicazioni, i sistemi, i display e i report che visualizzano il PAN per verificare che sia mascherato correttamente
+            - name: guidance
+              prose: Implementare funzionalità di mascheramento nelle applicazioni, assicurarsi che il mascheramento sia applicato in tutti i punti, formare il personale
+            - name: objective
+              prose: Ridurre il rischio di esposizione del PAN completo in ambienti non autorizzati minimizzando la possibilità di accesso non autorizzato o uso improprio dei dati
+          - id: "r_3.3.3"
+            title: Non usare dati di autenticazione sensibili come parte del PAN
+            parts:
+            - name: statement
+              prose: I dati di autenticazione sensibili non devono essere usati come componenti o derivati del PAN
+            - name: assessment
+              prose: "Esaminare l'architettura dei sistemi di pagamento, le specifice dei processi di generazione/memorizzazione del PAN e le procedure di gestione dei dati"
+            - name: guidance
+              prose: Mantenere una chiara separazione tra il PAN e altri dati di autenticazione, assicurarsi che i sistemi non generino o modifichino PAN, rivedere le specifiche di tutti i componenti di sistema che gestiscono il PAN
+            - name: objective
+              prose: Prevenire la ri-creazione e l'inferenza di dati di autenticazione sensibili del PAN riducendo il rischio di frode e compromissione della sicurezza
+      - id: "r3.4"
+        title: Access to displays of full PAN and ability to copy PAN are restricted
+        controls:
+          - id: "r_3.4.1"
+            title: Implementare controlli per impedire che il PAN venga copiato manualmente o elettronicamente
+            parts:
+            - name: statement
+              prose: Implementare processi e controlli per prevenire la copia manuale o elettronica del PAN quando viene visualizzato in qualsiasi formato
+            - name: assessment
+              prose: Esaminare i sistemi e le applicazioni che visualizzano il PAN
+            - name: guidance
+              prose: Implementare restrizioni tecniche, usare soluzioni per monitorare e bloccare tentativi di copia, prevenire la copia manuale vietando le registrazioni scritte o fotografiche
+            - name: objective
+              prose: Prevenire la divulgazione non autorizzata riducendo il rischio di compromissione dei dati e frodi
+          - id: "r_3.4.2"
+            title: Impedire che il PAN possa essere copiato o trasferito da personale non autorizzato
+            parts:
+            - name: statement
+              prose: Implementare processi per impedire che il PAN venga inserito o memorizzato in file, log o altri luoghi non protetti
+            - name: assessment
+              prose: "Esaminare le politiche e le procedure documentate che impedisono la copia e/o il trasferimento, impedire al personale non autorizzato di copiare/trasferire il PAN"
+            - name: guidance
+              prose: Implementare controlli tecnici nelle applicazioni per prevenire l'inserimento, bloccare la memorizzazione non autorizzata, formare il personale, revisionare regolarmente la configurazione dei sistemi e il codice delle applicazioni
+            - name: objective
+              prose: Ridurre il rischio di esposizione accidentale o intenzionale del PAN completo mitigando il potenziale di accesso non autorizzato e frode
+      - id: "r3.5"
+        title: Primary account number (PAN) is secured wherever it is stored
+        controls:
+          - id: "r_3.5.1"
+            title: Le chiavi di crittografia per la protezione del PAN devono essere protette
+            parts:
+            - name: statement
+              prose: Custodire le chiavi di crittografia per la protezione del PAN tramite dispositivi hardware sicuri o un robusto processod i gestione delle chiavi con un'autenticazione multifattore e solo il personale preposto ne deve essere a conoscenza
+            - name: assessment
+              prose: Esaminare la documentazione, le configurazioni e i log per verificare che le chiavi siano protette
+            - name: guidance
+              prose: Le chiavi devono essere in chiaro solo durante l'uso, limitare le posizioni di archiviazione e l'accesso al solo personale autorizzato
+            - name: objective
+              prose: Assicurare che le chiavi di crittografia per il PAN siano protettete da compomissioni per prevenire la decrittografia non autorizzata dei dati
+      - id: "r3.6"
+        title: Cryptographic keys used to protect stored account data are secured
+        controls:
+          - id: "r_3.6.1"
+            title: Le chiavi crittografiche usate per la protezione dei dati devono essere protette dall'abuso e dalla divulgazione
+            parts:
+            - name: statement
+              prose: Proteggere le chiavi crittografiche usate per proteggere i dati dell'account memorizzati
+            - name: assessment
+              prose: Esaminare le policy, le procedure e i sistemi di gestione delle chiavi, i moduli di sicurezza hardware e i log di accesso
+            - name: guidance
+              prose: Proteggere le chiavi con hardware sicuro o con robusti processi software e controlli di accesso multifattore, limitare l'accesso delle chiavi al personale autorizzato, implementare processi per la rotazione delle chiavi mai memorizzate in chiaro, backup sicuro e distruzione di chiavi vecchie
+            - name: objective
+              prose: Assicurare la riservatezza delle chaivi crittografiche per prevenire accesso non autorizzato ai dati di account protetti
+      - id: "r3.7"
+        title: Where cryptography is used to protect stored account data, key management processes and procedures covering all aspects of the key lifecycle are defined and implemented
+        controls:
+          - id: "r_3.7.1"
+            title: Gli aspetti del ciclo di vita delle chiavi crittografiche devono essere definiti, documentati e compresi
+            parts:
+            - name: statement
+              prose: Definire, documentare, mantenere e comunicare al personale le policy e le procedure di gestione delle chiavi
+            - name: assessment
+              prose: Esaminare la documentazione delle policy e procedure, verificare che il personale abbia compreso le proprie responsabilità
+            - name: guidance
+              prose: Le procedure dovrebbero coprire l'intero ciclo di vita (creazione, attivazione, uso, backup, archiviazione, distruzione), formare il personale, aggiornare regolarmente le policy
+            - name: objective
+              prose: Garantire che la gestione delle chiavi crittografiche sia coerente per tutto il loro ciclo di vita, riducendo i rischio legati alla creazione, uso, conservazione e distruzione
+          - id: "r_3.7.2"
+            title: Le chiavi crittografiche devono essere generate con meccanismi sicuri e robusti
+            parts:
+            - name: statement
+              prose: Generare le chiavi crittografiche con metodi robusti e sicuri
+            - name: assessment
+              prose: Esaminare la documentazione relativa ai processi e strumenti
+            - name: guidance
+              prose: Usare generatori di numeri random sicuri, evitare la generazione manuale di chiavi o metodi deboli, verificare che la lunghezza delle chiavi sia conforme agli standard
+            - name: objective
+              prose: Assicurare che le chiavi crittografiche siano sufficientemente casuali e uniche per resistere agli attacchi di crittanalisi
+          - id: "r_3.7.3"
+            title: Le chaivi crittogrfiche devono essere protette durante i processi di distribuzione e caricamento
+            parts:
+            - name: statement
+              prose: Proteggere da accesso non autorizzato e divulgazione le chiavi crittografiche durante la distribuzione e il caricamento nei sistemi
+            - name: assessment
+              prose: Esaminare le procedure di distribuzione, usare canali di comunicazione sicuri e metodi di trasferimento protetti
+            - name: guidance
+              prose: Usare metodi sicuri come canali crittografati o dispositivi hardware protetti, implemetare controlli rigorosi, formare il personale
+            - name: objective
+              prose: Prevenire che le chiavi vengano compomesse mentre vengono installate sui sistemi
+          - id: "r_3.7.4"
+            title: Le chiavi crittografiche devono essere conservate in modo sicuro e l'accesso deve essere limitato
+            parts:
+            - name: statement
+              prose: Conservare le chiavi crittografiche in forma protetta
+            - name: assessment
+              prose: Esaminare i sistemi di gestione delle chiavi e i moduli di sicurezza hardware, verificare che il personale abbia compreso le politiche di accesso limitato
+            - name: guidance
+              prose: Archiviare le chiavi in ambienti sicuri, implementare controlli di accesso multifattore, mantenere registro di accessi, non memorizzare mai le chiavi in chiaro, formare il personale
+            - name: objective
+              prose: Impedire l'accesso non autorizzato garantendone la riservatezza e per tutta la loro durata
+          - id: "r_3.7.5"
+            title: Le chiavi crittografiche devono essere sostituite periodicamente e quando la loro sicurezza è compromessa
+            parts:
+            - name: statement
+              prose: Sostituire le chiavi periodicamente o in caso in cui si è certi che la sicurezza sia stata compromessa
+            - name: assessment
+              prose: Esaminare le policy e le procedure di gestione delle chiavi, controllare i log e i registri di operazione
+            - name: guidance
+              prose: Definire la durata massima di vita delle chiavi, implementare processi per la sostituzione, garantire che la transizioni alle nuove chiavi sia gestita in modo sicuro
+            - name: objective
+              prose: Minimizzare il rischio di compromissione delle chiavi prevenendo attacchi basati sulla longevità delle chiavi
+          - id: "r_3.7.6"
+            title: Le chiavi crittografiche devono essere revocate e invalidate in modo sicuro quando non più necessarie o compromesse
+            parts:
+            - name: statement
+              prose: Revocare e invalidare chiavi crittografiche quando non più necessarie o compromesse
+            - name: assessment
+              prose: Esaminare le policy e le rpocedure di gestione delle chiavi, verificare i log e i registri di sistema, non usare più le chiavi revocate
+            - name: guidance
+              prose: Implementare meccanismi per la revoca rapida e sicura, assicurarsi che i sistemi siano configurati per riconoscere le chiavi corrette, definire procedure per determinare quando una chiave non è necessaria o compromessa
+            - name: objective
+              prose: Impedire l'uso di chaivi obsolete riducendo il rischio di accesso non autorizzato
+          - id: "r_3.7.7"
+            title: Le chiavi crittografiche devono essere distrutte in modo sicuro e irreversibile
+            parts:
+            - name: statement
+              prose: Distruggere in modo sicuro e irreversibile le chaivi crittografiche a fine ciclo di vita
+            - name: assessment
+              prose: Esamianre le policy e le procedure di gestione delle chiavi, i log e i registri delle operazioni di distruzione
+            - name: guidance
+              prose: Usare metodi di distruzione conformi con gli standard del settore, documentare tutte le operazioni
+            - name: objective
+              prose: Prevenire il recupero e uso non autorizzato di chiavi obsolete o revocate
+          - id: "r_3.7.8"
+            title: Le chiavi devono essere usate solo per scopi di crittografia per cui sono state create e approvate
+            parts:
+            - name: statement
+              prose: Utilizzare le chiavi solo per lo scopo per cui sono state generate e autorizzate
+            - name: assessment
+              prose: Esaminare la documentazione e i log del sistema, verificare che le configurazioni delle applicazioni non permettano un uso improprio delle chiavi
+            - name: guidance
+              prose: Implementare controlli per limitare l'uso delle chiaci alle sole funzioni per cui sono state create, mantenere una chiara documentazione per ciascuna, formare il personale
+            - name: objective
+              prose: Impedire l'uso improprio o non autorizzato di chiavi che possono compromettere la sicurezza dei dati
+          - id: "r_3.7.9"
+            title: Il backup delle chiavi crittograficeh deve essere protetto come le chiavi originali
+            parts:
+            - name: statement
+              prose: Proteggere con lo stesso livello di sicurezza delle chaivi originali il backup di esse
+            - name: assessment
+              prose: Esaminare le policy e le procedure relative al backup, verificare i meccanismi di arciviazione, controllare i log di accesso
+            - name: guidance
+              prose: Crittografare con chiavi di protezione robuste i backup, conservarli in luoghi sicuri e con controlli di accesso rigorosi, la distruzione dei backup deve essere uguale ala distruzione delle chiavi originali
+            - name: objective
+              prose: Garantire che la disponibilità dei backup non comprometta l'integrità dei dati
+  - id: Requisito-4
+    title: Protect Cardholder Data with Strong Cryptography During Transmission Over Open, Public Networks. Maintain a Vulnerability Management Program
+    groups: 
+      - id: "r4.1"
+        title: Processes and mechanisms for protecting cardholder data with strong cryptography during transmission over open, public networks are defined and understood
+        controls:
+          - id: "r_4.1.1"
+            title: I processi e i meccanismi per proteggere i dati dei titolari devono essere definiti, documentati e compresi
+            parts:
+            - name: statement
+              prose: Definire, documentare, mantenere e comunicare al personale le policy e le procedure per l'uso di crittografia forte per la protezione dei dati durante la trasmissione su reti aperte e pubbliche
+            - name: assessment
+              prose: Esaminare la documentazione delle policy e delle procedure per la protezione crittografica dei dati in transito per verificare la completezza, verificare che il personale abbia compreso le proprie responsabilità
+            - name: guidance
+              prose: Specificare i protocolli crittografici accettabili, i tipi di chiavi e algoritmi da usare, formare il personale, aggiornare regolarmente le policy e le procedure
+            - name: objective
+              prose: Garantire che i processi e le misure di sicurezza per la trasmissione crittografata dei dati siano chiaramente stabiliti, compresi e applcati in modo coerente
+          - id: "r_4.1.2"
+            title: I ruoli e le responsabilità per la protezione dei dati
+            parts:
+            - name: statement
+              prose: Documentare, assegnare e far comprendere al personale i ruoli e le responsabilità per la protezione dei dati dei titolari di carta in transito
+            - name: assessment
+              prose: Esaminare la documentazione, verificare che il personale abbia compreso i propri ruoli e responsabilità
+            - name: guidance
+              prose: Documentare chiaramente i ruoli e le responsabilità e aggiornare periodicamente la documentazione
+            - name: objective
+              prose: Garantire una chiara definizione di chi è responsabile dei vari aspetti della sicurezza
+      - id: "r4.2"
+        title: PAN is protected with strong cryptography during transmission
+        controls:
+          - id: "r_4.2.1"
+            title: Il PAN deve essere protetto con crittografia forte e protocolli di sicurezza durante la trasmissione su reti aperte e pubbliche
+            parts:
+            - name: statement
+              prose: Proteggere con crittografia forte il PAN durante la trasmissioni su reti non sicure
+            - name: assessment
+              prose: Esaminare le configurazioni dei sistemi che trasmettono il PAN
+            - name: guidance
+              prose: Usare protocolli di crittografia riconosciuti sicuri, assicurarsi che la configurazione dei sistemi abbia la validazione dei certificati, valutare regolarmente che le configurazioni siano al passo con le nuove minacce
+            - name: objective
+              prose: Prevenire intercettazione e compromissione del PAN durante la trasmissione su reti non sicure
+          - id: "r_4.2.2"
+            title: Tutti i protocolli e i certificati usati per proteggere il PAN devono essere protetti da compromissioni
+            parts:
+            - name: statement
+              prose: Proteggere da qualsiasi compromissione i protocolli crittografici e i certificati digitali usati per la protezione del PAN durante la trasmissione
+            - name: assessment
+              prose: Esaminare le policy e le procedure per la gestione dei certificati digitali e delle chaivi private, verificare la configurazione dei sistemi
+            - name: guidance
+              prose: Implementare una gestione sicura dei certificati, monitorare regolarmente lo stato dei certificati e dei protocolli usati, usare certificati con lunghezze di chiave e algoritmi di firma forti
+            - name: objective
+              prose: Mantenere integri i meccanismi di crittografia e i certificati digitali usati per il PAN, garantendo autenticità e riservatezza delle comunicazioni
+  - id: Requisito-5
+    title: Protect All Systems and Networks from Malicious Software
+    groups: 
+      - id: "r5.1"
+        title: Processes and mechanisms for protecting all systems and networks from malicious software are defined and understood
+        controls:
+          - id: "r_5.1.1"
+            title: I processi e i meccanismi documentati sono definiti per proteggere tutti i sistemi e le reti da software dannosi
+            parts:
+            - name: statement
+              prose: Definire i processi e i meccanismi per proteggere tutti i sistemi e le reti da software malevoli
+            - name: assessment
+              prose: Esaminare i processi e i meccanismi documentati, verificare che il personale abbia compreso tali processi e meccanismi
+            - name: guidance
+              prose:  Documentare anche i tipi di software dannosi da cui proteggersi, manutenere le misure di protezione
+            - name: objective
+              prose: Garantire che l'organizzazione abbia processi e meccanismi definiti e compresi per proteggere sistemi e reti da software dannosi
+          - id: "r_5.1.2"
+            title: Il personale deve essere consapevole dei processi e dei meccanismi per la protezione da software dannosi in base ai propri ruoli e responsabilità
+            parts:
+            - name: statement
+              prose: Far sì che il personale conosca i processi e i meccanismi per la protezione da software malevoli
+            - name: assessment
+              prose: Verificare che il personale sia stato formato
+            - name: guidance
+              prose: Formare il personale con corsi e aggiornamenti periodici
+            - name: objective
+              prose: Assicurarsi che ruoli e responsabilità siano noti a tutto il personale
+      - id: "r5.2"
+        title: Malicious software (malware) is prevented, or detected and addressed
+        controls:
+          - id: "r_5.2.1"
+            title: I meccanismi anti-malware sono implementati su tutti i sistemi che sono solitamente obiettivi di malware
+            parts:
+            - name: statement
+              prose: Implementare meccanismi anti-malware sui sistemi che sono obiettivi comuni si software dannosi
+            - name: assessment
+              prose: Esaminare la configurazione dei sistemi e le impostazioni anti-malware
+            - name: guidance
+              prose: Fornire protezione in tempo reale ed eseguire scansioni regolari per la protezione da virus, worm, trojan
+            - name: objective
+              prose: Assicurarsi che tutti i sistemi a rischio siano protetti con l'implementazione di meccanismi anti-malware efficaci
+          - id: "r_5.2.2"
+            title: Per i sistemi che non sono comuni bersagli di software dannosi implementare misure alternative per affrontare software dannosi 
+            parts:
+            - name: statement
+              prose: Implementare misure alternative per prevenire, rilevare e affrontare software dannosi nei sistemi che non sono comuni bersagli
+            - name: assessment
+              prose: Esaminare la documentazione delle misure alternative, verificare che il personale abbia compreso l'applicazione di queste misure
+            - name: guidance
+              prose:  "Alcuni esempi di misure alternative: whitelist di applicazioni, isolamento della rete, controllo rigido degliaccessi, monitoraggio continuo"
+            - name: objective
+              prose: Garantire che tutti i sistemi siano protetti da software dannosi con misure di sicurezza adeguate e documentate
+          - id: "r_5.2.3"
+            title: Processi per rilevare ed eliminare tutto il software dannoso
+            parts:
+            - name: statement
+              prose: Implementare processi per rilevare ed eliminare software dannosi
+            - name: assessment
+              prose: Esaminare la documentazione per la gestione degli incidendi relativi a malware, verificare che il personale sia a conoscenza dell'applicazione di tali processi
+            - name: guidance
+              prose:  I processi dovrebbero includere soluzioni anti-malware, rilevamento delle intrusioni, monitoraggio dei log; isolare i sistemi infetti, ripristinare i dati e i sistemi compromessi
+            - name: objective
+              prose: Assicurarsi che si abbia la capacità di identificare e rimuovere efficacemente i software dannosi presenti nei sistemi e nelle reti
+      - id: "r5.3"
+        title: Anti-malware mechanisms and processes are active, maintained, and monitored
+        controls:
+          - id: "r_5.3.1"
+            title: I meccanismi anti-malware devono essere mantenuti aggiornati
+            parts:
+            - name: statement
+              prose: Mantenere aggiornati meccanismi anti-malware
+            - name: assessment
+              prose: Esaminare i registri di aggiornamento, verificare le configurazioni per assicurarsi che siano abilitati gli aggiornamenti automatici
+            - name: guidance
+              prose: Aggiornare regolarmente le definizioni di virus
+            - name: objective
+              prose: Assicurarsi che i meccanismi anti-malware sono in grado di proteggere dalle minacce di sofwtare dannoso più recenti
+          - id: "r_5.3.2"
+            title: I meccanismi anti-malware devono eseguire scansioni periodiche
+            parts:
+            - name: statement
+              prose: Far sì che i meccanismi anti-malware eseguino scansioni periodicamente
+            - name: assessment
+              prose: Esaminare i registri delle scansioni, verificare le configurazioni dei meccanismi anti-malware
+            - name: guidance
+              prose: Assicurarsi che siano programmate scansioni periodiche, definire la frequenza delle scansioni in base al rischio dell'ambiente e alla sensibilità dei dati
+            - name: objective
+              prose: Garantire che tutti i sistemi siano controllati regolarmente
+          - id: "r_5.3.3"
+            title: Tutti gli eventi generati da meccanismi anti-malware sono registrati
+            parts:
+            - name: statement
+              prose: Registrare tutti gli eventi dei meccanismi anti-malware
+            - name: assessment
+              prose: Esaminare i sistemi di logging per assicurarsi che gli eventi vengano registrati in modo completo
+            - name: guidance
+              prose:  I log dovrebbero includere tutti i dettagli pertinenti, protetti da alterazioni e conservati per un perioso adeguato
+            - name: objective
+              prose: Assicurare che ci sia uan traccia completa delle attività e degli avvisi dei meccanismi anti-malware
+          - id: "r_5.3.4"
+            title: Gli avvisi generati dai meccanismi anti-malware sono monitorati e gestiti
+            parts:
+            - name: statement
+              prose: Monitorare e gestire gli avvisi generati dai meccanismi anti-malware
+            - name: assessment
+              prose: Esaminare i registri di monitoraggio e i sistemi di gestione avvisi, verificare che il personale abbia compreso la gestione degli avvisi
+            - name: guidance
+              prose:  Non ignorare gli avvisi generati dai sistemi anti-malware
+            - name: objective
+              prose: Garantire che gli avvisi di sicurezza siano tempestivamente identificati, analizzati e che vengano intraprese azioni correttive adeguate
+          - id: "r_5.3.5"
+            title: Le funzioni anti-malware non possono essere disattivate o alterate a meno che non sia espressamente autorizzato
+            parts:
+            - name: statement
+              prose: Non permettere la disattivazione o l'alterazione dei meccanismi anti-malware a meno che non sia espressamente autorizzato dal personale addetto
+            - name: assessment
+              prose: Esaminare le impostazioni di configurazione, verificare che il personale autorizzato sappia quando concedere eccezioni
+            - name: guidance
+              prose:  L'autorizzazione alla disattivazione deve essere limitata al personale autorizzato
+            - name: objective
+              prose: Impedire la disattivazione o la manomissione non autorizzata dei meccanismi anti-malware per mantenere protezione continua contro software dannosi
+      - id: "r5.4"
+        title: Anti-phishing mechanisms protect users against phishing attacks
+        controls:
+          - id: "r_5.4.1"
+            title: I meccanismi anti-phishing sono implementati per proteggere gli utenti da email di phishing
+            parts:
+            - name: statement
+              prose: Implementare meccanismi anti-phishing per proteggere gli utenti
+            - name: assessment
+              prose: Esaminare le configurazioni dei sistemi di posta elettronica
+            - name: guidance
+              prose:  "Esempi di meccanismi anti-phishing: filtri di spam, analisi delle email, blocchi di URL malevoli"
+            - name: objective
+              prose: Ridurre il rischio che gli utenti vengano compromessi da attacchi di phishing bloccando o segnalando email insicure prima che raggiungano l'utente
+  - id: Requisito-6
+    title: Develop and Maintain Secure Systems and Software. Implement Strong Access Control Measures
+    groups: 
+      - id: "r6.1"
+        title: Processes and mechanisms for developing and maintaining secure systems and software are defined and understood
+        controls:
+          - id: "r_6.1.1"
+            title: Le organizzazioni devono identificare le vulnerabilità di sicurezza rilevanti per i sistemi e il software presenti nel CDE
+            parts:
+            - name: statement
+              prose: Definire, implementare e mantenere un processo continuo per identificare vulnerabilità di sicurezza, eseguendolo periodicamente
+            - name: assessment
+              prose: Esaminare la documentazione del processo, verificare la frequenza delle revisioni, confermare che le fonti siano affidabili e aggioranate  
+            - name: guidance
+              prose: L'uso di sistemi automatizzati può facilitare la tempestività e la coerenza dell'identificazione delle vulnerabilità
+            - name: objective
+              prose: Garantire che l'organizzazione identifichi tempestivamente le vulnerabilità e mantenga aggiornate le informazioni sulle minacce
+          - id: "r_6.1.2"
+            title: Valutazione e classificazione delle vulnerabilità di sicurezza
+            parts:
+            - name: statement
+              prose: Assegnare un livello di rischio o priorità a ciascuna vulnerabilità per stabilire l'ordine con cui saranno risolte
+            - name: assessment
+              prose: Esaminar la documentazione del processo di classificazione, verificare che il criterio di classificazione sia definito
+            - name: guidance
+              prose:  Usare metriche riconosciute, il processo dovrebbe prevedere la revisione periodica del criterio di classificazione
+            - name: objective
+              prose: Stabilire le priorità per la mitigazione delle vulnerabilità in base al rischio che rappresentano, assicurando che le risorse siano allocate in modo efficiente per ridurre i rischi
+      - id: "r6.2"
+        title: Bespoke and custom software are developed securely
+        controls:
+          - id: "r_6.2.1"
+            title: Installazione tempestiva delle patch e aggiornamenti di sicurezza
+            parts:
+            - name: statement
+              prose: Valutare le vulnerabilità di sicurezza identificate con un processo decumentato per testare e implementare aggiornamenti di sicurezza, definire tempi massimi di applicazione
+            - name: assessment
+              prose: Esaminare la policy di gestione delle patch e le procedure operative, verificare che siano definiti i tempi di applicazione, controllare che le patch siano testate e mantenute tracciabili
+            - name: guidance
+              prose: Definire tempi di implementazione coerenti con la gravità delle vulnerabilità, documentare le azioni intraprese
+            - name: objective
+              prose: Assicurare che tutte le vulnerabilità conosciute siano mitigate in tempi brevi riducendo il rischio di compromissione
+          - id: "r_6.2.2"
+            title: Applicazione di patch o mitigazioni temporanee per vulnerabilità critiche
+            parts:
+            - name: statement
+              prose: Applicare una pacth di sicurezza e implementare una misura di mitigazione per le vulenrabilità classificate come critiche o ad alto rischio
+            - name: assessment
+              prose: Esaminare policy e procedure di gestione delle patch, verificare che le vulnerabilità ad alto rischio abbiano la precedenza, esaminare documentazione
+            - name: guidance
+              prose: "Esempi di misure di mitigazione temporanee: disattivazione di servizi vulnerabili, uso di regole firewall restrittive, minotraggio avanzato, revisioni delle mitigazioni"
+            - name: objective
+              prose: Assicurare che nessuna vulnerabilità cirtica rimanga esposta senza essere mitigata
+          - id: "r_6.2.3"
+            title: Processo di gestione per garantire l'installazione delle patch e l'efficacia delle misure di mitigazione
+            parts:
+            - name: statement
+              prose: Implementare un processo che verifichi l'applicazione effettiva delle patch e delle mitigazioni, la validazione dell'efficacia e la documentazione dello stato diavanzamento monitorando e riesaminando periodicamente il processo di patch per garantire continua efficacia
+            - name: assessment
+              prose: Esaminare la documentazione, verificare che le patch e le mitigazioni siano applicate, controllare le patch installare, analizzare i risultati del monitoraggio, valutare che il processo sia mantenuto e migliorato nel tempo
+            - name: guidance
+              prose: Prevedere controlli periodici di verifica automatizzata, report di conformità e riesami formali per garantire che rimanga aggiornato e adeguato alle nuove minacce
+            - name: objective
+              prose: Assicurare che il processo di gestione delle patch e delle vulnerabilità rimanga efficace, coerente con le policy aziendali e ridurre il rischio operativo nel tempo
+          - id: "r_6.2.4"
+            title: Applicazione coerente di aggiornamenti e pacth di sicurezza su tutti i componenti del sistema
+            parts:
+            - name: statement
+              prose: Garantire che tutti i componenti del sistema ricevano aggiornamenti di sicurezza coerenti con la policy definita e applicare misure compensative dove gli aggiornamenti non sono possibili
+            - name: assessment
+              prose: Esaminare policy e procedure di aggiornamento, verificare che il processo sia applicato a tutti i componenti, valutare la regolarità delle revisioni e l'allineamento con la politica aziendale
+            - name: guidance
+              prose: Implementare strumenti di gestione centralizzata delle patch per monitorare l'applicazione degli aggiornamenti su tutti i sistemi, riesaminare periodicamente l'elenco dei componenti non aggiornabili
+            - name: objective
+              prose: Assicurare che tutti i componenti del sistema siano mantenuti aggiornati riducendo l'esposizione del CDE da vulnerabilità note e garantendo uniformità di protezione
+      - id: "r6.3"
+        title: Security vulnerabilities are identified and addressed
+        controls:
+          - id: "r_6.3.1"
+            title: Le vulnerabilità devono essere identificate usando fonti riconosciute e classificate in base al rischio
+            parts:
+            - name: statement
+              prose: Identificare e classificare le vulnerabilità di sicurezza in base al rischio usando fonti riconosciute e assegnando un livello di rischio documentato
+            - name: assessment
+              prose: Valutare periodicamente l'efficacia del processo di gestione delle vulnerabilità verificando tempestività e adeguatezza delle azioni intraprese
+            - name: guidance
+              prose: Applicare le best parctice per la gestione delle vulnerabilità come quelle fornite da organizzazioni riconosciute nel settore
+            - name: objective
+              prose: Garantire che tutte le vulnerabilità siano identificate, classificate e corrette in modo tempestivo per riduerre il rischio di esposizione a minacce
+          - id: "r_6.3.2"
+            title: Creare un inventario del software personalizzato e dei componenti di terze parti incorporati per facilitare la gestione delle vulnerabilità e degli aggiornamenti
+            parts:
+            - name: statement
+              prose: Mantenere un inventario aggiornato del software per facilitare la gestione delle vulnerabilità e degli aggiornamenti
+            - name: assessment
+              prose: Verificare che l'invetanrio sia completo e usato per identificare e gestire le vulnerabilità
+            - name: guidance
+              prose: Adottare pratiche di gestione dell'invetario riconosciute e strumenti adeguati per garantire l'efficacia del processo
+            - name: objective
+              prose: Assicurare che tutte le vulnerabilità note siano identificate e gestite tempestivamente per ridurre i rischi associati
+          - id: "r_6.3.3"
+            title: Le patch e gli aggiornamenti per le vulnerabilità critiche devono essere applicati entro un mese dal loro rilascio
+            parts:
+            - name: statement
+              prose: Applicare entro un mese dal rilascio le patch e gli aggiornamenti per le vulnerabilità per ridurre i rischi
+            - name: assessment
+              prose: Verificare che le patch critiche siano implementate tempestivamente e che il processo sia eseguito regolarmente
+            - name: guidance
+              prose: Eseguire test pre-implementazione e monitoraggio post-implementazione
+            - name: objective
+              prose: Ridurre il rischio di sfruttamento delle vulnerabilità critiche e mantenere un ambiente sicuro e conforme
+      - id: "r6.4"
+        title: Public-facing web applications are protected against attacks
+        controls:
+          - id: "r_6.4.1"
+            title: Le applicazioni web devono essere testate e protette da vulnerabilità 
+            parts:
+            - name: statement
+              prose: Testare e proteggere le applicazioni web per identificare vulnerabilità note, analizzando i risultati e implementando correzioni tempestive
+            - name: assessment
+              prose: Verificare che i test siano condotti periodicamente e che le vulnerabilità siano documentate e mitigate
+            - name: guidance
+              prose: Usare strimenti automatizzati e manuali, seguendo best practice riconosciute nel settore
+            - name: objective
+              prose: Ridurre il rischio di compromissione delle applicazioni web e proteggere i dati dei titolari di carta
+          - id: "r_6.4.2"
+            title: Le applicazioni web pubbliche devono essere protette da firewall o soluzioni simili
+            parts:
+            - name: statement
+              prose: Proteggere le applicazioni web pubbliche con firewall o soluzioni simili per rilevare e prevenire attacchi noti
+            - name: assessment
+              prose: Verificare che il firewal sia attivo, aggiornato e configurato correttamente
+            - name: guidance
+              prose: Usare un firewall conforme con capacità di rilevamento e prevenzione attiva degli attacchi web
+            - name: objective
+              prose: Ridurrre il rischio di compormissione delle applicazioni web con la protezioni da attacchi noti
+          - id: "r_6.4.3"
+            title: Gestione degli script delle pagine di pagamento
+            parts:
+            - name: statement
+              prose: Implementare metodi per confermare che ogni script sia autorizzato, garantire l'integrità di ciascun script
+            - name: assessment
+              prose: Verificare integrità e documentazione dell'inventario degli script inclusi quelli scritti da terzi usati nelle pagine di pagamento
+            - name: guidance
+              prose: Usare politiche di sicurezza per proteggere gli script da modifiche non autorizzate
+            - name: objective
+              prose: Ridurre il rischio di compormissione delle pagine di pagamento con la gestione sicura degli script nel browser del consumatore
+      - id: "r6.5"
+        title: Changes to all system components are managed securely
+        controls:
+          - id: "r_6.5.1"
+            title: Gestione delle modifiche ai componenti di sistema in modo sicuro
+            parts:
+            - name: statement
+              prose: Documentare, testare e approvare prima dell'implementazione le modifiche a tutti i componenti del sistema
+            - name: assessment
+              prose: Verificare che esiste un processo formale di gestione delle modifiche, documentato e seguito
+            - name: guidance
+              prose: "Esempi di buone pratiche per la gestione delle modifiche: separazione dei compiti, revision del codice, gestione delle versioni"
+            - name: objective
+              prose: Assicurare che tutte le modifiche siano gestite in modo sicuro per prevenire l'introduzione di vulnerabilità e garantire la conformità agli standard di sicurezza
+          - id: "r_6.5.2"
+            title: Le applicazioni devono essere protette da vulnerabilità comuni con controlli di sicurezza e test regolari
+            parts:
+            - name: statement
+              prose: Proteggere le applicazioni da vulnerabilità comuni con controlli di sicurezza integrati e test periodici
+            - name: assessment
+              prose: Verificare che le vulnerabilità siano identificate, documentate e mitigate con controlli applicativi e test regolari
+            - name: guidance
+              prose: Applicare linee guida di sicurezza riconosciute, usare strumenti di scansione e test manuali per garantire la protezione
+            - name: objective
+              prose: Ridurre il rischio di comprmissione dei dati dei titolari di carta con la protezione contro vulnerabilità comuni
+          - id: "r_6.5.3"
+            title: Le applicazioni devono includere controlli per prevenire rischi e vulnerabilità
+            parts:
+            - name: statement
+              prose: Implementare controlli per prevenire vulnerabilità
+            - name: assessment
+              prose: Verificare che siano presenti meccanismi per rilevare e mitigare vulnerabilità
+            - name: guidance
+              prose: Usare programmazione sicura e strumenti di analisi del codice per ridurre il rischio di errori
+            - name: objective
+              prose: Prevenire l'esecuzione di codice non autorizzato e proteggere i dati dei titolari di carta
+          - id: "r_6.5.4"
+            title: Le funzioni e i ruoli devono essere separati tra i vari ambienti
+            parts:
+            - name: statement
+              prose: Separare i ruoli e le fnzioni tra ambienti di produzione assicurando che solo le modifiche verificate e approvate siano implementate
+            - name: assessment
+              prose: Verificare che esista una separazione chiara dei ruoli e delle funzioni con controlli che impediscano l'implementazione di modifiche non approvate
+            - name: guidance
+              prose: Implementare controlli di accesso e processi di approvazione per garantire che solo le modifiche autorizzate siano trasmesse in produzione
+            - name: objective
+              prose: Ridurre il rischio di introduzione di modifiche non autorizzate mantenendo integrità e sicurezza del sistema
+          - id: "r_6.5.5"
+            title: Le applicazioni devono gestire gli errori in modo sicuro evitando la divulgazione di informazioni sensibili
+            parts:
+            - name: statement
+              prose: Proteggere le applicazioni da comportamenti di gestione degli errori non sicuri che possano rivelare informazioni sensibili
+            - name: assessment
+              prose: Verificare che le applicazioni implementino una gestione degli errori con messaggi generici, log dettagliati senza esposizione di dati sensibili
+            - name: guidance
+              prose: Usare framework e librerie adeguati configurando i livelli di logging e le modalità di visualizzazione degli errori
+            - name: objective
+              prose: Ridurre il rischio di esposizione accidentale di informazioni sensibili con una gestione degli errori sicura e controllata
+          - id: "r_6.5.6"
+            title: I dati e gli account di test dovrebbero essere eliminati dai componenti prima che il sistema venga messo in produzione
+            parts:
+            - name: statement
+              prose: RImuovere i dati e gli account di test dai componenti di sistema prima che il sistema entri in produzione
+            - name: assessment
+              prose: Verificare che tutti i dati e gli account di test siano stati rimossi dai componenti di sistema prima dell'implementazione in ambiente di produzione
+            - name: guidance
+              prose: Usare gli strumenti di scansione per identificare e rimuovere eventuali dai di test redisui nei componenti di sistema
+            - name: objective
+              prose: Prevenire l'accesso no nautorizzato e la divulgazione di informazioni sensibili rimuovendo i dati e gli account dei test prima della messa in produzione del sistema
+  - id: Requisito-7
+    title: Restrict Access to System Components and Cardholder Data by Business Need to Know
+    groups:
+      - id: "r7.1"
+        title: Processes and mechanisms for restricting access to system components and cardholder data by business need to know are defined and understood
+        controls:
+          - id: "r_7.1.1"
+            title: Le politiche di sicurezza e le procedure operative devono essere documentate, aggiornate e conosciute dalle parti interessate
+            parts:
+            - name: statement
+              prose: Gestire e mantenere efficacemente le politiche di sicurezza e le procedure operative
+            - name: assessment
+              prose: Esaminare la documentazione e verificare che il personale gestisca le politiche e le procedure in conformità con gli elementi specificati
+            - name: guidance
+              prose: Aggiornare le politiche e le procedure, assicurarsi che siano distribuite e comprese dal personale
+            - name: objective
+              prose: Garantire che tutte le attività di supporto siano ripetibili e applicate in modo coerente
+          - id: "r_7.1.2"
+            title: I ruoli e le responsabilità per le attività del requisito 7 devono essere documentati, assegnati e compresi dal personale
+            parts:
+            - name: statement
+              prose: Documentare, assegnare e far comprendere i ruoli e le responsabilità per lo svolgimento delle attività previste
+            - name: assessment
+              prose: Esaminare la documentazione, verificare che il personale abbia compreso i ruoli e le responsabilità
+            - name: guidance
+              prose: Documentare come meglio considerato i ruoli e le responsabilità, formare il personale
+            - name: objective
+              prose: Garantire che tutte le attività abbiano responsabilità assegnate e che il personale sia responsabile del corretto svolgimento
+      - id: "r7.2"
+        title: Access to system components and data is appropriately defined and assigned
+        controls:
+          - id: "r_7.2.1"
+            title: Definire un modello di controllo degli accessi che garantisce l'assegnazione di accessi in base alle funzioni lavorative e ai principi di privilegio minimo
+            parts:
+            - name: statement
+              prose: "Il modello di controllo deve includere: accesso adeguato in base all'attività e alle esigenze, accesso ai componenti del sistema in base alle funzioni del lavoro degli utenti, privilegi minimi"
+            - name: assessment
+              prose: Esaminare le politiche, le procedure documentati e le impostazioni del modello
+            - name: guidance
+              prose: Assegnare i privilegi in base alle funzioni lavorative e garantire la separazione dei compiti per prevenire conflitti o rischi
+            - name: objective
+              prose: Stabilire i requisiti di accesso applicando principi del privilegio minimo
+          - id: "r_7.2.2"
+            title: Gli accessi agli utenti devono essere assegnati in base alla classificazione, la funzione del lavoro e il principio dei privilegi minimi
+            parts:
+            - name: statement
+              prose: Assegnare l'accesso agli utenti concedendo solo i privilegi minimi necessari per svolgere le responsabilità assegnate
+            - name: assessment
+              prose: Esaminare le politiche, le procedure e le impostazione di accesso, verificare che il personale resoponsabile abbia solo i privilegi necessari
+            - name: guidance
+              prose: Assegnare i diritti di accesso attraverso ruoli definiti per gestire e revocare l'accesso privilegiato quando non più necessario
+            - name: objective
+              prose: Limitare l'accesso ai sistemi e ai dati al minimo necessario per svolgere le funzioni lavorative'
+          - id: "r_7.2.3"
+            title: I privilegi rischiesti devono essere approvati da personale autorizzato garantendo che l'accesso sia necessario per la funzione lavorativa dell'utente
+            parts:
+            - name: statement
+              prose: Garantir che tutti i privilegi richiesti siano approvati dal personale autorizzato con un processo documentato
+            - name: assessment
+              prose: Esaminare le politiche e le procedure, gli ID utente e i privilegi assegnati verificando che esista un'approvazione documentata per i privilegi assegnati, l'approvazione effettuata sa personale autorizzato, i privilegi corrispondono ai ruoli assegnati
+            - name: guidance
+              prose: Implementare un processo di approvazione dei privilegi documentando ogni autorizzazione e verificando la corrispondenza con i ruoli assegnati
+            - name: objective
+              prose: Prevenire la concessione di privelegi non autorizzati e assicurare che tutti i privilegi siano appropriati e documentati
+          - id: "r_7.2.4"
+            title: Revisionare regolarmente tutti gli account utente e i privilegi di accesso per garantire che siano appropriati alle funzioni lavorative e conformi alla politiche aziendali
+            parts:
+            - name: statement
+              prose: Tutti gli accoutn utente e relativi privilegi devono essere esaminati una volta ogni sei mesi per assicurare che l'accesso rimanda appropriato, eventuali accessi siano identificati e corretti e la direzione confermi che l'accesso sia appropriato
+            - name: assessment
+              prose: Esaminare le politiche e le procedure, verificare che il personale esegui le revisioni periodiche
+            - name: guidance
+              prose: Implementare le revisioni regolari e ripetibili
+            - name: objective
+              prose: Garantire che le assegnazioni dei privilegi siano verificate periodicamente e che l'accesso rimanga appropriato alle funioni lavorative
+          - id: "r_7.2.5"
+            title: Gli account applicativi e di sistema e i relativi privilegi di accesso devono essere gestiti, assegnati e revisionati basandosi sul principio dei privilegi minimi e limitando l'accesso
+            parts:
+            - name: statement
+              prose: Tutti gli accessi applicativi e di sistemi devono essere assegnati e gestiti con privilegi minimi, limitati, esaminati periodicamente e revisionati con documentazione
+            - name: assessment
+              prose: Esaminare le politiche e le procedure, i privilegi degli acount e consultare il personale per assicurarsi che siano assegnati correttamente, verificare la frequenza e i risultati delle revisioni periodiche
+            - name: guidance
+              prose: Stabilire linee guida per la configurazione e l'uso degli account, implementare un processo regolare e ripetibile di revisione dei privilegi
+            - name: objective
+              prose: Garantire che i privilegi siano limitati al minimo necessario, revisionati periodicamente e conformi alle politiche aziendali riducendo il rischio di accessi non autorizzati
+          - id: "r_7.2.6"
+            title: L'accesso degli utenti agli archivi dei dati dei titolari di carta deve essere limitato
+            parts:
+            - name: statement
+              prose: Limitare aagli amministratori responsabili per qualisasi accesso diretto o interrogazione degli archivi dei dati dei titolari di carta
+            - name: assessment
+              prose: Esaminare le politiche, le procedure e le impostazioni di configurazioni
+            - name: guidance
+              prose: COncedere l'accesso agli archivi in base ai ruoli e ai privilegi minimi
+            - name: objective
+              prose: Prevenire l'accesso diretto non autorizzato agl iarchivi dei dati dei titolari di carta consentendo l'accesso solo al personale autorizzato
+      - id: "r7.3"
+        title: Access to system components and data is managed via an access control system(s)
+        controls:
+          - id: "r_7.3.1"
+            title: I sistemi di controllo degli accessi devono essere implementati per limitare l'accesso ai componenti basandosi sulla necessità dell'utente
+            parts:
+            - name: statement
+              prose: Implementare sistemi di controllo che limitano l'accesso in base alla necessità di conoscenza dell'utente e coprono tutti i componenti del sistema
+            - name: assessment
+              prose: Esaminare la documentazione del fornitore e le impostazioni di sistema per verificare che l'accesso sia gestito per ciascun componente
+            - name: guidance
+              prose: Usare meccanismi auotmatizzati per limitare l'accesso e assegnare i privilegi garantendo che ogni utente abbia accesso soloai componenti e ai dati utili per svolgere le proprie funzioni
+            - name: objective
+              prose: Assicurare che i diritti di accesso e i privilegi siano gestiti in modo coerente e approprioato con i sistemi dedicati al controllo degli accessi
+          - id: "r_7.3.2"
+            title: I ssitemi di controllo degli accessi devono essere configurati per applicare le autorizzazioni assegnate basandosi sulla classificazione e sulla funzione lavorativa
+            parts:
+            - name: statement
+              prose: Far sì che i sistemi di controllo degli accessi devono applicare le autorizzazioni assegnate
+            - name: assessment
+              prose: Esaminare la documentazione del fornitore e le impostazioni di sistema
+            - name: guidance
+              prose: Assicurare che i diritti di accesso e i privilegi dei singoli account sinao ereditati solo dall'appartenenza a gruppi, riducendo il rischio di errori
+            - name: objective
+              prose: Garantire che le autorizzazioni siano applicate correttamente e coerentemente in base ai ruoli definiti prevenendo accessi non autorizzati
+          - id: "r_7.3.3"
+            title: L'impostazione di default dovrebbe essere 'nega tutto' per evitare accessi che non sono esplicitamente autorizzati
+            parts:
+            - name: statement
+              prose: Evitare accessi non autorizzati configurando i sistemi di controllo degli accessi con impostazione di default 'nega tutto'
+            - name: assessment
+              prose: Esaminare la documentazione del fornitore e le impostazioni di sistema
+            - name: guidance
+              prose: Verificare la configurazione di default
+            - name: objective
+              prose: Garantire che i diritti e i privilegi di accesso siano vietati a meno che non siano espressamente autorizzati
+  - id: Requisito-8
+    title:  Identify Users and Authenticate Access to System Components
+    groups: 
+      - id: "r8.1"
+        title:  Processes and mechanisms for identifying users and authenticating access to system components are defined and understood
+        controls:
+          - id: "r_8.1.1"
+            title: Gestire e mantenere efficacemente tutte le politiche e procedure specificate nel requisito 8
+            parts:
+            - name: statement
+              prose: Documentare, tenere aggiornate, in uso, condividere e diffondere alle parti interessate tutte le politiche di sicurezza e le procedure operative
+            - name: assessment
+              prose: Esaminare la documentazione e verificare che il personale gestisca le politiche e le procedure in modo conforme con tutti gli elementi specificati
+            - name: guidance
+              prose: Aggiornare le politiche e le procedure senza limitarsi a revisioni periodiche predeterminate
+            - name: objective
+              prose: Garantire che aspettative, controlli e supervisone delle attività siano rispettati, le attività di supporto siano ripetibili
+          - id: "r_8.1.2"
+            title: Documentare, assegnare e far comprendere i ruoli e le responsabilità per lo svolgimento delle attività previste dal Requisito 8, assicurando che il personale conosca le proprie responsabilità
+            parts:
+            - name: statement
+              prose: I ruoli e le responsabilità devono essere documentati, assegnati, comprensibili e noti
+            - name: assessment
+              prose: Esaminare la documentazione, verificare che il personale responsabile abbia compreso il prioprio ruolo e responsabilità
+            - name: guidance
+              prose: Usare strumenti idonei per assegnare, comunicare e far comprendere le responsabilità
+            - name: objective
+              prose: Assicurare che tutte le responsabilità siano adeguate e comprese
+      - id: "r8.2"
+        title: User identification and related accounts for users and administrators are strictly managed throughout an account’s lifecycle
+        controls:
+          - id: "r_8.2.1"
+            title: Gli utentei devono avere un ID univoco per accedere ai componentni del sistema o ai daiti in modo che ogni azione possa essere ricondotta ad un individuo specifico
+            parts:
+            - name: statement
+              prose: Asseganre ad ogni utente un ID univoco prima di permettere l'accesso per garantire la tracciabilità delle azioni
+            - name: assessment
+              prose: Esaminare i registri di controllo per verificare che l'accesso possa essere identificato in modo univoco e associato ad un utente
+            - name: guidance
+              prose: Assegnare un ID univoco garantisce responsabilità individuale e facilita la soluzione di problemi, non si applica agli account dei terminali POS che accedono a un solo numero di carta alla volta
+            - name: objective
+              prose: Tutte le azioni degli utenti devono essere atribuibili a un individuo specifico
+          - id: "r_8.2.2"
+            title: L'uso di ID o credenziali condivise deve essere limitato a circostanse eccezionale permettendo sempre tracciabilità e responsabilità individuale
+            parts:
+            - name: statement
+              prose: "Gli ID di gruppo devono: essere limitati al tempo necessario, usati in modo giustificato, essere approvati esplicitamente, permettere di poter attribuire ogni azione al singolo utente"
+            - name: assessment
+              prose: Esaminare gli elenchi di account utente e la documentazione relativa alle credenziali, verificare le politiche e le procedure di autenticazione, verificare che il personali sappia in quali occasioni autorizzare le credenziali condivise
+            - name: guidance
+              prose: Stabilire controlli robusti, non si applica agli account POS che accedono ad un numero di carta alla volta
+            - name: objective
+              prose: Garantier che tutte le azioni eseguite con ID di gruppo siano attribuibili a una singola persona
+          - id: "r_8.2.3"
+            title: Fornitori di servizi
+            parts:
+            - name: statement
+              prose: I fornitori di servizi devono usare fattori di autenticazione univoci per ogni cliente
+            - name: assessment
+              prose: Esaminare le politiche e le procedure di autenticazione
+            - name: guidance
+              prose: Applicabile solo ai fornitori di servizi con accesso remoto alle sedi dei clienti, non a quelli che accedono ai propri ambienti condivisi
+            - name: objective
+              prose: Garantire che le credenziali di un fornitore di servizi usati per un cliente non possono essere usare da altri clienti per accedere
+          - id: "r_8.2.4"
+            title: Gestire gli account in modo che solo quelli autorizzati possa eseguire funzioni privilegiati
+            parts:
+            - name: statement
+              prose: Autorizzare con approvazione documentata il ciclo di vita deli ID utente e dei fattori di autenticazione
+            - name: assessment
+              prose: Esaminare le autorizzazioni documentate e le impostazioni di sistema
+            - name: guidance
+              prose: Verificare che gli ID utente non possono essere creati, modificati o eliminati senza autorizzazione
+            - name: objective
+              prose: Assicurare che ogni evento del ciclo di vita degli ID utente e dei fattori di autenticazione sia autorizzato, tracciabile e limitato ai privilegi consentiti
+          - id: "r_8.2.5"
+            title: L'accesso per gli utentei terminati deve essere immedatamente revocato per prevenire accessi non autorizzati
+            parts:
+            - name: statement
+              prose: Disattivare o rimuovere immediatamente la possibilità di accesso agli account terminati
+            - name: assessment
+              prose: Rivedere le fonti di informazione per gli utenti terminati, verificare che il personale responsabile confermi che i fattori di autenticazione degli utentei terminati siano disattivati
+            - name: guidance
+              prose: Assicurarsi che nessun account terminato rimanga attivo
+            - name: objective
+              prose: Garantire che gli account degli utente terminati non possano essre usati
+          - id: "r_8.2.6"
+            title: Gli account devono essere rimossi o disattivati entro 90 giorni di inattività
+            parts:
+            - name: statement
+              prose: Disabilitare o rimuovere gli account inattivi entro 90 giorni dall'ultima attività
+            - name: assessment
+              prose: Esaminare gli account utenti e le informazioni sull'ultimo accesso
+            - name: guidance
+              prose: Considerare la disattivazione anche senza attendere 90 giorni
+            - name: objective
+              prose: Garantire che non possano essere usati account incattivi per prevenire accessi non autorizzati
+          - id: "r_8.2.7"
+            title: Gli account utilizzati da terze parti devono essere gestiti perlimitare l'accesso solo al tempo necessario e monitorare le attività impreviste
+            parts:
+            - name: statement
+              prose: "Gli account di terze parti devono essere: abilitati solo durante il periodo necessario, monitorati per attività non autorizzate"
+            - name: assessment
+              prose: Esaminare gli account di terze parti, la documentazione contrattuale e i registri di accesso
+            - name: guidance
+              prose:  Abilitare l'accesso solo per i periodi necessari e disabilitarlo immediatamente, assegnare date di inisio e fine, monitorare attività insolite
+            - name: objective
+              prose: Prevenire l'uso improprio dell'accesso remoto da parte di terzi garantendo che sia autorizzato, limitato e monitorato
+          - id: "r_8.2.8"
+            title: L'utente deve autenticarsi nuovamente per riattivare il terminale o la sessione se rimane inattiva per più di 15 minuti
+            parts:
+            - name: statement
+              prose: Tutte le sessioni utente devono richiedere una nuova autenticazione dopo 15 minuti di inattività
+            - name: assessment
+              prose: Esaminare le impostazioni di configurazione del sistema per verificare che il timeout sia impostato
+            - name: guidance
+              prose: Esaminare le impostazioni di configurazione del sistema per verificare, bilanciare la sicurezza con il tipo di attività in corso
+            - name: objective
+              prose: Garantire che le sessioni utente inattive non possano essere sfruttate da utenti non autorizzati
+      - id: "r8.3"
+        title: Strong authentication for users and administrators is established and managed
+        controls:
+          - id: "r_8.3.1"
+            title: Gli accessi ai componenti del sistema devono essere autenticati tramite un fattore di autenticazione per permettere che l'indentità dell'utente sia verificata prima di procedere
+            parts:
+            - name: statement
+              prose: "L'autenticazione deve avvenire tramite almeno uno dei fattori tra cui: qualcosa che si sa, che sia o che si è"
+            - name: assessment
+              prose: Esaminare la documentazione, verificare che i processi di autenticazione funzionino in modo coerente
+            - name: guidance
+              prose: È consigliabile l'uso di password robuste, token fisici o dati biometrici
+            - name: objective
+              prose: Garantire che l'accesso agli account avvenga solo con l'associazione tra l'identità dell'utente e almeno uno dei fattori di autenticazione
+          - id: "r_8.3.2"
+            title: I fattori di autenticazione devono essere illegibili grazie all'uso di crittografia avanzata da usare durante la trasmissione e l'archiviazione per prevenire accessi non autorizzati ai dati sensibili
+            parts:
+            - name: statement
+              prose: Proteggere tutti i fattori di autenticazione durante la trasmissione e l'archiviazione usando la crittografia avanzata
+            - name: assessment
+              prose: Esaminare la documentazione del fornitore e le impostazioni di sistema, accertarsi che i fattori di autenticazione non siano trasmessi in chiaro
+            - name: guidance
+              prose: Usare protocolli sicuri come TLS o SSh e cifrare con algoritmi moderni come RSA per ridurre il rischio di intercettazione
+            - name: objective
+              prose: Imepdire che i fattori di autenticazione in chiaro possano essere ottenuti con intercettazione o accesso ai dati archiviati
+          - id: "r_8.3.3"
+            title: L'identità dell'utente deve essere verificata prima di permettere la modifica di qualsiasi fattore di autenticazione per prevenire attacchi di social engineering
+            parts:
+            - name: statement
+              prose: Verificare l'identità dell'utente prima che venga modificato qualsiasi fattore di autenticazione associato all'account
+            - name: assessment
+              prose: Esaminare le procedure di modifica dei fattori di autenticazione
+            - name: guidance
+              prose: Implementare processi di verifica come domande segrete o autenticazione a più fattori, far sì che le modifiche richiedino la creazioni di nuove chiavi di autenticazione
+            - name: objective
+              prose: Impedire a soggetti non autorizzati di ottenere accesso fingendosi un utente legittimo
+          - id: "r_8.3.4"
+            title: Meccanismi di blocco dell'account per prevenire attacchi di forza bruta
+            parts:
+            - name: statement
+              prose: Limitare i tentativi di autenticazione non validi con il blocco dell'ID utente dopo 10 tentativi consecutivi falliti per almeno 30 minuti o fino alla conferma dell'identità dell'utente
+            - name: assessment
+              prose: Esaminare le impostazioni di configurazione del sistema
+            - name: guidance
+              prose: Il blocco dell'account riduce la probabilità di successo di attacchi automatizzati, per riattivare l'account è necessario che sia confermata l'identità dell'utente con procedure che ne prevedono il controllo
+            - name: objective
+              prose: Rendere ineffficaci i tentativi di indovinare i dattori di autentizazione online
+          - id: "r_8.3.5"
+            title: Le password o passphrase usate come fattori di autenticazione devono essere gestite per impedire che in caso di modifica siano usati i valori iniziali
+            parts:
+            - name: statement
+              prose: Impostare le password e passphrase in modo che venga assegnato un valore univoco al primo utilizzo o in casi di ripristino e che questo valore venga cambiato immediatamente al primo accesso
+            - name: assessment
+              prose: Esaminare le procedure di impostazione delle password
+            - name: guidance
+              prose: L'uso di password temporanee riduce il rischio che account appena creati vengano compromessi, comunicare il valore temporaneo in modo sicuro
+            - name: objective
+              prose: Impedire che password o passphrase temporanee vengano usate da utenti non autorizzati
+          - id: "r_8.3.6"
+            title: Le password e passphrase devono rispettare dei criteri minimi di complessità e lunghezza
+            parts:
+            - name: statement
+              prose: Le password e passphrase usate come fattori di autenticazione devono rispettare criteri minimi di complessità (lunghezza minima e presenza di caratteri sia numerici che alfabetici)
+            - name: assessment
+              prose: Esaminare le impostazioni di configurazione del sistema
+            - name: guidance
+              prose: Password comlesse sono una difesa dall'accesso non autorizzato, aumentare la sicurezza chiedendo anche l'uso di caratteri speciali e maiuscole, impedire l'uso di password semplici o comuni
+            - name: objective
+              prose: Impedire di indovinare una password o passphrase né con attacchi di forza bruta né offline
+          - id: "r_8.3.7"
+            title: Le password o passphrase non devono poter essere riutilizzate in modo ciclico per ridurre il rischio di compromissione dovuto al riuso di credenziali
+            parts:
+            - name: statement
+              prose: Impedire che gli utenti possano impostare un nuova password o passphrase uguale a uno delle ultime quattro usate
+            - name: assessment
+              prose: Esaminare le impostazioni di configurazione del sistema
+            - name: guidance
+              prose: Mantenere una cronologia delle password, implementare  controlli automatici per applicare la politica del non riutilizzo
+            - name: objective
+              prose: Una password o passphrase non può essere riusata prima dei 12 mesi almeno
+          - id: "r_8.3.8"
+            title: Le politiche e le procedure di autenticazione devono essere comunicate e comprese da tutti gli utenti
+            parts:
+            - name: statement
+              prose: Documentare e comunicare a tutti gli utentei le politiche e le procedure di autenticazione (linee guida e istruzioni per evitare il riuso delle password e indicazioni per modificare password e per segnalare incidenti)
+            - name: assessment
+              prose: Esaminare le procedure e la documentazione distribuita, verificare che gli utenti conoscano le procedure di autenticazione
+            - name: guidance
+              prose: Comunicare efficacemente, aggiornare periodicamente le linee guida
+            - name: objective
+              prose: Gli utenti comprendono e applicano correttamente le politiche e le procedure relative all’autenticazione e ricevono supporto adeguato
+          - id: "r_8.3.9"
+            title: "Quando le password/passphrase sono usate come unico fattore di autenticazione devono essere adottati controlli aggiuntivi"
+            parts:
+            - name: statement
+              prose: Se la password o la passphrase sono usate come unico fattore di autenticazione applicare ulteriori controlli come la modifica ogni 90 giorni
+            - name: assessment
+              prose: Esaminare le impostazioni di configurazione del sistema e la documentazione
+            - name: guidance
+              prose: Usare un unico fattore di autenticazione aumenta la vulnerabilità, prevenire l'uso prolungato delle credenziali e mantenere un livello di sicurezza coerente con il rischio
+            - name: objective
+              prose: Una password o passphrase compromessa non rilevata non può essere utilizzata per accedere indefinitamente ai sistemi o alle risorse aziendali
+          - id: "r_8.3.10"
+            title: Applicabile solo ai fornitori di servizio per la gestione delle password come unico fattore di autenticazione
+            parts:
+            - name: statement
+              prose: Fornire indicazioni ai clienti che includono una guida su come modificare periodicamente la password e indicazioni su quando (ogni 90 gionrni) e in quali circostanze effettuare la modifica
+            - name: assessment
+              prose: Esaminare la documentazione e la guida fornite al cliente e le impostazioni di configurazione del sistema
+            - name: guidance
+              prose: Chiarire quando e come modificare le password per ridurre la probabilità di accessi non autorizzati legati a credenziali compromesse o obsolete
+            - name: objective
+              prose: "Le password/passphrase per i clienti dei fornitori di servizi non possono essere utilizzate indefinitamente e devono essere gestite secondo pratiche di sicurezza definite"
+          - id: "r_8.3.11"
+            title: Gestione dei fattori di autenticazione per garantire che siano assegnati a un singolo utente
+            parts:
+            - name: statement
+              prose: Assegnare i fattori di autenticazione fisici (token o smart card) ad un singolo utente
+            - name: assessment
+              prose: Esaminare le politiche e le procedure di autenticazione, consultare il personale di sicurezza per assicurarsi che l'assegnazione avvenga correttamente, esaminare le impostazioni di configurazione del sistema
+            - name: guidance
+              prose: Garantire l'autenticazione univoca dell'utente
+            - name: objective
+              prose: Impedire che un fattore di autenticazione possa essere usato da un utente diverso dal quale era stato assegnato
+      - id: "r8.4"
+        title: Multi-factor authentication (MFA) is implemented to secure access into the CDE
+        controls:
+          - id: "r_8.4.1"
+            title: Implementazione dell'autenticazione a più fattori (MFA) per l'accesso non da console al CDE da parte del personale con accesso amministrativo.
+            parts:
+            - name: statement
+              prose: Implementare l'MFA per tutti gli accessi non da console al CDE per il personale amministrativo
+            - name: assessment
+              prose: Esaminare le configurazioni di rete e di sistema, verificare i fattori di autenticazione del personale amministrativo
+            - name: guidance
+              prose: Implementare l'accesso MFA per il personale amministrativo per preveire accessi non autorizzati
+            - name: objective
+              prose: Impedire che l'accesso amministrativo al CDE possa avvenire usando un solo fattore di autenticazione
+          - id: "r_8.4.2"
+            title: Implementazione dell'autenticazione a più fattori per tutti gli accessi non da console al CDE
+            parts:
+            - name: statement
+              prose: Implementare l'MFA per tutti gli accessi da console, l'uso di un fattore due volte non è considerato autenticazione a più fattori
+            - name: assessment
+              prose: Esaminare le configurazioni di rete e di sistema 
+            - name: guidance
+              prose: La richeista di un fattore in più riduce la possibilità che un malintenzionato possa accedere al sistema
+            - name: objective
+              prose: Per l'accesso al CDE è obbligatorio usare più fattori di autenticazione
+          - id: "r_8.4.3"
+            title: L'autenticazione deve essere a più fattori per tutti gli accessi remoti provenienti dall'esterno della rete
+            parts:
+            - name: statement
+              prose: Implemetare l'MFA per tutti gli accessi remoti dall'esterno della rete
+            - name: assessment
+              prose: Esaminare le configurazioni di rete e di sistema
+            - name: guidance
+              prose: La richiesta di più tipi di fattori di autenticazione riduce la possibilità che un malintenzionato possa accedere
+            - name: objective
+              prose: Impedire che l'accesso remoto alla rete possa essere ottenuto con un solo fattore di autenticazione
+      - id: "r8.5"
+        title: Multi-factor authentication (MFA) systems are configured to prevent misuse
+        controls:
+          - id: "r_8.5.1"
+            title: Configurazione sicura dei sistemi MFA
+            parts:
+            - name: statement
+              prose: Usare almeno due fattori diversi nei sistemi MFA, far sì che i sistemi resistino agli attacchi di riproduzione
+            - name: assessment
+              prose: Esaminare la documentazione e le configurazioni MFA
+            - name: guidance
+              prose: "Esempi di protezione: sessione univoca, timestamp, OTP. l'uso di uno stesso fattore due volte non è valido"
+            - name: objective
+              prose: Controllare i sistemi MFA e gli accessi amministrativi in modo che siano sicuri
+      - id: "r8.6"
+        title:  Use of application and system accounts and associated authentication factors is strictly managed
+        controls:
+          - id: "r_8.6.1"
+            title: Gestione sicura degli account di sistema e applicazione
+            parts:
+            - name: statement
+              prose: Impedire di usare in modo interattivo gli account di sistema e le applicazioni, l'identità dell'utente deve essere confermata e tutte le azioni devono essere attribuibili a un singolo utente
+            - name: assessment
+              prose: Esaminare gli account di sistema, verificare che eventuali usi di accout interattivo siano documentati e approvati, verificare che ogni azione sia attribuibile ad un singolo utente 
+            - name: guidance
+              prose: Configurare gli account per impedire l'accesso interattivo, limitare le macchine su cui è possibile usare l'account        
+            - name: objective
+              prose: Assicurarsi che tutte le azioni anche di account interattivi siano autorizzate e attribuibili ad un singolo utente
+          - id: "r_8.6.2"
+            title: "Protezione delle password/passphrase degli account di sistema e applicazione"
+            parts:
+            - name: statement
+              prose: "Non codificare in script, file di configurazione o codice sorgente le password/passphrase degli account di sistema e applicazione usabili interattivamente"
+            - name: assessment
+              prose: Esaminare le procedure di sviluppo, controllare gli script, i file di configurazione e codice sorgente
+            - name: guidance
+              prose: "Usare archivi di password o strumenti di gestione per proteggere i fattori di autenticazione, procedere con la modifica delle password/passphrase se si sospetta di divulgazione"
+            - name: objective
+              prose: "Evitare che password/passphrase di applicazioni e account di sistema siano usate da personale non autorizzato"
+          - id: "r_8.6.3"
+            title: "Protezione delle password/passphrase per account applicativi e di sistema"
+            parts:
+            - name: statement
+              prose: "Proteggere dall'uso improprio le password/passphrase per qualsiasi applicazione e account di sistema modificandole periodicamente e costruendole con complessità adeguata"
+            - name: assessment
+              prose: Esaminare le politiche, le procedure e le analisi del rischio, controllare le impostazioni di sistema
+            - name: guidance
+              prose: "Determinare la frequenza delle modifiche delle password/passphrase, adottare lunghezza e complessità adeguate"
+            - name: objective
+              prose: "Evitare che si usi a tempo indeterminato e proteggere dagli usi improprio le password/passphrase"
+  - id: Requisito-9
+    title: Restrict Physical Access to Cardholder Data. Regularly Monitor and Test Networks
+    groups: 
+      - id: "r9.1"
+        title: Processes and mechanisms for restricting physical access to cardholder data are defined and understood
+        controls: 
+          - id: "r_9.1.1"
+            title: Gestione e mantenimento delle politiche di procedura di sicurezza
+            parts:
+            - name: statement
+              prose: Documentare, mantenere aggiornate e in uso tutte le politiche di sicurezza e le procedure operative
+            - name: assessment
+              prose: Esaminare la documentazione
+            - name: guidance
+              prose: Aggiornare le politiche e le procedure in base alle necessità, comunicare attivamente gli aggiornamenti al personale interessato
+            - name: objective
+              prose: Tutte le attività devono essere ripetibili e coerenti
+          - id: "r_9.1.2"
+            title: Documentazione e assegnazione dei ruoli e responsabilità
+            parts:
+            - name: statement
+              prose: Documentare, assegnare e verificare che siano stati compresi i ruoli e le responsabilità
+            - name: assessment
+              prose: Esaminare la documentazione, verificare che il personale abbia compreso il proprio ruolo e responsabilità
+            - name: guidance
+              prose: Documentare ruoli e responsabilità, formare il personale
+            - name: objective
+              prose: Assegnare tutte le responsabilità per il corretto e continuo funzionamento
+      - id: "r9.2"
+        title: Physical access controls manage entry into facilities and systems containing cardholder data
+        controls: 
+          - id: "r_9.2.1"
+            title: Controlli di accesso fisico e monitoraggio del CDE
+            parts:
+            - name: statement
+              prose: "Limitare l'accesso fisico ai sistemi nel CDE, monitorando con videocamere o meccanismi di controllo i punti di ingresso/uscita, proteggere i meccanismi di monitoraggio e i dati raccolti"
+            - name: assessment
+              prose: Osservare i controlli, verificare che i meccanismi di monitoraggio siano protetti, esaminare i dati raccolti e conservarli per almeno tre mesi
+            - name: guidance
+              prose: Garantire che solo il personale autorizzato abbia accesso con ad esempio lettori di badge e chiavi
+            - name: objective
+              prose: Evitare che i componenti del sistema nel CDE siano accessibili fisicamente da personale non autorizzato
+          - id: "r_9.2.2"
+            title: Controllo dell'accesso ai jack di rete accessibili al pubblico
+            parts:
+            - name: statement
+              prose: Implementare controlli fisici e logici per limitare l'uso di jack di rete accessibili
+            - name: assessment
+              prose: Osservare le posizioni dei jack per verificare che siano presenti i cotrolli necessari a limitare l'accesso
+            - name: guidance
+              prose: "Esempio: disabilitare le prese di rete in aree pubbliche o abilitarle solo con l'autorizzazione'"
+            - name: objective
+              prose: Evitare che i dispositivi non autorizzati possano connettersi alla rete da aree pubbliche
+          - id: "r_9.2.3"
+            title: Controllo dell'accesso fisico alle apparecchiature di rete e telecomunicazione
+            parts:
+            - name: statement
+              prose: Limitare l'accesso finiso ai punti di accesso wireless, gateway, hardware di rete e linee di telecomunicazione
+            - name: assessment
+              prose: Verificare che l'accesso finisco sia limitato
+            - name: guidance
+              prose: "L'accesso fisico ai punti di accesso wireless, ai gateway, all'hardware di rete/comunicazione e alle linee di telecomunicazione deve essere limitato, esaminare le configurazioni di rete"
+            - name: objective
+              prose: Impedire la connessione alla rete per ottenere l'accesso non autorizzato al CDE o a sistemi ad esso collegato
+          - id: "r_9.2.4"
+            title: Limitazione dell'accesso alle console nelle aree sensibili
+            parts:
+            - name: statement
+              prose: Limitare con blocco quando non in uso l'acesso alla console nelle aree sensibili
+            - name: assessment
+              prose: Controllare che il tentativo di accesso non venga da un'area sensibile
+            - name: guidance
+              prose: Bloccare le console fisiche per proteggere le informazioni e le configurazioni sensibili
+            - name: objective
+              prose:
+      - id: "r9.3"
+        title: Physical access for personnel and visitors is authorized and managed
+        controls: 
+          - id: "r_9.3.1"
+            title: Gestione dell'accesso fisico del personale al CDE
+            parts:
+            - name: statement
+              prose: Implementare procedure per l'autorizzazione e la gestione dell'accesso fisico come identificazione del personale, gestione delle modifiche dei requisiti, revoca dell'autorizzazione
+            - name: assessment
+              prose: Esaminare le procedure documentate, controllare i metodi di identificazione, tenere un elenco di personale autorizzato
+            - name: guidance
+              prose: "Esempi: identificare visivamente il personale, limiare l'accesso ai materiali per il badge per prevenire creazione di badge falsi"
+            - name: objective
+              prose: Identificare e autorizzare il personale per l'accesso ad aree sensibili
+          - id: "r_9.3.2"
+            title: Gestione dell'accesso dei visitatori al CDE
+            parts:
+            - name: statement
+              prose: Implementare procedure che per autorizzare e gestire l'accesso di visitatori
+            - name: assessment
+              prose: Esaminare le procedure documentate in caso di visitatori
+            - name: guidance
+              prose: I visitatori devono essere autorizzati e sempre accompagnati, chiaramente identificabile con badge con scadenza e distinguibile da quello del personale
+            - name: objective
+              prose: Evitare che i visitatori superino l'accesso fisico autorizzato
+          - id: "r_9.3.3"
+            title: Gestione dei badge dei visitatori
+            parts:
+            - name: statement
+              prose: Assicurarsi che i badge dei visitatori siano stati restituiti o disattivati prima che i visitatori lascino la struttura
+            - name: assessment
+              prose: Controllare i visitatori mentre lasciano la struttura e verificare che i badge non siano più attivi
+            - name: guidance
+              prose: Controllare che i badge dei visitatori non possono più essere usati
+            - name: objective
+              prose: Evitare che i badge dei visitatori siano ancora attivi dopo la fine della visita
+          - id: "r_9.3.4"
+            title: Registrazione dell'accesso dei visitatori
+            parts:
+            - name: statement
+              prose: Mantenere un resoconto delle attività dei visitatori con nome, data e ora, personale che autorizza
+            - name: assessment
+              prose: Esaminare i registri dei visitatori
+            - name: guidance
+              prose: Documentare in dei registri da mantenere per almeno tre mesi
+            - name: objective
+              prose: Registrare l'accesso dei visitatori per identificare le persone che accedono alla struttura
+      - id: "r9.4"
+        title: Media with cardholder data is securely stored, accessed, distributed, and destroyed
+        controls: 
+          - id: "r_9.4.1"
+            title: Protezione fisica dei supporti con dati dei titolari di carta, inclusi backup offline e revisioni periodiche della sicurezza.
+            parts:
+            - name: statement
+              prose: "Proteggere fisicamente tutti i supporti contenenti dati dei titolari di carta, i backup offline; la sicurezza della/e posizione/i dei backup offline viene rivista almeno una volta ogni 12 mesi"
+            - name: assessment
+              prose: Esaminare la documentazione, controllare i log e che siano state condotte le revisioni periodiche
+            - name: guidance
+              prose: I backup offline devono essere conservati in luoghi sicuri
+            - name: objective
+              prose: I supporti e i backup contenenti dati dei titolari di carta non possono essere accessibili a personale non autorizzato e la sicurezza dei backup offline è verificata periodicamente tramite ispezione.
+          - id: "r_9.4.2"
+            title: Classificazione dei supporti contenenti dati dei titolari di carta in base alla sensibilità dei dati.
+            parts:
+            - name: statement
+              prose: Classificare in base alla sensibilità dei dati i supporti contenenti i dati dei titolari di carta
+            - name: assessment
+              prose: Esaminare la documentazione, verificare i log
+            - name: guidance
+              prose: Identificare in modo sicuro i supporti e far sì che lo stato di classificazione sia evidente
+            - name: objective
+              prose: Assicurarsi che tutti i supporti che contengono dati siano classificati e protetti in base alla loro sensibilità
+          - id: "r_9.4.3"
+            title: Protezione e tracciamento dei supporti contenenti dati dei titolari di carta quando inviati fuori dalla struttura.
+            parts:
+            - name: statement
+              prose: Proteggere e tracciare tutti i supporti che contengono dati inviati fuori dalla struttura
+            - name: assessment
+              prose: Esaminare la documentazione, controllare i log di tracciamento
+            - name: guidance
+              prose: Registrare gli invii, usare corrieri affidabili per mantenere la traccibilità e un inventario accurato
+            - name: objective
+              prose: Proteggere i dati dei titolari di carta che vengono inviati fuori dalla struttura
+          - id: "r_9.4.4"
+            title: Approvazione della gestione per lo spostamento dei supporti contenenti dati dei titolari di carta fuori dalla struttura
+            parts:
+            - name: statement
+              prose: Far approvare dalla direzione tutti gli spostamenti di supporti che contengono dati dei titolari di carta
+            - name: assessment
+              prose: Esaminare la documentazione relativa alle procedure di spostamento, esaminare i log di tracciamento
+            - name: guidance
+              prose: L'approvazione assicura che i supporti lascino la struttura in modo controllato
+            - name: objective
+              prose: Evitare che qualche supporto venga spostato senza l'approvazione del personale responsabile
+          - id: "r_9.4.5"
+            title: Gestione e inventario dei supporti elettronici contenenti dati dei titolari di carta
+            parts:
+            - name: statement
+              prose: Mantenere log di inventario per tutti i supporti elettronici, eseguire inventari periodici
+            - name: assessment
+              prose: Esaminare la documentazione per le procedure di mantenimento degli inventari, esaminare i log
+            - name: guidance
+              prose: Mantenere inventari accurati con revisione periodica
+            - name: objective
+              prose: Avere sotto controllo i supporti elettronici che contengono i dati dei titolali di carta
+          - id: "r_9.4.6"
+            title: Distruzione dei materiali cartacei contenenti dati dei titolari di carta.
+            parts:
+            - name: statement
+              prose: Eliminare i materiali cartacei, la distruzione deve garantire che i dati non possano essere ricostruiti
+            - name: assessment
+              prose: Esaminare la politica di distruzione, verificare che i procedimenti di distruzione vengano applicati dal personale
+            - name: guidance
+              prose: "Esempi di eliminazione: tritatura incrociata, incenerimento, macerazione"
+            - name: objective
+              prose: Evitare che i dati dei titolari di carta vengaono recuperati da materiale cartaceo
+          - id: "r_9.4.7"
+            title: Distruzione dei supporti elettronici contenenti dati dei titolari di carta.
+            parts:
+            - name: statement
+              prose: Distruggere i supporti elettronici contenenti dati dei titolari di carta quando non più necessari; i dati devono essere resi irrecuperabili e non ricostruibili
+            - name: assessment
+              prose: Esaminare la politica di distruzione
+            - name: guidance
+              prose: "Esempi di distruzione: cancellazione sicura secondo standrad del settore, deguassing o distruzione fisica"
+            - name: objective
+              prose: Evitare che i dati dei titolari di carta vengaono recuperati dai supporti elettronici
+      - id: "r9.5"
+        title: Point of interaction (POI) devices are protected from tampering and unauthorized substitution
+        controls: 
+          - id: "r_9.5.1"
+            title: Protezione dei dispositivi Point-of-Interaction (POI) per prevenire manomissioni, sostituzioni non autorizzate e skimming.
+            parts:
+            - name: statement
+              prose:  Proteggere da manomissioni e sostituzioni non autorizzate i dispositivi POI che acquisiscono dati della carta tramite interazione fisica diretta
+            - name: assessment
+              prose: Esaminare le politiche e le procedure documentate
+            - name: guidance
+              prose: Mantenere un elenco aggiornato dei dispositivi, ispezioni periodiche come confronti fotografici o controlli dei numeri di serie, formare il personale
+            - name: objective
+              prose: Evitare che i dispositvi vengano manomessi o sostituiti senza autorizzazione
+  - id: Requisito-10
+    title:  Log and Monitor All Access to System Components and Cardholder Data
+    groups:
+      - id: "r10.1"
+        title: Processes and mechanisms for logging and monitoring all access to system components and cardholder data are defined and understood
+        controls:
+          - id: "r_10.1.1"
+            title: Gestione di policy e procedure di sicurezza
+            parts:
+            - name: statement
+              prose: Documentare, aggiornare, usare e far conoscere a tutto il personale tutte le policy di sicurezza e le procedure operative
+            - name: assessment
+              prose: Esaminare la documentazione e verificare che il personale ne sia a conoscenza
+            - name: guidance
+              prose: Formare il personale
+            - name: objective
+              prose: Definire e far si che siano rispettate dal personale le aspettative, i controlli e la supervisione delle attività; tutte le attività di supporto devono essere ripetibili, applicate in modo coerente e conformi all'intento della direzione.
+          - id: "r_10.1.2"
+            title: Assegnazione e comprensione dei ruoli e responsabilità
+            parts:
+            - name: statement
+              prose: Assegnare e verificare che sianostati compresi i ruoli e le responsabilità
+            - name: assessment
+              prose: Esaminare la documentazione per la descrizione dei ruoli, verificare che il personale abbia compreso il proprio ruolo e responsibilità
+            - name: guidance
+              prose: Formare il personale, aggiornare la documentazione
+            - name: objective
+              prose: Far sì che il personale abbia un ruolo e delle responsabilità per la corretta esecuzione di tutte le attività
+      - id: "r10.2"
+        title: Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events
+        controls:
+          - id: "r_10.2.1"
+            title: Audit log completo e protezione delle registrazioni
+            parts:
+            - name: statement
+              prose:  Registrare nei log di audit tutti i componenti di sistema e i dati dei titolari di carta devono essere registrati nei log di audit
+            - name: assessment
+              prose: Esaminare le configurazioni dei log e controllare che i log siano attivi e abilitati per tutti i componenti di sistema e per i dati dei titolari di carta
+            - name: guidance
+              prose: Devono essere registrati tutti gli accessi, le azioni svolte, i tentativi di accesso non valido, le modifiche delle credenziali, avvii arresti o pause e creazione o cancellazione di oggetti
+            - name: objective
+              prose: Catturare tutte le attività che vengono svolte garantendo tracciablità e rilevabilità degli accessi non autorizzati
+          - id: "r_10.2.2"
+            title: Dettagli completi nei log di audit
+            parts:
+            - name: statement
+              prose: "I log di audit devono registrare i seguenti dettagli: identificazione dell’utente, tipo e origine e data e ora dell’evento, indicazione di successo o fallimento, identità o nome dei dati, componenti di sistema, risorse o servizi interessati (ad esempio nome e protocollo)"
+            - name: assessment
+              prose: Intervistare il personale responsabile e verificare le configurazioni dei log di audit e i dati dei log per assicurarsi che ciascun evento auditable includa tutti i dettagli
+            - name: guidance
+              prose: Registrare informazioni sufficienti per identificare chi ha effettuato l’azione, cosa è stato fatto, quando e dove, e lo stato di successo o fallimento, in modo da poter seguire e indagare eventuali attività sospette
+            - name: objective
+              prose: Garantire tracciabilità e investigazione, includendo chi, cosa, quando, dove e come per ogni evento
+      - id: "r10.3"
+        title: Audit logs are protected from destruction and unauthorized modifications
+        controls:
+          - id: "r_10.3.1"
+            title: Controllo accesso in lettura ai log di audit
+            parts:
+            - name: statement
+              prose: Limitare esclusivamente al personale autorizzato l'accesso in lettura ai file di log di audit
+            - name: assessment
+              prose: Verificare le configurazioni dei sistemi e dei privilegi
+            - name: guidance
+              prose: L’accesso ai log deve essere controllato con rigorosi meccanismi basati sul principio del “need to know” e i log dovrebbero essere isolati fisicamente o tramite rete per ridurre il rischio di accesso o modifica non autorizzata.
+            - name: objective
+              prose: Impedire che i record delle attività possano essere letti o accessibili da personale non autorizzato
+          - id: "r_10.3.2"
+            title: Protezione dei log di audit
+            parts:
+            - name: statement
+              prose: Proteggere e prevenire modifiche dei file di log
+            - name: assessment
+              prose: Esaminare le configurazioni dei sistemi e che i log di audit siano protetti da modifiche
+            - name: guidance
+              prose: Evitare che i log siano esposti in luoghi accessibili dalla rete
+            - name: objective
+              prose: Assicurarsi che i registri delle attività non vengano modificati garantendo integrità e affidabilità dei dati
+          - id: "r_10.3.3"
+            title: Backup protetto dei log di audit
+            parts:
+            - name: statement
+              prose: Salvare su server sicuri i file di log di audit inclusi quelli generati da tecnologie esposte
+            - name: assessment
+              prose: Esaminare le configurazioni di backup
+            - name: guidance
+              prose: Determinare la modalità più appropriata per effettuare i backup
+            - name: objective
+              prose: Proteggere i registri delle attività e preservarli prevenendo modifiche non autorizzate
+          - id: "r_10.3.4"
+            title: Protezione dei log tramite monitoraggio dell’integrità dei file
+            parts:
+            - name: statement
+              prose: Usare i meccanismi di monitoraggio dell’integrità dei file o di rilevamento delle modifiche sui log di audit per garantire che i dati esistenti nei log non possano essere modificati senza generare un alert. 
+            - name: assessment
+              prose: Esaminare le configurazioni dei sistemi, i file monitorati e i risultati delle attività di monitoraggio
+            - name: guidance
+              prose: Implementare processi che notificano quando vengono identificate modifiche sospette e che generino alert quando dati esistenti vengon cambiati o cancellati
+            - name: objective
+              prose: Evitare che i record delle attività archiviate vengano modifcati
+      - id: "r10.4"
+        title: Audit logs are reviewed to identify anomalies or suspicious activity
+        controls:
+          - id: "r_10.4.1"
+            title: Revisione quotidiana dei log di audit e uso di meccanismi automatizzati
+            parts:
+            - name: statement
+              prose: "Reviosionare almeno una volta al giorno i log che registrano gli eventi di sicurezza, i log dei componenit di sistema che memorizzano, processano o trasmettono CHD o SAD, i componenti di sistema critici, i log di tutti i server e componenti di sistema che eseguono funzioni di sicurezza (ad esempio, controlli di sicurezza di rete, IDS/IPS, server di autenticazione)"
+            - name: assessment
+              prose: Esaminare le politiche e le procedure per verificare che siano definiti processi per la revisione quotidiana
+            - name: guidance
+              prose: Usare meccanismi automatizzati per supportare le revisioni dei log, inclusi strumenti di raccolta, parsing e alerting dei log, sistemi di gestione centralizzata dei log, analizzatori di log ed eventuali soluzioni SIEM
+            - name: objective
+              prose: Identificare rapidamente attività potenzialmente sospette o anomale per minimizzare l'impatto'
+          - id: "r_10.4.2"
+            title: Revisione periodica dei log di tutti gli altri componenti di sistema
+            parts:
+            - name: statement
+              prose: Rivedere periodicamente secondo una frequenza definita dall’analisi del rischio dell’entità i log di tutti gli altri componenti di sistema non specificati nel requisito 10.4.1
+            - name: assessment
+              prose: Esaminare le policy e le procedure di sicurezza, esaminare i risultati documentati delle revisioni dei log
+            - name: guidance
+              prose: Determinare la frequenza delle revisioni dei log
+            - name: objective
+              prose: Rivedere periodicamente le attività potenzialmente sospette o anomale dei componenti di sistema non inclusi nel requisito 10.4.1 in base al rischio identificato
+          - id: "r_10.4.3"
+            title: Gestione di eccezioni e anomalie nei log
+            parts:
+            - name: statement
+              prose: Gestire e affrontare secondo procedure stabilite tutte le eccezioni e le anomalie identificate durante il processo di revisione dei log
+            - name: assessment
+              prose: Esaminare le policy e le procedure di sicurezza
+            - name: guidance
+              prose: Includere nei processi la registrazione delle attività di revisione dei log, classificazione e prioritizzazione delle eccezioni e anomalie
+            - name: objective
+              prose: Affrontare e risolvere tempestivamente attività sospette o anomalie rilevate dalla revisione dei log
+      - id: "r10.5"
+        title: Audit log history is retained and available for analysis
+        controls:
+          - id: "r_10.5.1"
+            title: Conservazione dei log di audit
+            parts:
+            - name: statement
+              prose: Conservare per almento 12 mesi la cronologie dei log di audit, la disponibilità immediata di log recenti permette di identificare rapidamente una violazione
+            - name: assessment
+              prose: Esaminare la documentazione e le configurzioni dei log di audit
+            - name: guidance
+              prose: "Esempi di metodi per garantire disponibilità immediata: log online, archiviazione dei log, rapido ripristino dai backup" 
+            - name: objective
+              prose: Rendere disponibili immediatamnte i record delle attività
+      - id: "r10.6"
+        title: Time-synchronization mechanisms support consistent time settings across all systems
+        controls:
+          - id: "r_10.6.1"
+            title: Sincronizzazione degli orologi di sistema
+            parts:
+            - name: statement
+              prose: Sincronizzare gli orologi di sistema usando tecnologie di sincronizzazione del tempo. 
+            - name: assessment
+              prose: Esaminare le configurazioni di sistema
+            - name: guidance
+              prose: Mantenere aggiornata la tecnologia di sincronizzazione gestendo anche le vulenrabilità e l'applicazione di patch secondi il requisito 6
+            - name: objective
+              prose: Stabilire un orario comune su tutti i sistemi
+          - id: "r_10.6.2"
+            title: Configurazione e sincronizzazione dell’orario dei sistemi
+            parts:
+            - name: statement
+              prose: Configurare i sistemi per utilizzare il tempo corretto e coerente
+            - name: assessment
+              prose: Esaminare le configurazioni di sistema
+            - name: guidance
+              prose: Solo i server di riferimento ricevono aggiornamenti dall'esterno, il tempo ricevuto dall'esterno è basato su un coordinamento universale (UTC), i server accettano aggiornamenti solo da fonti riconosciute, se ci sono più server di riferimento si collegano tra loro, i sistemi interni ricevono aggiornamenti solo dai server di riferimento
+            - name: objective
+              prose: Assicurarsi che l'orario su tutti i sistemi è accurato e coerente
+          - id: "r_10.6.3"
+            title: Protezione della sincronizzazione del tempo
+            parts:
+            - name: statement
+              prose: Proteggere le impostazioni di sincronizzazione del tempo e i dati relativi
+            - name: assessment
+              prose: Verificare le configurazioni dei sistemi e le impostazioni di sincronizzazione, esaminare i log, le configurazione e i processi
+            - name: guidance
+              prose: Limitare l'accesso ai dati temporali al solo personale autorizzato, registrare, monitorare e revisionare qualsiasi modifica alle impostazioni temporali
+            - name: objective
+              prose: Evitare che possano essere modificate da personale non autorizzato le impostazioni temporali dei sistemi critici, garantendo integrità e tracciabilità
+      - id: "r10.7"
+        title: Failures of critical security control systems are detected, reported, and responded to promptly
+        controls:
+          - id: "r_10.7.1"
+            title: Rilevamento e gestione dei guasti nei controlli di sicurezza critici (solo per service provider).
+            parts:
+            - name: statement
+              prose: "Rilevare, segnalare e gestire prontamente i guasti ai controlli di sicurezza di rete, sistemi IDS/IPS, file integrity monitoring, anti-malware, controlli di accesso"
+            - name: assessment
+              prose: Esaminare la documentazione
+            - name: guidance
+              prose: I guasti possono causare funzionamento errato o cessazione dello svolgimento del compito, la risposta deve essere tempestiva
+            - name: objective
+              prose: Garantire protezione continua dei dati agendo tempestivamente in caso di guasti
+          - id: "r_10.7.2"
+            title: Rilevamento e gestione dei guasti dei sistemi di controllo di sicurezza critici
+            parts:
+            - name: statement
+              prose: Rilevare, segnalare e gestire prontamente i guasti dei sistemi di controllo di sicurezza critici tra cui i controlli di sicurezza della rete, i meccanismi di rilevamento delle modifiche, malware, controlli di accesso e meccanismi di registrazione e revisione dei log
+            - name: assessment
+              prose: Esaminare la documentazione
+            - name: guidance
+              prose: Definire i tipi di guasti rilevabili per ogni componente del sistema
+            - name: objective
+              prose: Identificare e gestire prontamente i guasti dei sistemi di controllo di sicurezza critici
+          - id: "r_10.7.3"
+            title: Risposta ai guasti dei sistemi di controllo di sicurezza critici
+            parts:
+            - name: statement
+              prose:  Gestire prontamente i guasti di qualsiasi sistema di controllo di sicurezza critico
+            - name: assessment
+              prose: Esaminare la documentazione
+            - name: guidance
+              prose: Rispristino delle funzioni di sicurezza, identificazione e documentazione del guasto e della sua causa, delle soluzioni e implementazione dei controlli per prevenire che il guasto si ripeti
+            - name: objective
+              prose: Analizzare e risolvere i guasti dei sistemi di controllo di sicurezza critici per ridurre al minimo l’impatto ed evitare il ripetersi del guasto
+  - id: Requisito-11
+    title: Test Security of Systems and Networks Regularly. Maintain an Information Security Policy
+    groups:
+      - id: "r11.1"
+        title: Processes and mechanisms for regularly testing security of systems and networks are defined and understood
+        controls:
+          - id: "r_11.1.1"
+            title: Gestione e mantenimento di politiche e procedure relative
+            parts:
+            - name: statement
+              prose: Documentare, mantenere aggiornate e note a tutti gli interessati tutte le politiche di sicurezza e le procedure operative identificate
+            - name: assessment
+              prose: Esaminare la documentazione, confermare che il personale sia a conoscenza delle politiche e delle procedure in vigore
+            - name: guidance
+              prose: Le politiche e le procedure devono essere coerenti con gli obiettivi di sicurezza dell'organizzazione e supportare il mantenimento dei controlli richiesti, aggiornare la documentazione immediatamente dopo ogni modifica
+            - name: objective
+              prose: Definire e rispettare le aspettative, i controlli e la supervisione delle attività che devono essere ripetibili e conformi all'intento della direzione
+          - id: "r_11.1.2"
+            title: Assegnazione e comprensione dei ruoli e delle responsabilità relativi al requisito
+            parts:
+            - name: statement
+              prose: Documentare, assegnare e assicurarsi che siano compresi i ruoli e le responsabilità per l'esecuzione delle attività previste
+            - name: assessment
+              prose: Esaminare la documentazione, assicurarsi che il personale abbia compreso i ruoli e le responsabilità
+            - name: guidance
+              prose: Documentare in modo chiaro i ruoli, formare il personale
+            - name: objective
+              prose: Allocare e far comprendere le responsabilità operative e di controllo previsti, garantendo la continuità e l'efficacia dei processi di sicurezza
+      - id: "r11.2"
+        title: Wireless access points are identified and monitored, and unauthorized wireless access points are addressed
+        controls:
+          - id: "r_11.2.1"
+            title: Gestione dei punti di accesso wireless autorizzati e non autorizzati
+            parts:
+            - name: statement
+              prose: Gestire i punti di accesso wireless autorizzati e non testando almeno ogni tre mesi gli access point wireless
+            - name: assessment
+              prose: Esaminare le politiche e le procedure, analizzare le metodologie e la documentazione, verificare i risultati delle valutazioni, esaminare le configurazioni nel caso di uso di monitoraggio automatizzato
+            - name: guidance
+              prose: In ambienti semplici può essere sufficiente un'ispezione fisica, in ambienti complessi è consigliato combinare ispezioni fisiche e strumenti tecnici, si applica anche se è vietato l'uso di tecnologie wireless perchè dispositivi non autorizzati possono comunque collegarsi
+            - name: objective
+              prose: Rilevare e gestire tempestivamente tutti i punti di accesso wireless non autorizzati garantendo che l'ambiente resti protetto da accessi non controllati
+          - id: "r_11.2.2"
+            title: Inventario dei punti di accesso wireless autorizzati
+            parts:
+            - name: statement
+              prose: Mantenere un inventario aggiornato di tutti i punti di accesso wireless autorizzati
+            - name: assessment
+              prose: Esaminare la documentazione, confermare la presenza di autorizzazione per ogni punto di accesso
+            - name: guidance
+              prose: Aggiornare l'inventario e gestire i punti di accesso non autorizzati
+            - name: objective
+              prose: Garantire che siano noti tutti i punti di accesso wireless evitando che dispositivi non autorizzati vengano confusi con quelli autorizzati
+      - id: "r11.3"
+        title: External and internal vulnerabilities are regularly identified, prioritized, and addressed
+        controls:
+          - id: "r_11.3.1"
+            title: Scansioni di vulnerabilità interne
+            parts:
+            - name: statement
+              prose: Eseguire le scansioni di vulenrabilità interne per garantire che i sistemi siano protetti da vulnerabilità note e correttamente risolte 
+            - name: assessment
+              prose: Esaminare i report delle scansioni, verificare che le vulnerabilità critiche e ad alto rischio siano state risolte, analizzare la configurazione dello strumento di scansioni, esaminare la documentazione
+            - name: guidance
+              prose: Identificazione e correzione tempestiva, eseguire le scansioni almeno ogni tre mesi, classificare i rischi delle vulnerabilità
+            - name: objective
+              prose: Garantire che la sicurezza dei sistemi interni sia verificata periodicamente, le vulnerabilità devono essere valutate e risolte in base ala classificazione della gestione del rischio
+          - id: "r_11.3.2"
+            title: Scansioni di vulnerabilità esterne
+            parts:
+            - name: statement
+              prose: Eseguire le scansioni di vulnerabilità esterne per identificare e risolvere tempestivamente le debolezze dei sistemi esposti riducendo il rischio di compromissione
+            - name: assessment
+              prose: Esaminare i report, verificare che le scansioni siano state eseguite, analizzare la documentazione
+            - name: guidance
+              prose: Mitigare tempestivamente i rischi, le scansioni devono essere eseguiti almeno ogni tre mesi, tutti i report devono essere conservati per almeno 12 mesi
+            - name: objective
+              prose: Assicurare che la sicurezza dei sistemi esposti sia verificata periodicamente e dopo ogni modifica significativa, gestire e risolvere tutte le vulnerabilità
+      - id: "r11.4"
+        title: External and internal penetration testing is regularly performed, and exploitable vulnerabilities and security weaknesses are corrected
+        controls:
+          - id: "r_11.4.1"
+            title: Metodologia di test di penetrazione
+            parts:
+            - name: statement
+              prose: Definire, documentare e implementare una metodologia di penetration testing che riproduce scenari di attacco realistici e consente di individuare vulnerabilità tecniche e logiche sfruttabili da un attaccante
+            - name: assessment
+              prose: Esaminare la metodologia documentata, analizzare i report dei test e verificare che abbiano coperto l'intero perimetro, confermare che i risultati dei test siano conservati per almeno 12 mesi
+            - name: guidance
+              prose: È raccomandato che i test comprendano anche la verifica dell’efficacia dei controlli di rilevamento e logging, i test devono simulare attacchi e coprire il perimetro esposto verso internet
+            - name: objective
+              prose: Assicurare che la sicurezza della rete e dei sistemi critici sia verificata periodicamente con simulazioni per identificare debolezze sfruttabili
+          - id: "r_11.4.2"
+            title: Esecuzione di test di penetrazione interni
+            parts:
+            - name: statement
+              prose: Eseguire test di penetration interni per identificare vulnerabilità e configurazioni errate che possono essere sfruttate da un utente interno
+            - name: assessment
+              prose: Esaminare la metodologia documentata e il piano di test, analizzare i risultati dei test, verificare che siano stati eseguiti periodicamente almeno una volta all'anno
+            - name: guidance
+              prose: I test devono simulare scenari realistici di compromissione interna usando tecniche manuali e automatizzate, far analizzare i risultati dei test
+            - name: objective
+              prose: Confermare che le difese interne e i controlli del CDE siano periodicamente verificati con test che simulano attacchi reali
+          - id: "r_11.4.3"
+            title: Esecuzione di test di penetrazione esterni
+            parts:
+            - name: statement
+              prose: Eseguire test di penetrazione esterna per identificare vulnerabilità e configurazioni errate esposte ai sistemi e servizi accessibili dall'esterno
+            - name: assessment
+              prose: Esaminare la motodologia documentata e il piano di test, analizzare i risultati dei test e verificare che i test siano eseguiti periodicamente almeno una volta all'anno
+            - name: guidance
+              prose: Simulare attacchi provenienti da internet o da reti non fidate per valutare la resistenza dei ssitemi esposti, i test devono essere condotti da professionisti e i risultati devono essere documentati e classificati in base al rischio
+            - name: objective
+              prose: Verificare l'efficacia delle difese perimetrali e dei controlli di sicurezza esposti a internet assicurando che eventuali vulnerabilità esterne siano corrette tempestivamente
+          - id: "r_11.4.4"
+            title: Correzione e verifica delle vulnerabilità emerse dai test di penetrazione
+            parts:
+            - name: statement
+              prose: Correggere le vulnerabilità e le debolezze di sicurezza individuate durante i test di penetrazione, dopo la correzione il test deve essere ripetuto per verificare che le vulnerabilità siano effettivamente state risolte
+            - name: assessment
+              prose: Esaminare i report dei test, valutare la documentazione delle attività, verificare l'esecuzione del test di conferma
+            - name: guidance
+              prose: Correzione tempestiva per ridurre la probabilità che un attaccante possa sfruttare le vulnerabilità
+            - name: objective
+              prose: Garantire che tutte le vulnerabilità e le debolezze di sicurezza identificate siano effettivamente risolte
+          - id: "r_11.4.5"
+            title: Verifica dell'efficacia dei controlli di segmentazione tramite test di penetrazione
+            parts:
+            - name: statement
+              prose: Eseguire test di penetrazione sui controlli di segmentazioni, se usati, almeno una volta ogni 12 mesi e dopo ogni modifica
+            - name: assessment
+              prose: Esaminare la metodologia di test, analizzare i risultati dell'ultimo test
+            - name: guidance
+              prose: Le tecniche di verifica possono includere host discovery, port scanning, analisi di routing e tentativi controllati di connessione tra segmenti; i test devono essere pianificati e rieseguiti dopo ogni modifica significativa
+            - name: objective
+              prose: Assicurare che i controlli e i metodi di segmentazione siano efficaci e funzionino correttametne mantenendo il CDE isolato dalle reti non fidate
+          - id: "r_11.4.6"
+            title: Verifica semestrale dei controlli di segmentazione per i service provider
+            parts:
+            - name: statement
+              prose: Requisito aggiuntivo per i service provider nel caso vengano usati controlli di segmentazione per isolare il CDE da altre reti
+            - name: assessment
+              prose: Esaminare i risultati dell'ultimo test, verificare che i test siano eseguiti periodicamente, accertare che eventuali vulnerabilità identificate siano state corrette
+            - name: guidance
+              prose: I test devono essere condotti da risorese interne o esterne qualificate
+            - name: objective
+              prose: Dimostrare che i controlli di segmentazione se usati da un server provider sono efficaci e garantire che i test vengano condotti periodicamente
+          - id: "r_11.4.7"
+            title: Supporto ai clienti per i test di penetrazione in ambienti multi-tenant
+            parts:
+            - name: statement
+              prose: Requisito aggiuntivo per i service provider multi-tenant
+            - name: assessment
+              prose: Esaminare le politiche, le procedure e le evidenze fornite dal server provider, verificare che il provider offra ai clienti la possibilità di eseguire direttamente i test
+            - name: guidance
+              prose: Fornire accesso per permettere ai clienti di condurre i propri test oppure fornire evidenze che dimostrino che test equivalenti sono stati eseguiti
+            - name: objective
+              prose: Garantire che i service provider multi-tenant supportino in modo efficace i propri clienti e assicurare che i test vengano eseguiti regolarmente
+      - id: "r11.5"
+        title: Network intrusions and unexpected file changes are detected and responded to
+        controls:
+          - id: "r_11.5.1"
+            title: Rilevamento e prevenzione delle intruzioni e delle comunicazioni malevole
+            parts:
+            - name: statement
+              prose: Implementare tecniche di intrusion detection o intrusion prevention per rilevare e prevenire intrusioni nella rete, per i service provider le tecniche devono anche controllare i canali di comunicazione malevoli o occulti
+            - name: assessment
+              prose: Esaminare configurazioni di rete, verificare che motori, baseline e firme sono aggiornate, per i service provider esaminare la documentazione e le configurazioni
+            - name: guidance
+              prose: Confrontare il traffico di rete con firme o comportamenti malevoli e generare allarmi, monitorare costantemente gli alert
+            - name: objective
+              prose: Garantire che siano implementati meccanismi di rilevamento e prenzione capaci di identificare e bloccare in tempo reale traffico sospetto o anomalo
+          - id: "r_11.5.2"
+            title: Meccanismi di rilevamento delle modifiche ai file critici
+            parts:
+            - name: statement
+              prose: Implementare un meccanismo di rilevamento delle modifiche per generare avvisi in caso di modifiche non autorizzate ed effettuare confronti dei file critici almeno una volta a settimana
+            - name: assessment
+              prose: Esaminare le configurazioni di sistema, verificare che il sistema sia configurato per coprire tutti i file critici, confrontare che le attività di confronto dei file vengano eseguite periodicamente
+            - name: guidance
+              prose: Individuare variazioni non previste che generano avvisi, i file critici sono quelli che non cambiano frequentemente
+            - name: objective
+              prose: Garantire che eventuali modifiche non autorizzate ai file critici vengano rilevate tempestivamente e segnalate, impedendo che alterazioni malevole compromettano la sicurezza dei dati dei titolari di carta
+      - id: "r11.6"
+        title: Unauthorized changes on payment pages are detected and responded to
+        controls:
+          - id: "r_11.6.1"
+            title: Meccanismo di rilevamento modifiche e manomissioni su pagine di pagamento web
+            parts:
+            - name: statement
+              prose: Implementare un meccanismo di rilevamento e manomissione per avvisare il personale di eventuali modifiche non autorizzate, valutare periodicamente gli header HTTP, eseguire verifiche periodiche
+            - name: assessment
+              prose: Esaminare le impostazioni del sistema e le pagine di pagamento, verificare che il meccanismo sia configurato, confermare che il meccanismo funzioni con la frequenza richiesta
+            - name: guidance
+              prose: Il punto di rilevamento più affidabile è nel borwser del consumatore dove gli script vengono ricevuti e interpretati
+            - name: objective
+              prose: Impedire che codice skimming o tecniche analoghe vengano aggiunte alle pagine di pagamento senza generare un avviso tempestivo, garantire che eventuali misure anti-skimming non possano essere rimosse o disattivate
+  - id: Requisito-12
+    title: Support Information Security with Organizational Policies and Programs
+    groups:
+      - id: "r12.1"
+        title: A comprehensive information security policy that governs and provides direction for protection of the entity’s information assets is known and current
+        controls:
+          - id: "r_12.1.1"
+            title: Politica di sicurezza informativa generale
+            parts:
+            - name: statement
+              prose: Stabilire, pubblicare, mantenere e diffondere a tutto il personale, fornitori e partner commerciali una politica generale informativa che definisce gli obiettivi e le direttive generali riguardo la protezione dei dati dei titolari di carta
+            - name: assessment
+              prose: Esaminare la politica di sicurezza informativa generale, verificare che personale fornitori e partner commerciali ne siano a conoscenza, verificare che la potica abbia uno scopo, definisca dei ruoli e delle disponibilità
+            - name: guidance
+              prose: Assicurare che la politica sia periodicamente aggiornata per riflettere i cambiamentei organizzativi, tecnologici e che venga effettivamente comunicata a tutte le parti interessate
+            - name: objective
+              prose: Definire tutti gli obiettivi strategici e i principi di sicurezza informativa adottati dalla direzione e conosciuti da tutto il personale, garantendo che le informazioni critiche siano protette
+          - id: "r_12.1.2"
+            title: Revisione e aggiornamento della policy di sicurezza informativa
+            parts:
+            - name: statement
+              prose: Riesaminare almeno una volta ogni 12 mesi e aggiornare la politica di sicurezza informativa
+            - name: assessment
+              prose: Esaminare la politica di sicurezza per verificare la presenza di revisioni annuali e confermare che le modifiche e gli aggiornamenti siano stati effettuati quando necessario
+            - name: guidance
+              prose: Documentare le revisioni includendo le motivazioni e le approvazioni delle modifiche, aggiornare tempestivamente
+            - name: objective
+              prose: La politica di sicurezza informativa deve riflettere gli obiettivi e i principi dell'organizzazione assicurando che nuove minacce e cambiamenti siano considerati e gestiti in modo appriopriato
+          - id: "r_12.1.3"
+            title: Ruoli e responsabilità
+            parts:
+            - name: statement
+              prose: Definire chiaramente i ruoli e le responsabilità e assicurarsi che tutto il personale sia a conoscenza dei propri compiti
+            - name: assessment
+              prose: Esaminare la politica di sicurezza informativa, confermare che il personale abbia compreso il proprio ruolo e responsabilità
+            - name: guidance
+              prose: Periodiche sessioni di aggiornamento per formare il personale
+            - name: objective
+              prose: Assicurarsi che tutto il personale abbia compreso il proprio ruolo nella protezione dei dati dei titolari di carta
+          - id: "r_12.1.4"
+            title: Assegnazione della responsabilità della sicurezza informativa
+            parts:
+            - name: statement
+              prose: Assegnare le responsabilità della sicurezza informativa a un Chief Information Security Officer
+            - name: assessment
+              prose: Esaminare la politica di sicurezza informativa per confermare che la responsabilità sia attribuita a una persona competente
+            - name: guidance
+              prose: Dimostrare la competenza tramite esperienza, formazioni o certificazioni riconosciute
+            - name: objective
+              prose: Un membro competente deve essere designato della responsabilità della gestione e mantenimento del programma di sicurezza informatica
+      - id: "r12.2"
+        title: Acceptable use policies for end-user technologies are defined and implemented
+        controls:
+          - id: "r_12.2.1"
+            title: Politiche di utilizzo accettabile per le tecnologie degli utenti finali
+            parts:
+            - name: statement
+              prose: Documentare e implentare le politiche di utilizzo accettabile per le tecnologie degli utenti finali sono documentate
+            - name: assessment
+              prose: Esaminare le politiche di utilizzo accettabile e verificare che i processi siano documentati e implementati in conformità con tutti gli elementi richiesti
+            - name: guidance
+              prose:  Policy semplici e chiare, devono fornire contesto e istruzioni sui comportamenti corretti
+            - name: objective
+              prose: Definire e gestire l'uso delle tecnologie degli utenti finali per garantire un uso autorizzato e conforme alle policy aziendali
+      - id: "r12.3"
+        title: Risks to the cardholder data environment are formally identified, evaluated, and managed
+        controls:
+          - id: "r_12.3.1"
+            title: Analisi del rischio mirata per la frequenza dei controlli PCI DSS
+            parts:
+            - name: statement
+              prose: Eseguire un'analisi del rischio mirata e documentata tra cui identificazione degli asset protetti, delle minacce, dei fattori che contribuiscono alla probabilità del verificarsi della minaccia, risulatato dell'analisi, revisione dell'analisi
+            - name: assessment
+              prose: Esaminare le policy e procedure documentate
+            - name: guidance
+              prose: Integrare analisi mirate con valutazioni di rischio ampie per identificare minacce emergenti e vulnerabilità potenziali
+            - name: objective
+              prose: Mantenere aggiornata e applicare la conoscenza dei rischi per determinare la frequenza dei controlli
+          - id: "r_12.3.2"
+            title: Analisi del rischio mirata per requisiti PCI DSS gestiti con approccio personalizzato
+            parts:
+            - name: statement
+              prose: Eseguire un'analisi del rischio per ogni requisito con documentazione dettaglaita, approvazione ed esecuzione
+            - name: assessment
+              prose: Esaminare la documentazione dell'analisi per ciascun requisito'
+            - name: guidance
+              prose: Documentare estesamente i controlli implementati
+            - name: objective
+              prose: Eseguire l'analisi del rischio seguendo una metodologia ripetibile in modo da assicurare che i controlli soddisfino la sicurezza del requisito
+          - id: "r_12.3.3"
+            title: Gestione e revisione dei protocolli e delle crittografie
+            parts:
+            - name: statement
+              prose: Documentare e revisionare almeno una volta ogni 12 mesi i protocolli crittografici
+            - name: assessment
+              prose: Esaminare la documentazione dei protocolli crittografici in uso
+            - name: guidance
+              prose: Mantenere un inventario aggiornato dei protocolli, monitorare attivamente e documentare un piano per rispondere a modifiche anticipate
+            - name: objective
+              prose: Rispondere rapidamente a qualsiasi vulnerabilità rilevata in protocolli o algoritmi crittografici se tali vulnerabilità possano compromettere la protezione dei dati dei titolari di carta
+          - id: "r_12.3.4"
+            title: Revisione di hardware e software in uso
+            parts:
+            - name: statement
+              prose: Revisione almeno una volta ogni 12 mesi l'hardware e il software in uso
+            - name: assessment
+              prose: Esaminare la documentazione relativa alla revisione di hardware e software
+            - name: guidance
+              prose: La revisione periodica aiuta a garantire che le tecnologie usate continuino a supportare i controlli
+            - name: objective
+              prose: Aggiornare e supportare le tecnologie hardware e software
+      - id: "r12.4"
+        title: PCI DSS compliance is managed
+        controls:
+          - id: "r_12.4.1"
+            title: Assegnazione di responsabilità esecutiva per la conformità PCI-DSS
+            parts:
+            - name: statement
+              prose: La direzione esecutiva deve stabilire le responsabilità per la protezione dei dati dei titolari di carta e per un programma di conformità PCI DSS
+            - name: assessment
+              prose: Esaminare la documentazione
+            - name: guidance
+              prose: Documentare la responsabilità complessiva per mantenere la conformità PCI-DSS
+            - name: objective
+              prose: I dirigenti sono responsabili e responsabili della sicurezza dei dati dei titolari di carta
+          - id: "r_12.4.2"
+            title: Verifica periodica dell'efficacia operativa dei controlli
+            parts:
+            - name: statement
+              prose: Effettuare revisioni periodiche almeno una volta ogni tre mesi per confermare che il personale esegua i propri compiti
+            - name: assessment
+              prose: Esaminare le politiche e le procedure per verificare che siano definiti i processi per condurre le revisioni
+            - name: guidance
+              prose: Le revisione devono essere documentate e includere i risultati, le azioni di rimedio
+            - name: objective
+              prose: Verificare periodicamente l'efficacia operativa dei controlli critici, i risultati sono valutati dalla direzione
+      - id: "r12.5"
+        title: PCI DSS scope is documented and validated
+        controls:
+          - id: "r_12.5.1"
+            title: Inventario dei componenti di sistema
+            parts:
+            - name: statement
+              prose: Mantenere un inventario aggiornato per permettere all'organizzazione di definire correttamente l'ambiente e implementare i requisiti PCI-DSS
+            - name: assessment
+              prose: Esaminare l'inventario per verificare che includa tutti i componenti di sistema e una descrizione della funzione di ciascuno
+            - name: guidance
+              prose: Identificare chiaramenti i componenti, includere immagini che possono essere istanziati, assegnare un responsabile dell'inventario
+            - name: objective
+              prose: Identificare e conoscere tutti i componenti di sistema
+          - id: "r_12.5.2"
+            title: Tutti i componenti e le connessioni nell'ambito sono identificati e protetti
+            parts:
+            - name: statement
+              prose: Documentare e confermare almeno una volta ogni 12 mesi e dopo ogni cambiamento significativo l'inventario dei componenti
+            - name: assessment
+              prose: Esaminare la documentazione
+            - name: guidance
+              prose: Valutare criticamente il CDE e tutti i componenti connessi, documentare le posizioni dei dati, usare strumenti e metodologie per identificare i componenti
+            - name: objective
+              prose: Verificare continuamente con analisi complete la correttezza dell'inventario
+          - id: "r_12.5.3"
+            title: Verifica dell'impatto dei cambiamenti organizzativi e l'applicabilità dei controlli
+            parts:
+            - name: statement
+              prose: Per i service provider, comunicare i risultati delle revisioni al management esecutivo 
+            - name: assessment
+              prose: Esaminare le politche e procedure per verificare che siano definiti processi che assicurino che ogni cambiamento significativo nella struttura organizzativa comporti una revisione documentata e la documentazione
+            - name: guidance
+              prose: Ogni cambiamento significativo nella struttura organizzativa deve comportare una revisione documentata dell'impatto sull'applicabilità dei controlli
+            - name: objective
+              prose: Confermare e aggiornare l'ambito PCI DSS dopo ogni cambiamento significativo nella struttura organizzativa, assicurando che tutti i controlli richiesti siano attivi e applicabili.
+      - id: "r12.6"
+        title: Security awareness education is an ongoing activity
+        controls:
+          - id: "r_12.6.1"
+            title: Le organizzazioni devono implementare un programma per garantire che tutto il personale conosca le politiche e le procedure di sicurezza delle informazioni e comprenda il proprio ruolo nella protezine dei dati
+            parts:
+            - name: statement
+              prose: Implementare un programma per rendere il personale consapevole delle politiche e procedure di sicurezza e del proprio ruolo nella protezione dei dati di titolari di carta
+            - name: assessment
+              prose: Esaminare il programma
+            - name: guidance
+              prose: Formare il personale
+            - name: objective
+              prose: Assicurarsi che il personale conosca le possibili minacce e le proprie responsabilità
+          - id: "r_12.6.2"
+            title: Il programma di consapevolezza deve essere rivisto e aggiornato regolarmente per riflettere i cambiamenti delle minacce e delle vulnerabilità
+            parts:
+            - name: statement
+              prose: Revisionare ogni 12 mesi e aggiornare in caso di necessità il programma di consapevolezza della sicurezza
+            - name: assessment
+              prose: Esaminare i contenuti del programma, le revisioni e confrontarsi con il personale per verificare che il programma sia conforme a tutti gli elementi specificati
+            - name: guidance
+              prose: Il materiale deve essere aggiornato per garantire che il personale non riceva informazioni obsolete
+            - name: objective
+              prose: Assicurarsi che il materiale del programma di consapevolezza della sicurezza sia aggiornato con le nuove minacce e vulnerabilità
+          - id: "r_12.6.3"
+            title: Tutto il personale deve ricevere formazione sulla sicurezza delle informazioni con aggiornamenti periodici usando diversi modi di comunicazione e il personale deve dimostrare di aver compreso le politiche e le procedure almeno una volta l'anno
+            parts:
+            - name: statement
+              prose: Comunicare ogni 12 mesi al personale le informazioni sulla consapevolezza della sicurezza usando più metodi di comunicazione
+            - name: assessment
+              prose: Esaminare i registri del programma di consapevolezza per verificare che il personale abbia partecipato alla formazione, esaminare il materiale, verificare che il personale abbia completato la formazione
+            - name: guidance
+              prose: Aggiornamenti periodici, simulazioni di attacchi, formazione online, incontri in presenza
+            - name: objective
+              prose: Il personale deve sempre essere consapevole delle minacce e delle vulnerabilità, conoscere le proprie responsabilità e comprendere le proprie difficoltà
+      - id: "r12.7"
+        title: Personnel are screened to reduce risks from insider threats
+        controls:
+          - id: "r_12.7.1"
+            title: Personale che avrà accesso al CDE deve essere sottoposto a controlli prima dell'assunzione per ridurre il rischio di minacce interne
+            parts:
+            - name: statement
+              prose: Ridurrre il rischio di minacce interne sottoponendo a controlli il personale che avrà accesso al CDE prima dell'assunzione
+            - name: assessment
+              prose: Assicurarsi che il personale delle Risorse Umane (responsabile delle assunzioni) verifichi i controlli prima dell'assunzione
+            - name: guidance
+              prose: I controlli devono essere proporzionati al ruolo e al livello richiesto anche per personale già assunto per un altro ruolo , controlli come verifica del precedente lavoro, fedina penale, referenze,
+            - name: objective
+              prose: Gestire in modo appropriato il rischio legato all'accesso al CDE da parte di nuovo personale
+      - id: "r12.8"
+        title: Risk to information assets associated with third-party service provider (TPSP) relationships is managed
+        controls:
+          - id: "r_12.8.1"
+            title: Elenco di tutti i fornitori di servizi terzi con i quali i dati dei titolari di carta sono condivisi
+            parts:
+            - name: statement
+              prose: Mantenere un elenco di tutti i fornitori di servizi terzi con cui i dati dei titolari di carta sono condivisi
+            - name: assessment
+              prose: Esaminare le politiche e le procedure per verificare che siano definiti i processi per mantenere l'elenco, esaminare la documentazione
+            - name: guidance
+              prose: "Esempi di TPSP: gateway di pagamento, processori di pagamento, fornitori di servizi di sicurezza come antivirus, call center, fornitori cloud"
+            - name: objective
+              prose: Identificare potenziali rischi esterni e definire la superficie di attacco estesa dell'organizzazione
+          - id: "r_12.8.2"
+            title: Gli accordi con i fornitori di servizi terzi che gestiscono dati dei titolari di carta o che possono influire sulla sicurezza devono essere per iscritto
+            parts:
+            - name: statement
+              prose: Mantenere per iscritto gli accordi con tutti i TPSP 
+            - name: assessment
+              prose: Esaminare politiche e procedure per verificare che siano definiti i processi per mantenere gli accordi scritti con tutti i TPSP
+            - name: guidance
+              prose: Includere negli accordi anche il supporto per richieste di informazioni, considerare eventuali fornitori secondari
+            - name: objective
+              prose: Mantenere registri di accordi scritti per ciascun TPSP per mantenere traccia delle responsabilità per la protezione dei dati dei titolari di carta
+          - id: "r_12.8.3"
+            title: Processo per l'ingaggio di fornitori di servizi terzi 
+            parts:
+            - name: statement
+              prose: Implementare un processo per l'ingaggio dei TPSP
+            - name: assessment
+              prose: Esaminare politiche e procedure per verificare che siano definiti processi per l'ingaggio dei TPSP, esaminare la documentazione
+            - name: guidance
+              prose: Valutazione pratiche di reporting, procedure di notifiche di violazioni e risposta agli incidenti, assegnazione delle responsabilità
+            - name: objective
+              prose: Assicurarsi che la capacità, l'intento e le risorse del TPSP siano adeguate a proteggere i dati dei titolari di carta prima di instaurare un rapporto formale con il fornitore
+          - id: "r_12.8.4"
+            title: L'organizzazione deve implementare un programma per monitorare periodicamente lo stato di confermità al PCI-DSS di tutti i TPSP
+            parts:
+            - name: statement
+              prose: Implementare un programma per monitorare lo stato di conformità al PCI-DSS dei TPSP almeno ogni 12 mesi
+            - name: assessment
+              prose: Esaminare politiche e procedure per verificare che siano definiti processi per monitorare lo stato di conformità
+            - name: guidance
+              prose: Se un TPSP ha un attestato di conformità dovrebbe fornirlo ai clienti su richiesta
+            - name: objective
+              prose: Verificare periodicamente lo stato di conformità al PCI-DSS dei TPSP
+          - id: "r_12.8.5"
+            title: L'organizzazione deve mantenere informazioni chiari su quali requisiti del PCI-DSS sono gestiti dai TPSP e quali dall'organizzazione stessa
+            parts:
+            - name: statement
+              prose: Mantenere informazioni su quali requisiti del PCI-DSS sono gestiti da chi (TPSP o organizzazione)
+            - name: assessment
+              prose: Esaminare politiche e procedure per verificare che siano definiti processi per mantenere informazioni
+            - name: guidance
+              prose: Documentare le responsabilità dell'organizzazione e dei TPSP
+            - name: objective
+              prose: Mantenere e riesaminare periodicamente i record dettagliati dei requisiti del PCI-DSS e dei componenti di sistema per i quali ciascun TPSP è responsabile in modo esclusivo o congiunto
+      - id: "r12.9"
+        title: Third-party service providers (TPSPs) support their customers’ PCI DSS compliance
+        controls:
+          - id: "r_12.9.1"
+            title: I TPSP devono fornire ai clienti un accordo scritto che include l'impegno a garantire la sicurezza dei dati dei titolari di carta che il TPSP possiede, memorizza o trasmette
+            parts:
+            - name: statement
+              prose: Fornire ai clienti accordi scritti che includono quali responsabilità abbia i TPSP rispetto ai dati dei titolari di carta
+            - name: assessment
+              prose: Esaminare politiche, procedure e modelli usati dai TPSP per gli accordi scritti
+            - name: guidance
+              prose: Il linguaggio dell'accordo dipende dal servizio fornito e dalle responsabilità assegnate, gli accordi devono confermare formalmente che il TPSP è responsabile della sicurezza dei dati dei titolari di carta trattati
+            - name: objective
+              prose: I TPSP confermano formalmente ai clienti le proprie responsabilità di sicurezza assicurando chiarezza e tracciabilità degli obblighi relativiai dati dei titolari di carta
+          - id: "r_12.9.2"
+            title: I TPSP forniscano ai loro clienti tutte le informazioni necessarie per consentire loro di soddisfare i requisiti di sicurezza e conformità PCI DSS
+            parts:
+            - name: statement
+              prose: Fornire su richiesta dei clienti informazioni sullo stato di conformità PCI-DSS e dettagli su quali requisiti del PCI-DSS siano responsabilità del TPSP
+            - name: assessment
+              prose: Esaminare politiche e procedure per verificare che siano definiti processi tramite cui i TPSP supportano le richieste
+            - name: guidance
+              prose: I TPSP devono fornire prove sufficienti per confermare la loro conformità
+            - name: objective
+              prose: Assicurare che i clienti possano proteggere i dati dei titolari di carta e adempiere ai propri obblighi contrattuali
+      - id: "r12.10"
+        title:  Suspected and confirmed security incidents that could impact the CDE are responded to immediately
+        controls:
+          - id: "r_12.10.1"
+            title: L'organizzazione deve disporre di un piano di risposta agli incidenti completo e pronto per essere attivato in caso di sospetto o confermato incidente di sicurezza
+            parts:
+            - name: statement
+              prose: Deve esistere un piano di risposta agli incidenti pronto per essere attivato in caso di sospetto o confermato incidente di sicurezza
+            - name: assessment
+              prose: Esaminare il piano di risposta agli incidenti
+            - name: guidance
+              prose: Il piano deve essere aggiornato con le informazioni di contatto correnti di tutti i soggetti coinvolti nella risposta agli incidenti e includere le parti interessate rilevanti, come legali, comunicazioni, clienti, istituti finanziari e partner commerciali, il piano dovrebbe affrontare tutti i compromessi di dati all'interno del CDE, compresi dati dei titolari di carta, chiavi di crittografia wireless e chiavi di crittografia per trasmissione e archiviazione
+            - name: objective
+              prose: Mantenere un piano di risposta agli incidenti completo che soddisfi le aspettative dei brand di pagamento e consenta all'organizzazione di reagire rapidamente ed efficacemente a qualsiasi incidente di sicurezza
+          - id: "r_12.10.2"
+            title: Il piano di risposta agli incidenti di sicurezza deve essere periodicamente rivisto e testato
+            parts:
+            - name: statement
+              prose: Rivedere ogni 12 mesi e aggiornare se necessario il piano di risposta agli incidenti di sicurezza e testarlo
+            - name: assessment
+              prose: Intervistare il personale e rivedere la documentazione per verificare che, almeno una volta all’anno, il piano di risposta agli incidenti sia stato rivisto, aggiornato se necessario e testato
+            - name: guidance
+              prose: I test possono includere esercitazioni simulate coinvolgendo il personale rilevante per esaminare la qualità della risposta e confermare che tutti gli elementi necessari siano inclusi nel piano
+            - name: objective
+              prose: Mantenere il piano di risposta agli incidenti aggiornato e verificare periodicamente la sua efficacia tramite test pratici
+          - id: "r_12.10.3"
+            title: Devono essere designati specifici membri del personale, disponibili 24 ore su 24 e 7 giorni su 7, per rispondere tempestivamente a eventuali incidenti di sicurezza sospetti o confermati
+            parts:
+            - name: statement
+              prose: Designare specifici membri del personale per essere disponibili 24 ore su 24, 7 giorni su 7, al fine di rispondere a incidenti di sicurezza sospetti o confermati
+            - name: assessment
+              prose: "Esaminare la documentazione e intervistare il personale responsabile per verificare che siano stati designati membri del personale disponibili 24/7 per la gestione degli incidenti di sicurezza, conformemente al piano di risposta agli incidenti dell’organizzazione"
+            - name: guidance
+              prose: È consigliabile che l’organizzazione istituisca un team di risposta agli incidenti con ruoli chiaramente definiti
+            - name: objective
+              prose: Garantire che incidenti di sicurezza sospetti o confermati ricevano una risposta immediata grazie alla disponibilità continua di personale qualificato
+          - id: "r_12.10.4"
+            title: Il personale responsabile della gestione degli incidenti deve essere adeguatamente formato in base a un'analisi dei rischi mirata
+            parts:
+            - name: statement
+              prose: Formare adeguatamente e periodicamente il personale responsabile della gestione degli incidenti sulle proprie responsabilità
+            - name: assessment
+              prose: Esaminare la documentazione e verificare che la formazione sia appropriata rispetto ai ruoli e condotta periodicamente
+            - name: guidance
+              prose: È essenziale che tutto il personale coinvolto nella risposta agli incidenti sia addestrato a gestire correttamente le situazioni di crisi, l'organizzazione dovrebbe mantenere un programma di formazione continua, è buona prassi documentare le sessioni di addestramento
+            - name: objective
+              prose: Garantire che il personale incaricato della risposta agli incidenti disponga delle competenze aggiornate e della preparazione necessaria per gestire in modo efficace eventi di sicurezza
+          - id: "r_12.10.5"
+            title: Il piano di risposta agli incidenti deve includere procedure per il monitoraggio e la gestione degli allarmi generati dai sistemi di sicurezza
+            parts:
+            - name: statement
+              prose: Includere processi per il monitoraggio e la risposta agli avvisi nel piano di risposta agli incidenti di sicurezza
+            - name: assessment
+              prose: Esaminare la documentazione del piano di risposta agli incidenti e osservare i processi operativi per verificare che siano incluse procedure specifiche, gli alert vengano analizzati, classificati e gestiti, siano definiti ruoli e responsabilità
+            - name: guidance
+              prose: Sistemi come intrusion detection e prevention, controlli di sicurezza di rete e meccanismi di rilevamento delle modifiche
+            - name: objective
+              prose: Garantire che tutti gli avvisi generati dai sistemi di rilevamento e monitoraggio della sicurezza siano gestiti in modo strutturato, documentato e tempestivo, riducendo il rischio di violazioni dei dati e migliorando la capacità di risposta dell’organizzazione agli incidenti di sicurezza
+          - id: "r_12.10.6"
+            title: Il piano di risposta agli incidenti deve essere aggiornato ed evoluto in base alle lezioni apprese dagli incidenti effettivamente gestiti e ai cambiamenti del contesto di sicurezza
+            parts:
+            - name: statement
+              prose: Aggiornare e migliorare sulla base delle lezioni apprese da ogni incidente e dalla evoluzioni delle minacce il piano di risposta agli incidenti di sicurezza
+            - name: assessment
+              prose: Verificare, tramite l’esame delle politiche e delle procedure, che esistano processi formalizzati per aggiornare ed evolvere il piano di risposta agli incidenti in base ai risultati delle analisi e agli aggiornamenti delle nuove minacce, confermare che le modifiche siano stato implementate e documentate
+            - name: guidance
+              prose: Dopo ogni incidente o test significativo, l’organizzazione deve eseguire una sessione di “post-incident review” per valutare l’efficacia del piano e individuare miglioramenti necessari, è raccomandato documentare i risultati delle lezioni apprese, le modifiche apportate e i motivi delle decisioni prese, confrontare periodicamente il piano con gli standard del settore
+            - name: objective
+              prose: Garantire che il piano rimanga efficace, attuale e coerente con le minacce emergenti e le migliori pratiche del settore. Integrare sistematicamente l’esperienza maturata consente di migliorare i tempi di risposta, la coordinazione tra i team e la capacità dell’organizzazione di prevenire o mitigare futuri incidenti simili
+          - id: "r_12.10.7"
+            title: L'organizzazione deve disporre di procedure documentate di risposta agli incidenti da attivare immediatamente nel caso in cui vengano rilevati dati di carta primaria (PAN) memorizzati in aree non previste
+            parts:
+            - name: statement
+              prose: Devono esistere e essere mantenute procedure di risposta agli incidenti da attivare nel caso in cui venga rilevato un PAN memorizzato in un’area non prevista
+            - name: assessment
+              prose: Verificare, attraverso l’esame delle procedure documentate, che siano previste istruzioni chiare e formalizzate per la gestione di casi di individuazione di PAN al di fuori del CDE
+            - name: guidance
+              prose: Attivare un processo strutturato che comprenda l’analisi forense dei dati trovati, la loro eliminazione sicura e la revisione delle cause operative o tecniche che hanno generato la dispersione, è consigliabile prevedere un’analisi dettagliata delle cause radice che consideri fattori come errori di configurazione, processi aziendali errati, cattive pratiche utente o carenze di controllo
+            - name: objective
+              prose: Garantire una gestione tempestiva e strutturata di tali eventi, riducendo il rischio di esposizione dei dati, identificando le cause alla radice e implementando misure correttive per evitare il ripetersi del problema

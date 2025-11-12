@@ -1,0 +1,829 @@
+---
+catalog:
+  uuid: 8ca8ccfd-c09d-46b6-9050-d8b5476c835d
+  metadata:
+    title: "Catalogo ETSI EN 303 645 v3.1.3"
+    last-modified: "2025-10-25T14:30:00+02:00"
+    version: "2.0"
+    oscal-version: "1.1.3"
+    remarks: "Fonte dello standard: https://www.etsi.org/deliver/etsi_en/303600_303699/303645/03.01.03_60/en_303645v030103p.pdf"
+        # link al pdf ufficiale dello standard
+  groups:
+  - id: "A_Cybersecurity_Provision"
+    title: Insieme di requisiti di sicurezza per dispositivi IoT consumer, volti a garantire protezione contro vulnerabilità, aggiornamenti sicuri, auteticazione robusta e resilienza operativa
+    groups:
+      - id: "Requisito_1"
+        title: No universal defualt password
+        controls:
+          - id: "r1.1"
+            title: Dove veongono usate password per autenticare utenti o dispositivi, queste devono essere uniche per dispositivo o configurate dall'utente
+            parts:
+            - name: statement
+              prose: Le password devono essere uniche per dispositivo o definite dall'utente
+            - name: assessment
+              prose: Verificare che ogni dispsitivo abbia credenziali unicho o che l'utente le abbia definite in fase di inizializzazione
+            - name: guidance
+              prose:  Usare meccanismi di generazione sicura delle password e permettere la modifica da parte dell'utente, è consigliato l'uso dell'autenticazione a più fattori
+            - name: objective
+              prose: Evitare uso di credenziali comuni che possono essere facilmente sfruttate dagli attaccanti
+          - id: "r1.2"
+            title: Le password preinstallare devono essere generate in modo sicuro e non dovrebbero essere usate per l'autenticazione macchina-macchina
+            parts:
+            - name: statement
+              prose: Randomizzare e rendere difficilmente indovinabili le password preinstallate uniche per ogni dispositivo, l'autenticazione tra dispositivi devono basarsi su meccanismi robusti
+            - name: assessment
+              prose:  Verificare che le password non seguino schemi prevedibili e che l'autenticazione non usi credenziali deboli
+            - name: guidance
+              prose:  Usare generatori crittografici sicuri e implementare meccanismi basati su chiavi o certificati evitando l'uso di password memorizzabili
+            - name: objective
+              prose: Ridurre il rischio di attacchi automatizzati contro dispositivi della stessa classe e garantire che l'autenticazione macchina-macchina sia sicura
+          - id: "r1.3"
+            title: I meccanismi di autenticazione usati per autenticare utenti o dispositivi devono usare crittografia conforme alle best practice tenendo conto della tecnologia, del contesto operativo, del rischio e dell'uso previsto
+            parts:
+            - name: statement
+              prose: Usare algoritmi di crittografia robusti e aggiornati in linea con le best practice del settore per i meccanismi di autenticazione di utenti e per comunicazioni macchina-macchina
+            - name: assessment
+              prose:  Verificare che gli algoritmi crittografici usati siano appropriati rispetto al rischio
+            - name: guidance
+              prose:  Evitare uso di metodi obsoleti o vulnerabili usando librerie affidabili e aggiornate, valutate e certificate
+            - name: objective
+              prose: Garantire che l'autenticazione sia sicura e resistene ad attacchi
+          - id: "r1.4"
+            title: Il dispositivo deve offrire un meccanismo semplice per modificare il valore di autenticazione (password, PIN, dati biometrici)
+            parts:
+            - name: statement
+              prose: Permettere all'utente o all'amministratore di modificare facilmente il valore dell'autenticazione (password, PIN, dati biometrici)
+            - name: assessment
+              prose:  Verificare che il processo di modifica sia accessibile, documentato e semplice
+            - name: guidance
+              prose:  Implementare interfacce intuitive, fornire instruzioni chiare o tutorial
+            - name: objective
+              prose: Permettere agli utenti di mantenere il controllo delle proprie credenziali e migliorare la sicurezza
+          - id: "r1.5"
+            title: Il dispositivo deve disporre di un meccanismo per rendere impraticabili attacchi di forza bruta con interfacce di rete
+            parts:
+            - name: statement
+              prose: Implementare nel dispositivo meccanismi che non rendano praticabili attacchi di forza bruta sulle credenziali di autenticazione con interfacce di rete ad eccezione di vincoli tecnici legati al caso d'uso'
+            - name: assessment
+              prose:  Verificare la presenza di limitazioni sul numero di tentativi di accesso, ritardi tra i tentativi o blocchi temporanei
+            - name: guidance
+              prose: Implementare misure di protezione contro attacchi automatizzati, limitare il numero di tentativi falliti prima di bloccare temporaneamente l'account, in caso di vincoli documentare le motivazioni e valutare soluzioni alternative
+            - name: objective
+              prose: Proteggere il dispositivo da tentativi automatizzati di accesso non autorizzato
+      - id: "Requisito_2"
+        title: Implements a means to manage reports of vulnerabilities
+        controls:
+          - id: "r2.1"
+            title: Il produttore deve rendere disponibile una policy per la divulgazione delle vulnerabilità, con le informazioni per essere contattato e tempestica di risposta
+            parts:
+            - name: statement
+              prose: Pubblicare una policy per la segnalazione dele vulnerabilità con le informazioni per contattare il produttore per fare una segnalazione, i tempi di risposta alle segnalazioni e per fornire aggiornament
+            - name: assessment
+              prose: Verificare che la policy sia pubblica, aggiornata e con le informazioni necessarie
+            - name: guidance
+              prose: "Seguire le linee guida riconosciute come gli standard ISO/IEC 29147 e ETSI TR 103 838"
+            - name: objective
+              prose: Facilitare la comunicazione tra ricercatori di sicurezza e produttori, promuovendo trasaprenza e reattività alla gestione delle vulnerabilità
+          - id: "r2.2"
+            title: Le vulnerabilità segnalate devono essere gestite in modo tempestivo, idealmente entro 90 giorni se si tratta del software
+            parts:
+            - name: statement
+              prose: Affrontare in tempi ragionevoli considerando la gravità del problema le vulnerabilità segnalate
+            - name: assessment
+              prose: Verificare che il processo di gestione delle vulnerabilità sia documentato, la risoluzione di problemi legati al software dovrebbe essere eseguita entro 90 giorni idealmente
+            - name: guidance
+              prose: Tracciamento interno e comunicazione esterna, priorità basate sul rischio, per vulnerabilità hardware pianificare aggiornamenti compatibili con il ciclo di vita del prodotto
+            - name: objective
+              prose: Ridurre il tempo di esposizione a rischi noti garantendo una risposta efficace e tempestiva
+          - id: "r2.3"
+            title: Le vulnerabilità nei prodotti e nei servizi associati devono essere monitorate, identificare e corrette continuamente dai produttori durante il periodo di supporto
+            parts:
+            - name: statement
+              prose: Monitorare, identificare, correggere le vulnerabilità che riguardano i dispositivi e i servizi associati intervenendo tempestivamente
+            - name: assessment
+              prose: Verificare che il produttore mantenga un inventario aggiornato dei componenti, inclusi quelli di terze parti e che usi strumenti per il monitoraggio delle vulnerabilità
+            - name: guidance
+              prose: Adottare processi automatizzati per la scansione del codice e dei binari, mantenere la lista dei componenti e delle versioni usate
+            - name: objective
+              prose: Ridurre il rischio di esposizione prolungata a vulnerabilità note e mantenere un livello di sicurezza adeguato per tutta la durata del supporto
+      - id: "Requisito_3"
+        title: Keep software update
+        controls:
+          - id: "r3.1"
+            title: Tutti i componenti software che non sono immutabili per motivi di sicurezza dovrebbero essere aggiornabili in modo sicuro
+            parts:
+            - name: statement
+              prose: Aggiornare in modo sicuro i componenti software del dispositivo IoT salvo vincoli tecnici giustificati
+            - name: assessment
+              prose: Verificare che i componenti software non immutabili siano aggiornabili e che il meccanismo di aggiornamento sia sicuro
+            - name: guidance
+              prose: Implementare i meccanismi di aggiornamento che garantiscano autenticità e intergrità come la verifica crittografica e i canali protetti
+            - name: objective
+              prose: Ridurre il rischio di vulnerabilità persistenti mantenendo il software aggiornato e sicuro
+          - id: "r3.2"
+            title: Il dispositivo deve disporre di un meccanismo sicuro di aggiornamento software, salvo vincoli tecnici giustificati
+            parts:
+            - name: statement
+              prose: Implementare un meccanismo sicuro per l'aggiornamento del software
+            - name: assessment
+              prose: Verificare la presenza di un meccanismo di aggiornamento sicuro e documentare eventuali vincoli che ne impediscono l'implementazione
+            - name: guidance
+              prose: Usare i canali autenticati, firme digitali e politiche per proteggere il processo di aggiornamento
+            - name: objective
+              prose: Prevenire l'installazione di software malevolo e garantire la sicurezza del dispositivo nel tempo
+          - id: "r3.3"
+            title: L'aggiornamento deve essere semplice da applicare per l'utente
+            parts:
+            - name: statement
+              prose: Progettare il progetto di aggiornamento in modo tale che sia semplice e accessibile all'utente
+            - name: assessment
+              prose: Verificare che l'utente possa applicare gli aggiornamenti con pochi passaggi e senza competenze avanzate
+            - name: guidance
+              prose: Integrare aggiornamenti automatici, interfacce intuitive e notifiche chiare per facilitare l'applicazione
+            - name: objective
+              prose: Aumentare la probabilità che gli utenti mantengono il dispositivo aggiornato e sicuro
+          - id: "r3.4"
+            title: Il meccanismo di aggiornamento sicuro dovrebbe essere configurabile per essere automatico
+            parts:
+            - name: statement
+              prose: Permettere la configurazione di aggiornamenti automatici, previa autorizzazioen dell'utente
+            - name: assessment
+              prose: Verificare che l'utente possa abilitare o disabilitare gli aggiornamenti e che il meccanismo sia sicuro
+            - name: guidance
+              prose: Offire opzioni per aggiornamenti automatici
+            - name: objective
+              prose: Garantire aggiornamenti tempestivi riducendo l'intervendo manuale e migliorando la sicurezza complessiva
+          - id: "r3.5"
+            title: Il dispositivo o un servizio associato dovrebbe verificare la disponibilità di aggiornamenti di sicurezza dopo l'inizializzazione
+            parts:
+            - name: statement
+              prose: Il dispositivo o un servizio associato deve controllare se sono disponibili aggiornamenti di sicurezza dopo l'inizializzazione
+            - name: assessment
+              prose: Verificare che esista un meccanismo automatico o manuale per il controllo degli aggiornamenti dopo l'avvio
+            - name: guidance
+              prose: Integrare controlli periodici o notifiche che informano l'utente della disponibilità di aggiornamenti
+            - name: objective
+              prose: Garantire che il dispositivo rimanga aggiornato e protetto
+          - id: "r3.6"
+            title: "L'utente dovrebbe poter abilitare/disabilitare gli aggiornamenti automatici e posticipare l'installazione"
+            parts:
+            - name: statement
+              prose: Permettere all'utente di gestire gli aggiornamenti automatici inclusa la possibilità di posticiparli
+            - name: assessment
+              prose: Verificare che l'utente possa configurare le preferenza di aggiornamento automatico e che siano documentate
+            - name: guidance
+              prose: Offirire opzioni chiare nell'interfaccia utente per la gestione degli aggiornamenti automatici
+            - name: objective
+              prose: Dare all'utente il controllo sul processo di aggiornamento
+          - id: "r3.7"
+            title:  Il dispositivo deve usare crittografia conforme alle best practice per facilitare aggiornamenti sicuri
+            parts:
+            - name: statement
+              prose: Proteggere gli aggiornamenti con meccanismi crittografici robusti e aggiornati
+            - name: assessment
+              prose: Verificare che siano stati usati algoritmi crittografici sicuri per autenticare e proteggere gli aggiornamenti
+            - name: guidance
+              prose: Usare firme digitali, TLS, e latri protocolli sicuri
+            - name: objective
+              prose: Prevenire l'intallazione di software malevolo e garantire l'integrità del dispositivo
+          - id: "r3.8"
+            title: Gli aggiornamenti di sicurezza devono essere tempestivi
+            parts:
+            - name: statement
+              prose: Distribuire gli aggiornamenti di sicurezza in modo tempestivo tenendo conto della gravità della vulnerabilità
+            - name: assessment
+              prose: Verificare che il produttore abbia un processo documentato per la gestione degli aggiornamenti di sicurezza
+            - name: guidance
+              prose: Stabilire priorità basate sul rischio e comunicare chiaramente agli utenti la disponibilità degli aggiornamenti
+            - name: objective
+              prose: Ridurre il tempo di esposizione e vulnerabilità per migliorare la sicurezza del dispositivo
+          - id: "r3.9"
+            title: Il dispositivo dovrebbe verificare l'autenticità e l'integrità degli aggiornamenti software
+            parts:
+            - name: statement
+              prose: Verificare che gli aggiornamenti siano autentici e non alterati
+            - name: assessment
+              prose: Verificare la presenza di meccanismi di verifica come firme digitali o checksum
+            - name: guidance
+              prose: Implementare controlli di integrità e autenticità prima dell'applicazione degli aggiornamenti
+            - name: objective
+              prose: Evitare l'installazione di aggiornamenti non autorizzati
+          - id: "r3.10"
+            title: Il dispositivo deve verificare l'autenticità e integrità degli aggiornamenti distribuiti in rete tramite una relazione di fiducia
+            parts:
+            - name: statement
+              prose: Verificare che gli aggiornamenti ricevuti via rete con una relazione di fiducia
+            - name: assessment
+              prose: Verificare che sono stati usati canali autenticati o firme digitali per la distribuzione degli aggiornamenti
+            - name: guidance
+              prose: Usare certificati, chiavi pubbliche o autenticazione utente per stabilire la fiducia
+            - name: objective
+              prose: Impedire che entità non autorizzate distribuiscano aggiornamenti malevoli
+          - id: "r3.11"
+            title: L'utente dovrebbe essere informato in modo chiaro e riconoscibile quando è necessario un aggiornamento di sicurezza
+            parts:
+            - name: statement
+              prose: Informare l'utente in modo evidente quando è disponibile un aggiornamento di sicurezza
+            - name: assessment
+              prose: Verificare che il dispositivo o il servizio associato notifichi chiaramente la disponibilità di aggiornamento di sicurezza
+            - name: guidance
+              prose: Usare notifiche visibili, email o messaggi nell'interfaccia utente per comunicare l'urgenza e i benefici dell'aggiornamento
+            - name: objective
+              prose: Favorire l'applicazione tempestiva degli aggiornamenti da parte dell'utente
+          - id: "r3.12"
+            title: L'utente dovrebbe essere informato se l'applicazione dell'aggiornamento interromperà il funzionamento del dispositivo
+            parts:
+            - name: statement
+              prose: Informare l'utente se l'aggiornamento comporta un'interruzione delle funzionalità del dispositivo
+            - name: assessment
+              prose: Verificare che il dispositivo comunichi chiaramente eventuali interruzioni e la loro durata stimata
+            - name: guidance
+              prose: Mostrare messaggi di avviso prima dell'aggiornamento includendo durata e impatto previsto
+            - name: objective
+              prose: Evitare disservizi imprevisti e permettere all'utente di painificare l'aggiornamento
+          - id: "r3.13"
+            title: Il produttore deve pubblicare in modo chiaro e accessibile il periodo di supporto definito
+            parts:
+            - name: statement
+              prose: COmunicare pubblicamente il periodo durante il quale il dispositivo riceverà aggiornamenti di sicurezza
+            - name: assessment
+              prose: Verificare che il periodo di supporto sia indicato nel sito ufficiale o nella documentazione
+            - name: guidance
+              prose: Includere il periodo di supporto nella scheda tecnica, nel manuale o sul sito web
+            - name: objective
+              prose: Informare correttamente il consumatore sulle aspettative di manutenzione e sicurezza
+          - id: "r3.14"
+            title: Per i dispositivi non aggiornabili, il produttore deve pubblicare le motivazioni e il piano di supporto hardware
+            parts:
+            - name: statement
+              prose: Spiegare il motivo per cui il dispositivo non puì ricevere aggiornamenti e indicare il piano di sostituzione 
+            - name: assessment
+              prose: Verificare che siano disponibili informazioni chiare sul supporto hardware e sulle alternative in caso di vulnerabilità
+            - name: guidance
+              prose: Pubblicare una policy di sostituzione e supporto per i dispositivi non aggiornabili
+            - name: objective
+              prose: Garantire la sicurezza anche in assenza di aggiornamenti software
+          - id: "r3.15"
+            title: Se il dispositivo non è aggiornabile, dovrebbe essere isolabile
+            parts:
+            - name: statement
+              prose: Isolare dalla rete per ridurre i rischi il dispositivo non aggiornabile
+            - name: assessment
+              prose: Verificare che il dispositivo possa essere disconnesso o limitato nelle sue funzionalità di rete
+            - name: guidance
+              prose: Implementare modalità offline o configurazioni che limitino l'esposizione del dispositivo
+            - name: objective
+              prose: Ridurre la superificie di attacco per dispositivi non aggiornabili
+          - id: "r3.16"
+            title: a designazione del modello del dispositivo deve essere chiaramente riconoscibile
+            parts:
+            - name: statement
+              prose: Il dispositivo deve riportare chiaramente il proprio modello tramite etichetta o interfaccia utente
+            - name: assessment
+              prose: Verificare che il modello sia identificabile fisicamente o difitalmente
+            - name: guidance
+              prose: Mostrare il modello nell'interfaccia web, nel firmware o sull'etichetta del dispositivo
+            - name: objective
+              prose: Facilitare la gestione degli aggiornamenti e il supporto tecnico
+      - id: "Requisito_4"
+        title: Securely store sensitive security parameters
+        controls:
+          - id: "r4.1"
+            title: I parametri di sicurezza sensibili in memoria persistente devono essere archiviati in modo sicuro
+            parts:
+            - name: statement
+              prose: Il dispositivo deve proteggere i parametri di sicurezza sensibili in memoria persistente da modifiche e divulgazioni non autorizzate
+            - name: assessment
+              prose: Verificare l'uso di meccanismi sicuri come TEE, SE, DSC o UICC per la protezione dei parametri
+            - name: guidance
+              prose: Utilizzare tecnologie hardware e software certificate per la protezione dei dati sensibili
+            - name: objective
+              prose: revenire compromissioni che derivano da accessi non autorizzati ai parametri di sicurezza
+          - id: "r4.2"
+            title: Le identità uniche hard-coded per dispositivo devono essere resistenti alla manomissione.
+            parts:
+            - name: statement
+              prose: Le identità uniche hard-coded devono essere protette da manomissioni fisiche, elettriche o software
+            - name: assessment
+              prose: Verificare che l'identità sia archiviata in componenti sicuri
+            - name: guidance
+              prose: Usare tecnologie che impediscano l'estrazione o la modifica dell'identità del dispositivo
+            - name: objective
+              prose: Garantire l'integrità dell'identità del dispositivo per scopi di autenticazione e sicurezza
+          - id: "r4.3"
+            title: Non devono essere usati parametri di sicurezza critici hard-coded nel codice sorgente.
+            parts:
+            - name: statement
+              prose: è vietato includere nel codice sorgente parametri di sicurezza critici come password, chiavi private o API key
+            - name: assessment
+              prose: Verificare che il codice sorgente non contenga credenziali statiche o facilmente estraibili
+            - name: guidance
+              prose: Utilizzare tecniche di provisioning sicuro e archiviazione separata per le credenziali
+            - name: objective
+              prose: Evitare che attaccanti possano ottenere credenziali tramite reverse engineering
+          - id: "r4.4"
+            title: I parametri critici usati per aggiornamenti e comunicazioni devono essere unici per dispositivo e generati in modo sicuro.
+            parts:
+            - name: statement
+              prose: I parametri critici devono essere unici per dispositivo e generati con meccanismi che riducono il rischio di attacchi automatizzati
+            - name: assessment
+              prose: Verificare che ogni dispositivo abbia chiavi o credenziali uniche e non prevedibili
+            - name: guidance
+              prose: Usare generatori crittografici sicuri e evitare l'uso di chiavi globali condivise
+            - name: objective
+              prose: Prevenire attacchi su larga scala e garantire la sicurezza delle comunicazioni e degli aggiornamenti
+      - id: "Requisito_5"
+        title: Communicate securely
+        controls:
+          - id: "r5.1"
+            title: Le comunicazioni tra dispositivi e servizi associati devono essere protette da intercettazioni e manipolazioni
+            parts:
+            - name: statement
+              prose: Proteggere le comunicazioni tra dispositivi IoT e servizi associati da intercettazioni e manipolazioni
+            - name: assessment
+              prose: Verificare l'uso di protocolli sicuri come TLS e l'implementazione di meccanismi di autenticazione
+            - name: guidance
+              prose: Usare crittografia end-to-end, certificati validi e configurazioni sicure dei protocolli di rete
+            - name: objective
+              prose: Garantire la riservatezza e l'integrità dei dati trasmessi
+          - id: "r5.2"
+            title: Le comunicazioni devono essere protette da alterazioni e contraffazioni
+            parts:
+            - name: statement
+              prose: Implementare meccanismi per garantire l'integrità dei dati trasmessi
+            - name: assessment
+              prose: Verificare l'uso di firme digitali per rilevare alterazioni
+            - name: guidance
+              prose: Usare algoritmi di hashing sicuri e tecniche di autenticazione dei messaggi
+            - name: objective
+              prose: Prevenire la modifica non autorizzata dei dati durante la trasmissione
+          - id: "r5.3"
+            title: Le comunicazioni devono essere protette da replay attack
+            parts:
+            - name: statement
+              prose: Implementare meccanismi per prevenire l'uso ripetuto di messaggi validi
+            - name: assessment
+              prose: Verificare l'uso di nonce, timestamp o sessioni uniche
+            - name: guidance
+              prose: Integrare controlli di sessione e validazione temporale nei protocolli di comunicazione
+            - name: objective
+              prose: Impedire che messaggi validi vengano riutilizzati per scopi malevoli
+          - id: "r5.4"
+            title: Le comunicazioni devono essere protette da spoofing
+            parts:
+            - name: statement
+              prose: Garantire che le entità comunicanti siano autentiche e verificate
+            - name: assessment
+              prose: Verificare l'uso di certificati, chiavi pubbliche e autenticazione reciproca
+            - name: guidance
+              prose: Usare meccanismi di autenticazione forte e validazione dell'identità
+            - name: objective
+              prose: Prevenire impersonificazioni e accessi non autorizzati
+          - id: "r5.5"
+            title: Le comunicazioni devono essere protette da attacchi man-in-the-middle
+            parts:
+            - name: statement
+              prose: Proteggere le comunicazioni da intercettazioni e modifiche da parte di terzi
+            - name: assessment
+              prose: Verificare l'uso di TLS con autenticazione reciproca e configurazioni sicure
+            - name: guidance
+              prose: Usare certificati validi, evitare protocolli obsoleti e implementare pinning dei certificati
+            - name: objective
+              prose: Garantire che la comunicazione avvenga solo tra entità legittime
+          - id: "r5.6"
+            title: Le comunicazioni devono essere protette da attacchi di downgrade
+            parts:
+            - name: statement
+              prose: Impedire che un attaccante possa forzare l'uso di protocolli meno sicuri
+            - name: assessment
+              prose: Verificare che il dispositivo rifiuti connessioni con protocolli obsoleti o insicuri
+            - name: guidance
+              prose: Configurare i protocolli per usare solo versioni sicure e aggiornate, disabilitare fallback automatici
+            - name: objective
+              prose: Mantenere un livello di sicurezza elevato nelle comunicazioni
+          - id: "r5.7"
+            title: Le comunicazioni devono essere protette da attacchi di tipo injection
+            parts:
+            - name: statement
+              prose: Validare e filtrare i dati trasmessi per prevenire l'inserimento di codice malevolo
+            - name: assessment
+              prose: Verificare l'implementazione di controlli di input e sanitizzazione dei dati
+            - name: guidance
+              prose: Usare tecniche di validazione dei dati e protezione contro SQL injection, XSS e simili
+            - name: objective
+              prose: Prevenire l'esecuzione di codice malevolo attraverso i canali di comunicazione
+          - id: "r5.8"
+            title: Le comunicazioni devono essere protette da attacchi di tipo buffer overflow
+            parts:
+            - name: statement
+              prose: Implementare controlli per evitare scritture fuori dai limiti di memoria
+            - name: assessment
+              prose: Verificare l'uso di tecniche di controllo dei limiti e protezione della memoria
+            - name: guidance
+              prose: Usare linguaggi sicuri, compilatori con protezioni attive e test di sicurezza
+            - name: objective
+              prose: Evitare compromissioni del dispositivo tramite vulnerabilità di memoria
+      - id: "Requisito_6"
+        title: Minimize exposed attack surfaces
+        controls:
+          - id: "r6.1"
+            title: Il dispositivo deve esporre solo le interfacce strettamente necessarie per il suo funzionamento
+            parts:
+            - name: statement
+              prose: Limitare le interfacce esposte dal dispositivo IoT a quelle strettamente necessarie
+            - name: assessment
+              prose: Verificare che non siano attive interfacce inutili o non documentate
+            - name: guidance
+              prose: Disabilitare porte e protocolli non utilizzati, usare firewall o ACL
+            - name: objective
+              prose: Ridurre la superficie di attacco disponibile agli attaccanti
+          - id: "r6.2"
+            title: Le interfacce devono essere protette da accessi non autorizzati
+            parts:
+            - name: statement
+              prose: PRoteggere le interfacce esposte con meccanismi di autenticazione e controllo degli acccessi
+            - name: assessment
+              prose: Verificare che tutte le interfacce esposte richiedano autenticazione e siano configurate
+            - name: guidance
+              prose: Usare autenticazione forte, limitare gliaccessi e monitorare le connessioni
+            - name: objective
+              prose: Prevenire accessi non autorizzati tramite interfacce esposte
+          - id: "r6.3"
+            title: Le interfacce di debug e sviluppo devono essere disattivate o protette nei dispositivi in produzione
+            parts:
+            - name: statement
+              prose: Disattivare o proteggere le interfacce di debug nei dispositivi destinati all'uso finale
+            - name: assessment
+              prose: Verificare che le interfacce di debug siano disattivate o accessibili solo con credenziali sicure
+            - name: guidance
+              prose: Rimuovere o proteggere JTAG, UART, SSH e simili nei dispositivi distribuiti
+            - name: objective
+              prose: Evitare che attaccanti possano sfruttare interfacce di sviluppo per compromettere il dispositivo
+          - id: "r6.4"
+            title: Le funzionalità non necessarie devono essere disattivate
+            parts:
+            - name: statement
+              prose: Disattivare funzionalità non essenziali per il funzionamento del dispositivo
+            - name: assessment
+              prose: Verificare che siano attive solo le funzionalità richieste per l'uso previsto
+            - name: guidance
+              prose: Usare configurazioni minime e modulari, disabilitare servizi non utilizzati
+            - name: objective
+              prose: Ridurre il rischio di vulnerabilità legate a funzionalità inutili
+          - id: "r6.5"
+            title: Il dispositivo deve essere configurato per ridurre al minimo le informazioni esposte
+            parts:
+            - name: statement
+              prose: Limitare le informazioni visibili o accessibili tramite interfacce pubbliche
+            - name: assessment
+              prose: Verificare che non vengano esposti dati sensibili o dettagli tecnici non necessari
+            - name: guidance
+              prose: Nascondere versioni software, configurazioni interne e messaggi di errore dettagliati
+            - name: objective
+              prose: Evitare che attaccanti possano raccogliere informazioni utili per attacchi mirati
+          - id: "r6.6"
+            title: Il dispositivo deve essere progettato per resistere a scansioni e rilevamenti automatizzati
+            parts:
+            - name: statement
+              prose: Implementare misure per rendere difficile l'identificazione automatica del dispositivo
+            - name: assessment
+              prose: Verificare la presenza di meccanismi anti-scansione e anti-fingerprinting
+            - name: guidance
+              prose: Usare tecniche come rate limiting, risposte generiche e offuscamento
+            - name: objective
+              prose: Ridurre la probabilità che il dispositivo venga individuato e attaccato automaticamente
+          - id: "r6.7"
+            title: Il dispositivo deve essere progettato per resistere a tentativi di enumerazione dei servizi
+            parts:
+            - name: statement
+              prose: Impedire che un attaccante possa identificare i servizi attivi sul dispositivo
+            - name: assessment
+              prose: Verificare che i servizi non rispondano con informazioni dettagliate o prevedibili
+            - name: guidance
+              prose: Configurare risposte generiche, limitare le informazioni nei banner e nei messaggi di errore
+            - name: objective
+              prose: Prevenire la raccolta di informazioni utili per attacchi mirati
+          - id: "r6.8"
+            title: Il dispositivo deve essere progettato per resistere a tentativi di enumerazioe degli utenti
+            parts:
+            - name: statement
+              prose: Evitare che un attaccante possa identificare utenti validi tramite messaggi di errore o risposte diverse
+            - name: assessment
+              prose: Verificare che i messaggi di errore siano uniformi e non rivelino la validità di un nome utente
+            - name: guidance
+              prose: Usare messaggi generici per login falliti e proteggere le API di autenticazione
+            - name: objective
+              prose: Impedire attacchi di enumerazione che facilitano brute force o phishing
+          - id: "r6.9"
+            title: Il dispositivo deve essere progettato per resistere a tentativi di enumerazione delle risorse
+            parts:
+            - name: statement
+              prose: Proteggere le risorse interne da accessi non autorizzati e tentativi di enumerazione
+            - name: assessment
+              prose: Verificare che le risorse non siano accessibili tramite URL prevedibili o directory listin
+            - name: guidance
+              prose: Usare permessi corretti, URL non prevedibili e disabilitare direcotry listing
+            - name: objective
+              prose: Evitare che attaccanti possano mappare le risorse disponibili sul dispositivo
+      - id: "Requisito_7"
+        title: Ensure software integrity
+        controls:
+          - id: "r7.1"
+            title: Con meccanismi di secure boot il dispositivo dovrebbe verificare l'integrità del proprio software
+            parts:
+            - name: statement
+              prose: Il dispositivo IoT dovrebbe usare meccanismi di avvio sicuro per verificare l'integrità del software
+            - name: assessment
+              prose: Verificare la presenza di un meccanismo di secure boot e che sia supportato da componenti hardware resistenti a manomissioni
+            - name: guidance
+              prose: Usare una root of trust hardware per validare il software all'avvio o adottare soluzioni software con livelli di sicurezza proporzionati al rischio e al contesto d'uso
+            - name: objective
+              prose: Garantire che il software eseguito sia autentico e non sia stato alterato da malware
+          - id: "r7.2"
+            title: Il dispositivo dovrebbe avvisare l'utente o l'amministratore e limitare la connessioni a reti esterne se viene rilevata una modifica non autorizzata al software
+            parts:
+            - name: statement
+              prose: Far generare un avviso e limitare la connessione a reti esterni mantenendo solo le funzionalità necessarie per la segnalazione in caso di rilevamento di modifiche non autorizzate al software
+            - name: assessment
+              prose: Verificare che il dispositivo sia in grado di rilevare modifiche del software e che disponga di un meccanismo di notifica
+            - name: guidance
+              prose: Implementare sistemi di logging e notifiche sicure, prevedere la possibilità di ripristino ad una versione sicura del software
+            - name: objective
+              prose: Ridurre il rischio di compromissione del dispositivo e facilitare il ripristino sicuro
+      - id: "Requisito_8"
+        title: Ensure that personal data is secure
+        controls:
+          - id: "r8.1"
+            title: I dati personali trasmessi tra il dispositivo e i servizi associati devono essere protetti con crittografia conforme alle best practice
+            parts:
+            - name: statement
+              prose: Proteggere la riservatezza dei dati personali in transito tra il dispositivo IoT e i serivisi associati con crittografia adeguata
+            - name: assessment
+              prose: Verificare l'uso di protocolli sicuri e algoritmi crittografici aggiornati
+            - name: guidance
+              prose: Uasre librerie crittografiche affidabili e configurazioni che garantiscono la riservatezza come protocolli del tipo TLS
+            - name: objective
+              prose: Prevenire l'intercettazione o la manipolazione dei dati personali durante la trasmissione
+          - id: "r8.2"
+            title: I dati personali sensibili come video, dati di pagamento e posizione devono essere protetti con crittografia conforme alle best practice
+            parts:
+            - name: statement
+              prose: Proteggere la riservatezza dei dati sensibili con crittografia robusta e appropriata
+            - name: assessment
+              prose: Verificare che i dati sensibili siano identificati correttamente e protetti adeguatamente
+            - name: guidance
+              prose: Eseguire valutazioni d'impatto sulla protezione dei dati per scegliere le misure più appropriate
+            - name: objective
+              prose: Evitare danni agli utenti in caso di compromissione di dati sensibili
+          - id: "r8.3"
+            title: Il produttore deve fornire una documentazione chiara e accessibile per l'utente di tutte le capacità di rilevamento esterno del dispositivo
+            parts:
+            - name: statement
+              prose: Fornire una descrizione chiara di tutti i sensori ottici e acustici presenti sul dispositivo
+            - name: assessment
+              prose: Verificare che la documentazione includa tutti i sensori e sia accessibile agli utenti
+            - name: guidance
+              prose: Includere le informazioni nel manuale utente e nell'interfaccia di configurazione
+            - name: objective
+              prose: Informare l'utente sulle capacità di raccolta dei dati del dispositivo
+      - id: "Requisito_9"
+        title: Make systems resilient to outages
+        controls:
+          - id: "r9.1"
+            title: La resilienza dovrebbe essere integrata nei prodotti IoT tenendo conto di possibili interruzioni di rete e alimentazione
+            parts:
+            - name: statement
+              prose: Progettare i dispositivi per continuare a funzionare anche in caso di interruzioni di rete o alimentazione
+            - name: assessment
+              prose: Verificare la presenza di meccanismi di ripristino automatico
+            - name: guidance
+              prose: Implementare batterie di backup, modalità offline e sistemi di ripristino
+            - name: objective
+              prose: Garantire continuità operativa dei dispositivi in scenari critici
+          - id: "r9.2"
+            title: I dispositivi IoT dovrebbero rimanere operativi a livello locale in caso di perdita di rete e riprendersi correttamente dopo un'interruzione di alimentazione
+            parts:
+            - name: statement
+              prose: Far sì che il dispositivo mantenga le funzionalità locali e possa eseguire il ripristino allo stato operativo dopo un'interruzione
+            - name: assessment
+              prose: Verificare che il dispositivo riprenda automaticamente le funzioni dopo il ripristino della rete o dell'alimentazione
+            - name: guidance
+              prose: Usare meccanismi di salvataggio dello stato e di riconnessione
+            - name: objective
+              prose: Evitare malfunzionamenti prolungati e garantire un'esperienza stabile all'utente
+          - id: "r9.3"
+            title: Il dispositivo dovrebbe riconnettersi alla rete in modo ordinato e stabile tenendo conto delle capacità dell'infrastruttura
+            parts:
+            - name: statement
+              prose: Far sì che dopo un'interruzione il dispositivo si riconnetti evitando il sovraccarico o comportamenti instabili
+            - name: assessment
+              prose: Verificare l'uso di meccanismi come ritardi randomizzati o back-off incrementali
+            - name: guidance
+              prose: Coordinare la riconnessione dei dispositivi con aggiornamenti distribuiti o pianificati
+            - name: objective
+              prose: Prevenire congestioni di rete e garantire una ripresa controllata dei servizi
+      - id: "Requisito_10"
+        title: Examine system telemetry data
+        controls:
+          - id: "r10.1"
+            title: Nel caso in cui vengano raccolti,i dati di telemetria devono essere analizzati per rilevare anomalie di sicurezza
+            parts:
+            - name: statement
+              prose: Monitorare per identificare i comportamenti anomali i dati di telemetria come i log
+            - name: assessment
+              prose: Verficare che esistano sistemi di analisi automatica e che siano configurati per rilevare comportamenti diversi dal normale
+            - name: guidance
+              prose: Usare strumenti di monitoraggio dei log per identificare tentativi di attacco o problemi di integrità
+            - name: objective
+              prose: Rilevare tempestivamente potenziali minacce o malfunzionamenti
+      - id: "Requisito_11"
+        title: Make it easy for users to delete user data
+        controls:
+          - id: "r11.1"
+            title: Gli utenti devono poter cancellare tutti i propri dati dal dispositivo IoT in modo semplie
+            parts:
+            - name: statement
+              prose: Offire funzionalità per cancellare tutti i dati personali, le configurazioni e le credenziali in modo semplice
+            - name: assessment
+              prose: Verificare che la funzione di cancellazione sia accessibile, docuementata e che rimuova tutti i dati dell'utente
+            - name: guidance
+              prose: Implementare una funzione di reset che cancelli i dati dell'utente senza compromettere il funzionamento del dispositivo
+            - name: objective
+              prose: L'utente deve poter controllare i propri dati e cancellarli facilmente
+          - id: "r11.2"
+            title: Il dispositivo deve permette di cancellare i dati personali anche dai servizi associati
+            parts:
+            - name: statement
+              prose: L'utente deve poter cancellare i propri dati personali dai servizi di cloud o app associate al dispositivo
+            - name: assessment
+              prose: Verificare che esista un meccanismo per richiedere la cancellazione dei dati dai servizi associati
+            - name: guidance
+              prose: Integrare la cancellazione remota con app o interfacce web in conformità al GDPR
+            - name: objective
+              prose: Esentere il controllo dell'utente anche ai dati archiviati esternamente
+          - id: "r11.3"
+            title: Gli utenti dovrebbero ricevere istruzioni chiare su come cancellare i propri dati dal dispositivo e dai servizi associati
+            parts:
+            - name: statement
+              prose: Fornire istruzioni chiare per la cancellazione dei dati dal dispositivo e dai servizi associati
+            - name: assessment
+              prose: Verificare che le istruzioni siano presenti nel manuale, nell'interfaccia utente o online
+            - name: guidance
+              prose: Usare un linguaggio chiaro e fornire esempi pratici
+            - name: objective
+              prose: Facilitare l'uso corretto delle funzioni di cancellazione da parte dell'utente
+          - id: "r11.4"
+            title: Dopo la cancellazione il dispositivo o il servizio associato dovrebbe fornire una conferma visibile all'utente
+            parts:
+            - name: statement
+              prose: Confermare agli utenti che i dati personali sono stati cancellati o sovrascritti
+            - name: assessment
+              prose: Verificare che venga mostrata la conferma di cancellazione dei dati in modo esplicito
+            - name: guidance
+              prose: Usare notifiche, email o messaggi nell'interfaccio per confermare la cancellazione dei dati
+            - name: objective
+              prose: Dare la certezza che i dati non sono più accessibili
+      - id: "Requisito_12"
+        title: Make installation and maintenance of devides easy
+        controls:
+          - id: "r12.1"
+            title: Installazione e manutanzione del dispositivo IoT devono richiedere poche decisioni e seguire le best practice di sicurezza
+            parts:
+            - name: statement
+              prose: Il processo di installazione deve essere semplice, con opzioni predefinite e sicure e guidato
+            - name: assessment
+              prose: Verificare che il dispositivo offra una procedura guidata con impostazioni sicure predefinite
+            - name: guidance
+              prose: Usare procedure guidate di configurazioni, documentazioni chiare e interfacce intuitive
+            - name: objective
+              prose: Ridurre il rischio di configurazioni errate
+          - id: "r12.2"
+            title: Devono essere disponibili istruzioni per aiutare l'utente a impostare il dispositivo in modo sicuro
+            parts:
+            - name: statement
+              prose: Fornire all'utente indicazioni su come configurare il dispositivo correttamente
+            - name: assessment
+              prose: Verificare che le istruzioni di configurazione siano accessibili e aggiornate
+            - name: guidance
+              prose: Fornire linee guida pratiche, cheklist e strumenti di verifica della configurazione
+            - name: objective
+              prose: Promuovere una configurazione inziaale che riduce i rischi di sicurezza
+          - id: "r12.3"
+            title: Devono essere disponibili strumenti o istruzioni per controllare lo stato di sicurezza del dispositivo
+            parts:
+            - name: statement
+              prose: Fornire indicazioni su come verificare che il dispositivo sia configurato e mantenuto correttamente
+            - name: assessment
+              prose: Verificare che siano presenti funzionalità di controllo dello stato di sicurezza
+            - name: guidance
+              prose: Integrare pannelli di controllo, notifiche e report di sicurezza accessibili all'utente
+            - name: objective
+              prose: Permettere all'utente di monitorare e mantenere la sicurezza
+      - id: "Requisito_13"
+        title: Validate input data
+        controls:
+        - id: "r13.1"
+          title: I dati inseriti da interfacce utente devono essere validati per prevenire manipolazioni e malfunzionamenti
+          parts:
+          - name: statement
+            prose: Controllare che i dati ricevuti sono nel formato previsto e non contengono codice malevolo
+          - name: assessment
+            prose: Verificare che sono implementati controlli di validazione lato dispositivo
+          - name: guidance
+            prose: Usare tecniche di sanitizzazione e validazione dei dati in ingresso
+          - name: objective
+            prose: Prevenire attacchi come SQL injection e garantire la stabilità del sistema
+  - id: "B_Data_Protection_Provisions"
+    title: Requisiti per la protezione dei dati personali nei dispositivi IoT consumer, in conformità con i principi di minimizzazione, trasparenza, consenso e sicurezza del trattamento
+    groups:
+      - id: "Requisito_14"
+        title: Data protection provisions for consumer IoT
+        controls:
+          - id: "r14.1"
+            title: Il produttore deve fornire informazioni chiare e accessibili sul trattamento dei dati personali
+            parts:
+            - name: statement
+              prose: Informare l'utente su quali dati personali vengono raccolti, come vengono trattati e per quali finalità
+            - name: assessment
+              prose: Verificare che le informazioni siano disponibili prima dell'attivazione del dispositivo'
+            - name: guidance
+              prose: Usare linguaggio semplice e accessibile, conforme al GDPR e alle normative locali
+            - name: objective
+              prose: Garantire trasparenza e consapevolezza nell'uso dei dati personali
+          - id: "r14.2"
+            title: Il produttore deve fornire informazioni su dove vengono trattati i dati personali
+            parts:
+            - name: statement
+              prose: Comunicare se i dati vengono trattati localmente, nel cloud o da terze parti
+            - name: assessment
+              prose: Verificare che l'informativa includa la localizzazione e i responsabili del trattamento
+            - name: guidance
+              prose: Specificare chiaramente se i dati sono trasferiti fuori dall'UE e con quali garanzie
+            - name: objective
+              prose: Consentire agli utenti di valutare i rischi legati alla localizzazione del trattamento
+          - id: "r14.3"
+            title: Il produttore deve fornire informazioni su come vengono protetti i dati personali
+            parts:
+            - name: statement
+              prose: Descrivere le misure tecniche e organizzative adottate per proteggere i dati personali
+            - name: assessment
+              prose: Verificare che siano indicate le tecnologie di protezione e le politiche di sicurezza
+            - name: guidance
+              prose: Includere riferimenti a crittografia, accessi controllati e audit
+            - name: objective
+              prose: Dimostrare l'impegno del produttore nella protezione dei dati
+          - id: "r14.4"
+            title: Il produttore deve fornire informazioni su come l'utente può esercitare i propri diritti
+            parts:
+            - name: statement
+              prose: Informare l'utente su come accedere, modificare o cancellare i propri dati
+            - name: assessment
+              prose: Verificare che siano presenti istruzioni chiare per l'esercizio dei diritti
+            - name: guidance
+              prose: Includere link, contatti e procedure per richieste di accesso o cancellazione
+            - name: objective
+              prose: Garantire il controllo dell'utente sui propri dati personali
+          - id: "r14.5"
+            title: Il dispositivo deve raccogliere solo i dati strettamente necessari per la sua funzionalità
+            parts:
+            - name: statement
+              prose: Applicare il principio di minimizzazione nella raccolta dei dati
+            - name: assessment
+              prose: Verificare che non vengano raccolti dati superflui o non pertinenti
+            - name: guidance
+              prose: Limitare la raccolta ai dati funzionali e documentare le finalità
+            - name: objective
+              prose: Ridurre il rischio di esposizione e trattamento eccessivo
+          - id: "r14.6"
+            title: I dati personali devono essere anonimizzati o aggregati quando possibile
+            parts:
+            - name: statement
+              prose: Adottare tecniche di anonimizzazione o aggregazione per ridurre i rischi
+            - name: assessment
+              prose: Verificare che i dati siano trattati in modo da non identificare direttamente l'utente
+            - name: guidance
+              prose: Usare pseudonimizzazione, hash, o aggregazione statistica
+            - name: objective
+              prose: Proteggere la privacy degli utenti anche in caso di accesso ai dati
+          - id: "r14.7"
+            title: Il dispositivo deve richiedere il consenso esplicito per la raccolta dei dati personali
+            parts:
+            - name: statement
+              prose: Ottenere il consenso informato e documentato prima della raccolta dei dati
+            - name: assessment
+              prose: Verificare che il consenso sia richiesto in modo chiaro e non implicito
+            - name: guidance
+              prose: Usare interfacce trasparenti e opzioni granulari per il consenso
+            - name: objective
+              prose: Rispettare il diritto dell'utente a decidere sul trattamento dei propri dati
+          - id: "r14.8"
+            title: L'utente deve poter revocare il consenso in qualsiasi momento
+            parts:
+            - name: statement
+              prose: Consentire all'utente di revocare facilmente il consenso al trattamento dei dati
+            - name: assessment
+              prose: Verificare che la revoca sia semplice, documentata e senza penalizzazioni
+            - name: guidance
+              prose: Includere opzioni di revoca nelle impostazioni del dispositivo o dell'app
+            - name: objective
+              prose: Garantire il controllo continuo dell'utente sui propri dati

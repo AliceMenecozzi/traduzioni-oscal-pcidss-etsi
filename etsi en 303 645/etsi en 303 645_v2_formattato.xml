@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="8ca8ccfd-c09d-46b6-9050-d8b5476c835d">
+  <metadata>
+    <title>Catalogo ETSI EN 303 645 v3.1.3</title>
+    <last-modified>2025-10-25T14:30:00+02:00</last-modified>
+    <version>2.0</version>
+    <oscal-version>1.1.3</oscal-version>
+    <remarks>
+      <p>Fonte dello standard: https://www.etsi.org/deliver/etsi_en/303600_303699/303645/03.01.03_60/en_303645v030103p.pdf</p>
+    </remarks>
+  </metadata>
+  <group id="A_Cybersecurity_Provision">
+    <title>Insieme di requisiti di sicurezza per dispositivi IoT consumer, volti a garantire protezione contro vulnerabilità, aggiornamenti sicuri, auteticazione robusta e resilienza operativa</title>
+    <group id="Requisito_1">
+      <title>No universal defualt password</title>
+      <control id="r1.1">
+        <title>Dove veongono usate password per autenticare utenti o dispositivi, queste devono essere uniche per dispositivo o configurate dall'utente</title>
+        <part name="statement">
+          <p>Le password devono essere uniche per dispositivo o definite dall'utente</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che ogni dispsitivo abbia credenziali unicho o che l'utente le abbia definite in fase di inizializzazione</p>
+        </part>
+        <part name="guidance">
+          <p>Usare meccanismi di generazione sicura delle password e permettere la modifica da parte dell'utente, � consigliato l'uso dell'autenticazione a pi� fattori</p>
+        </part>
+        <part name="objective">
+          <p>Evitare uso di credenziali comuni che possono essere facilmente sfruttate dagli attaccanti</p>
+        </part>
+      </control>
+      <control id="r1.2">
+        <title>Le password preinstallare devono essere generate in modo sicuro e non dovrebbero essere usate per l'autenticazione macchina-macchina</title>
+        <part name="statement">
+          <p>Randomizzare e rendere difficilmente indovinabili le password preinstallate uniche per ogni dispositivo, l'autenticazione tra dispositivi devono basarsi su meccanismi robusti</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che le password non seguino schemi prevedibili e che l'autenticazione non usi credenziali deboli</p>
+        </part>
+        <part name="guidance">
+          <p>Usare generatori crittografici sicuri e implementare meccanismi basati su chiavi o certificati evitando l'uso di password memorizzabili</p>
+        </part>
+        <part name="objective">
+          <p>Ridurre il rischio di attacchi automatizzati contro dispositivi della stessa classe e garantire che l'autenticazione macchina-macchina sia sicura</p>
+        </part>
+      </control>
+      <control id="r1.3">
+        <title>I meccanismi di autenticazione usati per autenticare utenti o dispositivi devono usare crittografia conforme alle best practice tenendo conto della tecnologia, del contesto operativo, del rischio e dell'uso previsto</title>
+        <part name="statement">
+          <p>Usare algoritmi di crittografia robusti e aggiornati in linea con le best practice del settore per i meccanismi di autenticazione di utenti e per comunicazioni macchina-macchina</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che gli algoritmi crittografici usati siano appropriati rispetto al rischio</p>
+        </part>
+        <part name="guidance">
+          <p>Evitare uso di metodi obsoleti o vulnerabili usando librerie affidabili e aggiornate, valutate e certificate</p>
+        </part>
+        <part name="objective">
+          <p>Garantire che l'autenticazione sia sicura e resistene ad attacchi</p>
+        </part>
+      </control>
+      <control id="r1.4">
+        <title>Il dispositivo deve offrire un meccanismo semplice per modificare il valore di autenticazione (password, PIN, dati biometrici)</title>
+        <part name="statement">
+          <p>Permettere all'utente o all'amministratore di modificare facilmente il valore dell'autenticazione (password, PIN, dati biometrici)</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il processo di modifica sia accessibile, documentato e semplice</p>
+        </part>
+        <part name="guidance">
+          <p>Implementare interfacce intuitive, fornire instruzioni chiare o tutorial</p>
+        </part>
+        <part name="objective">
+          <p>Permettere agli utenti di mantenere il controllo delle proprie credenziali e migliorare la sicurezza</p>
+        </part>
+      </control>
+      <control id="r1.5">
+        <title>Il dispositivo deve disporre di un meccanismo per rendere impraticabili attacchi di forza bruta con interfacce di rete</title>
+        <part name="statement">
+          <p>Implementare nel dispositivo meccanismi che non rendano praticabili attacchi di forza bruta sulle credenziali di autenticazione con interfacce di rete ad eccezione di vincoli tecnici legati al caso d'uso'</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare la presenza di limitazioni sul numero di tentativi di accesso, ritardi tra i tentativi o blocchi temporanei</p>
+        </part>
+        <part name="guidance">
+          <p>Implementare misure di protezione contro attacchi automatizzati, limitare il numero di tentativi falliti prima di bloccare temporaneamente l'account, in caso di vincoli documentare le motivazioni e valutare soluzioni alternative</p>
+        </part>
+        <part name="objective">
+          <p>Proteggere il dispositivo da tentativi automatizzati di accesso non autorizzato</p>
+        </part>
+      </control>
+    </group>
+    <group id="Requisito_2">
+      <title>Implements a means to manage reports of vulnerabilities</title>
+      <control id="r2.1">
+        <title>Il produttore deve rendere disponibile una policy per la divulgazione delle vulnerabilit�, con le informazioni per essere contattato e tempestica di risposta</title>
+        <part name="statement">
+          <p>Pubblicare una policy per la segnalazione dele vulnerabilit� con le informazioni per contattare il produttore per fare una segnalazione, i tempi di risposta alle segnalazioni e per fornire aggiornament</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che la policy sia pubblica, aggiornata e con le informazioni necessarie</p>
+        </part>
+        <part name="guidance">
+          <p>Seguire le linee guida riconosciute come gli standard ISO/IEC 29147 e ETSI TR 103 838</p>
+        </part>
+        <part name="objective">
+          <p>Facilitare la comunicazione tra ricercatori di sicurezza e produttori, promuovendo trasaprenza e reattivit� alla gestione delle vulnerabilit�</p>
+        </part>
+      </control>
+      <control id="r2.2">
+        <title>Le vulnerabilit� segnalate devono essere gestite in modo tempestivo, idealmente entro 90 giorni se si tratta del software</title>
+        <part name="statement">
+          <p>Affrontare in tempi ragionevoli considerando la gravit� del problema le vulnerabilit� segnalate</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il processo di gestione delle vulnerabilit� sia documentato, la risoluzione di problemi legati al software dovrebbe essere eseguita entro 90 giorni idealmente</p>
+        </part>
+        <part name="guidance">
+          <p>Tracciamento interno e comunicazione esterna, priorit� basate sul rischio, per vulnerabilit� hardware pianificare aggiornamenti compatibili con il ciclo di vita del prodotto</p>
+        </part>
+        <part name="objective">
+          <p>Ridurre il tempo di esposizione a rischi noti garantendo una risposta efficace e tempestiva</p>
+        </part>
+      </control>
+      <control id="r2.3">
+        <title>Le vulnerabilit� nei prodotti e nei servizi associati devono essere monitorate, identificare e corrette continuamente dai produttori durante il periodo di supporto</title>
+        <part name="statement">
+          <p>Monitorare, identificare, correggere le vulnerabilit� che riguardano i dispositivi e i servizi associati intervenendo tempestivamente</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il produttore mantenga un inventario aggiornato dei componenti, inclusi quelli di terze parti e che usi strumenti per il monitoraggio delle vulnerabilit�</p>
+        </part>
+        <part name="guidance">
+          <p>Adottare processi automatizzati per la scansione del codice e dei binari, mantenere la lista dei componenti e delle versioni usate</p>
+        </part>
+        <part name="objective">
+          <p>Ridurre il rischio di esposizione prolungata a vulnerabilit� note e mantenere un livello di sicurezza adeguato per tutta la durata del supporto</p>
+        </part>
+      </control>
+    </group>
+    <group id="Requisito_3">
+      <title>Keep software update</title>
+      <control id="r3.1">
+        <title>Tutti i componenti software che non sono immutabili per motivi di sicurezza dovrebbero essere aggiornabili in modo sicuro</title>
+        <part name="statement">
+          <p>Aggiornare in modo sicuro i componenti software del dispositivo IoT salvo vincoli tecnici giustificati</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che i componenti software non immutabili siano aggiornabili e che il meccanismo di aggiornamento sia sicuro</p>
+        </part>
+        <part name="guidance">
+          <p>Implementare i meccanismi di aggiornamento che garantiscano autenticit� e intergrit� come la verifica crittografica e i canali protetti</p>
+        </part>
+        <part name="objective">
+          <p>Ridurre il rischio di vulnerabilit� persistenti mantenendo il software aggiornato e sicuro</p>
+        </part>
+      </control>
+      <control id="r3.2">
+        <title>Il dispositivo deve disporre di un meccanismo sicuro di aggiornamento software, salvo vincoli tecnici giustificati</title>
+        <part name="statement">
+          <p>Implementare un meccanismo sicuro per l'aggiornamento del software</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare la presenza di un meccanismo di aggiornamento sicuro e documentare eventuali vincoli che ne impediscono l'implementazione</p>
+        </part>
+        <part name="guidance">
+          <p>Usare i canali autenticati, firme digitali e politiche per proteggere il processo di aggiornamento</p>
+        </part>
+        <part name="objective">
+          <p>Prevenire l'installazione di software malevolo e garantire la sicurezza del dispositivo nel tempo</p>
+        </part>
+      </control>
+      <control id="r3.3">
+        <title>L'aggiornamento deve essere semplice da applicare per l'utente</title>
+        <part name="statement">
+          <p>Progettare il progetto di aggiornamento in modo tale che sia semplice e accessibile all'utente</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che l'utente possa applicare gli aggiornamenti con pochi passaggi e senza competenze avanzate</p>
+        </part>
+        <part name="guidance">
+          <p>Integrare aggiornamenti automatici, interfacce intuitive e notifiche chiare per facilitare l'applicazione</p>
+        </part>
+        <part name="objective">
+          <p>Aumentare la probabilit� che gli utenti mantengono il dispositivo aggiornato e sicuro</p>
+        </part>
+      </control>
+      <control id="r3.4">
+        <title>Il meccanismo di aggiornamento sicuro dovrebbe essere configurabile per essere automatico</title>
+        <part name="statement">
+          <p>Permettere la configurazione di aggiornamenti automatici, previa autorizzazioen dell'utente</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che l'utente possa abilitare o disabilitare gli aggiornamenti e che il meccanismo sia sicuro</p>
+        </part>
+        <part name="guidance">
+          <p>Offire opzioni per aggiornamenti automatici</p>
+        </part>
+        <part name="objective">
+          <p>Garantire aggiornamenti tempestivi riducendo l'intervendo manuale e migliorando la sicurezza complessiva</p>
+        </part>
+      </control>
+      <control id="r3.5">
+        <title>Il dispositivo o un servizio associato dovrebbe verificare la disponibilit� di aggiornamenti di sicurezza dopo l'inizializzazione</title>
+        <part name="statement">
+          <p>Il dispositivo o un servizio associato deve controllare se sono disponibili aggiornamenti di sicurezza dopo l'inizializzazione</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che esista un meccanismo automatico o manuale per il controllo degli aggiornamenti dopo l'avvio</p>
+        </part>
+        <part name="guidance">
+          <p>Integrare controlli periodici o notifiche che informano l'utente della disponibilit� di aggiornamenti</p>
+        </part>
+        <part name="objective">
+          <p>Garantire che il dispositivo rimanga aggiornato e protetto</p>
+        </part>
+      </control>
+      <control id="r3.6">
+        <title>L'utente dovrebbe poter abilitare/disabilitare gli aggiornamenti automatici e posticipare l'installazione</title>
+        <part name="statement">
+          <p>Permettere all'utente di gestire gli aggiornamenti automatici inclusa la possibilit� di posticiparli</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che l'utente possa configurare le preferenza di aggiornamento automatico e che siano documentate</p>
+        </part>
+        <part name="guidance">
+          <p>Offirire opzioni chiare nell'interfaccia utente per la gestione degli aggiornamenti automatici</p>
+        </part>
+        <part name="objective">
+          <p>Dare all'utente il controllo sul processo di aggiornamento</p>
+        </part>
+      </control>
+      <control id="r3.7">
+        <title>Il dispositivo deve usare crittografia conforme alle best practice per facilitare aggiornamenti sicuri</title>
+        <part name="statement">
+          <p>Proteggere gli aggiornamenti con meccanismi crittografici robusti e aggiornati</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che siano stati usati algoritmi crittografici sicuri per autenticare e proteggere gli aggiornamenti</p>
+        </part>
+        <part name="guidance">
+          <p>Usare firme digitali, TLS, e latri protocolli sicuri</p>
+        </part>
+        <part name="objective">
+          <p>Prevenire l'intallazione di software malevolo e garantire l'integrit� del dispositivo</p>
+        </part>
+      </control>
+      <control id="r3.8">
+        <title>Gli aggiornamenti di sicurezza devono essere tempestivi</title>
+        <part name="statement">
+          <p>Distribuire gli aggiornamenti di sicurezza in modo tempestivo tenendo conto della gravit� della vulnerabilit�</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il produttore abbia un processo documentato per la gestione degli aggiornamenti di sicurezza</p>
+        </part>
+        <part name="guidance">
+          <p>Stabilire priorit� basate sul rischio e comunicare chiaramente agli utenti la disponibilit� degli aggiornamenti</p>
+        </part>
+        <part name="objective">
+          <p>Ridurre il tempo di esposizione e vulnerabilit� per migliorare la sicurezza del dispositivo</p>
+        </part>
+      </control>
+      <control id="r3.9">
+        <title>Il dispositivo dovrebbe verificare l'autenticit� e l'integrit� degli aggiornamenti software</title>
+        <part name="statement">
+          <p>Verificare che gli aggiornamenti siano autentici e non alterati</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare la presenza di meccanismi di verifica come firme digitali o checksum</p>
+        </part>
+        <part name="guidance">
+          <p>Implementare controlli di integrit� e autenticit� prima dell'applicazione degli aggiornamenti</p>
+        </part>
+        <part name="objective">
+          <p>Evitare l'installazione di aggiornamenti non autorizzati</p>
+        </part>
+      </control>
+      <control id="r3.10">
+        <title>Il dispositivo deve verificare l'autenticit� e integrit� degli aggiornamenti distribuiti in rete tramite una relazione di fiducia</title>
+        <part name="statement">
+          <p>Verificare che gli aggiornamenti ricevuti via rete con una relazione di fiducia</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che sono stati usati canali autenticati o firme digitali per la distribuzione degli aggiornamenti</p>
+        </part>
+        <part name="guidance">
+          <p>Usare certificati, chiavi pubbliche o autenticazione utente per stabilire la fiducia</p>
+        </part>
+        <part name="objective">
+          <p>Impedire che entit� non autorizzate distribuiscano aggiornamenti malevoli</p>
+        </part>
+      </control>
+      <control id="r3.11">
+        <title>L'utente dovrebbe essere informato in modo chiaro e riconoscibile quando � necessario un aggiornamento di sicurezza</title>
+        <part name="statement">
+          <p>Informare l'utente in modo evidente quando � disponibile un aggiornamento di sicurezza</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il dispositivo o il servizio associato notifichi chiaramente la disponibilit� di aggiornamento di sicurezza</p>
+        </part>
+        <part name="guidance">
+          <p>Usare notifiche visibili, email o messaggi nell'interfaccia utente per comunicare l'urgenza e i benefici dell'aggiornamento</p>
+        </part>
+        <part name="objective">
+          <p>Favorire l'applicazione tempestiva degli aggiornamenti da parte dell'utente</p>
+        </part>
+      </control>
+      <control id="r3.12">
+        <title>L'utente dovrebbe essere informato se l'applicazione dell'aggiornamento interromper� il funzionamento del dispositivo</title>
+        <part name="statement">
+          <p>Informare l'utente se l'aggiornamento comporta un'interruzione delle funzionalit� del dispositivo</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il dispositivo comunichi chiaramente eventuali interruzioni e la loro durata stimata</p>
+        </part>
+        <part name="guidance">
+          <p>Mostrare messaggi di avviso prima dell'aggiornamento includendo durata e impatto previsto</p>
+        </part>
+        <part name="objective">
+          <p>Evitare disservizi imprevisti e permettere all'utente di painificare l'aggiornamento</p>
+        </part>
+      </control>
+      <control id="r3.13">
+        <title>Il produttore deve pubblicare in modo chiaro e accessibile il periodo di supporto definito</title>
+        <part name="statement">
+          <p>COmunicare pubblicamente il periodo durante il quale il dispositivo ricever� aggiornamenti di sicurezza</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il periodo di supporto sia indicato nel sito ufficiale o nella documentazione</p>
+        </part>
+        <part name="guidance">
+          <p>Includere il periodo di supporto nella scheda tecnica, nel manuale o sul sito web</p>
+        </part>
+        <part name="objective">
+          <p>Informare correttamente il consumatore sulle aspettative di manutenzione e sicurezza</p>
+        </part>
+      </control>
+      <control id="r3.14">
+        <title>Per i dispositivi non aggiornabili, il produttore deve pubblicare le motivazioni e il piano di supporto hardware</title>
+        <part name="statement">
+          <p>Spiegare il motivo per cui il dispositivo non pu� ricevere aggiornamenti e indicare il piano di sostituzione</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che siano disponibili informazioni chiare sul supporto hardware e sulle alternative in caso di vulnerabilit�</p>
+        </part>
+        <part name="guidance">
+          <p>Pubblicare una policy di sostituzione e supporto per i dispositivi non aggiornabili</p>
+        </part>
+        <part name="objective">
+          <p>Garantire la sicurezza anche in assenza di aggiornamenti software</p>
+        </part>
+      </control>
+      <control id="r3.15">
+        <title>Se il dispositivo non � aggiornabile, dovrebbe essere isolabile</title>
+        <part name="statement">
+          <p>Isolare dalla rete per ridurre i rischi il dispositivo non aggiornabile</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il dispositivo possa essere disconnesso o limitato nelle sue funzionalit� di rete</p>
+        </part>
+        <part name="guidance">
+          <p>Implementare modalit� offline o configurazioni che limitino l'esposizione del dispositivo</p>
+        </part>
+        <part name="objective">
+          <p>Ridurre la superificie di attacco per dispositivi non aggiornabili</p>
+        </part>
+      </control>
+      <control id="r3.16">
+        <title>a designazione del modello del dispositivo deve essere chiaramente riconoscibile</title>
+        <part name="statement">
+          <p>Il dispositivo deve riportare chiaramente il proprio modello tramite etichetta o interfaccia utente</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il modello sia identificabile fisicamente o difitalmente</p>
+        </part>
+        <part name="guidance">
+          <p>Mostrare il modello nell'interfaccia web, nel firmware o sull'etichetta del dispositivo</p>
+        </part>
+        <part name="objective">
+          <p>Facilitare la gestione degli aggiornamenti e il supporto tecnico</p>
+        </part>
+      </control>
+    </group>
+    <group id="Requisito_4">
+      <title>Securely store sensitive security parameters</title>
+      <control id="r4.1">
+        <title>I parametri di sicurezza sensibili in memoria persistente devono essere archiviati in modo sicuro</title>
+        <part name="statement">
+          <p>Il dispositivo deve proteggere i parametri di sicurezza sensibili in memoria persistente da modifiche e divulgazioni non autorizzate</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare l'uso di meccanismi sicuri come TEE, SE, DSC o UICC per la protezione dei parametri</p>
+        </part>
+        <part name="guidance">
+          <p>Utilizzare tecnologie hardware e software certificate per la protezione dei dati sensibili</p>
+        </part>
+        <part name="objective">
+          <p>revenire compromissioni che derivano da accessi non autorizzati ai parametri di sicurezza</p>
+        </part>
+      </control>
+      <control id="r4.2">
+        <title>Le identit� uniche hard-coded per dispositivo devono essere resistenti alla manomissione.</title>
+        <part name="statement">
+          <p>Le identit� uniche hard-coded devono essere protette da manomissioni fisiche, elettriche o software</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che l'identit� sia archiviata in componenti sicuri</p>
+        </part>
+        <part name="guidance">
+          <p>Usare tecnologie che impediscano l'estrazione o la modifica dell'identit� del dispositivo</p>
+        </part>
+        <part name="objective">
+          <p>Garantire l'integrit� dell'identit� del dispositivo per scopi di autenticazione e sicurezza</p>
+        </part>
+      </control>
+      <control id="r4.3">
+        <title>Non devono essere usati parametri di sicurezza critici hard-coded nel codice sorgente.</title>
+        <part name="statement">
+          <p>� vietato includere nel codice sorgente parametri di sicurezza critici come password, chiavi private o API key</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il codice sorgente non contenga credenziali statiche o facilmente estraibili</p>
+        </part>
+        <part name="guidance">
+          <p>Utilizzare tecniche di provisioning sicuro e archiviazione separata per le credenziali</p>
+        </part>
+        <part name="objective">
+          <p>Evitare che attaccanti possano ottenere credenziali tramite reverse engineering</p>
+        </part>
+      </control>
+      <control id="r4.4">
+        <title>I parametri critici usati per aggiornamenti e comunicazioni devono essere unici per dispositivo e generati in modo sicuro.</title>
+        <part name="statement">
+          <p>I parametri critici devono essere unici per dispositivo e generati con meccanismi che riducono il rischio di attacchi automatizzati</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che ogni dispositivo abbia chiavi o credenziali uniche e non prevedibili</p>
+        </part>
+        <part name="guidance">
+          <p>Usare generatori crittografici sicuri e evitare l'uso di chiavi globali condivise</p>
+        </part>
+        <part name="objective">
+          <p>Prevenire attacchi su larga scala e garantire la sicurezza delle comunicazioni e degli aggiornamenti</p>
+        </part>
+      </control>
+    </group>
+    <group id="Requisito_5">
+      <title>Communicate securely</title>
+      <control id="r5.1">
+        <title>Le comunicazioni tra dispositivi e servizi associati devono essere protette da intercettazioni e manipolazioni</title>
+        <part name="statement">
+          <p>Proteggere le comunicazioni tra dispositivi IoT e servizi associati da intercettazioni e manipolazioni</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare l'uso di protocolli sicuri come TLS e l'implementazione di meccanismi di autenticazione</p>
+        </part>
+        <part name="guidance">
+          <p>Usare crittografia end-to-end, certificati validi e configurazioni sicure dei protocolli di rete</p>
+        </part>
+        <part name="objective">
+          <p>Garantire la riservatezza e l'integrit� dei dati trasmessi</p>
+        </part>
+      </control>
+      <control id="r5.2">
+        <title>Le comunicazioni devono essere protette da alterazioni e contraffazioni</title>
+        <part name="statement">
+          <p>Implementare meccanismi per garantire l'integrit� dei dati trasmessi</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare l'uso di firme digitali per rilevare alterazioni</p>
+        </part>
+        <part name="guidance">
+          <p>Usare algoritmi di hashing sicuri e tecniche di autenticazione dei messaggi</p>
+        </part>
+        <part name="objective">
+          <p>Prevenire la modifica non autorizzata dei dati durante la trasmissione</p>
+        </part>
+      </control>
+      <control id="r5.3">
+        <title>Le comunicazioni devono essere protette da replay attack</title>
+        <part name="statement">
+          <p>Implementare meccanismi per prevenire l'uso ripetuto di messaggi validi</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare l'uso di nonce, timestamp o sessioni uniche</p>
+        </part>
+        <part name="guidance">
+          <p>Integrare controlli di sessione e validazione temporale nei protocolli di comunicazione</p>
+        </part>
+        <part name="objective">
+          <p>Impedire che messaggi validi vengano riutilizzati per scopi malevoli</p>
+        </part>
+      </control>
+      <control id="r5.4">
+        <title>Le comunicazioni devono essere protette da spoofing</title>
+        <part name="statement">
+          <p>Garantire che le entit� comunicanti siano autentiche e verificate</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare l'uso di certificati, chiavi pubbliche e autenticazione reciproca</p>
+        </part>
+        <part name="guidance">
+          <p>Usare meccanismi di autenticazione forte e validazione dell'identit�</p>
+        </part>
+        <part name="objective">
+          <p>Prevenire impersonificazioni e accessi non autorizzati</p>
+        </part>
+      </control>
+      <control id="r5.5">
+        <title>Le comunicazioni devono essere protette da attacchi man-in-the-middle</title>
+        <part name="statement">
+          <p>Proteggere le comunicazioni da intercettazioni e modifiche da parte di terzi</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare l'uso di TLS con autenticazione reciproca e configurazioni sicure</p>
+        </part>
+        <part name="guidance">
+          <p>Usare certificati validi, evitare protocolli obsoleti e implementare pinning dei certificati</p>
+        </part>
+        <part name="objective">
+          <p>Garantire che la comunicazione avvenga solo tra entit� legittime</p>
+        </part>
+      </control>
+      <control id="r5.6">
+        <title>Le comunicazioni devono essere protette da attacchi di downgrade</title>
+        <part name="statement">
+          <p>Impedire che un attaccante possa forzare l'uso di protocolli meno sicuri</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il dispositivo rifiuti connessioni con protocolli obsoleti o insicuri</p>
+        </part>
+        <part name="guidance">
+          <p>Configurare i protocolli per usare solo versioni sicure e aggiornate, disabilitare fallback automatici</p>
+        </part>
+        <part name="objective">
+          <p>Mantenere un livello di sicurezza elevato nelle comunicazioni</p>
+        </part>
+      </control>
+      <control id="r5.7">
+        <title>Le comunicazioni devono essere protette da attacchi di tipo injection</title>
+        <part name="statement">
+          <p>Validare e filtrare i dati trasmessi per prevenire l'inserimento di codice malevolo</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare l'implementazione di controlli di input e sanitizzazione dei dati</p>
+        </part>
+        <part name="guidance">
+          <p>Usare tecniche di validazione dei dati e protezione contro SQL injection, XSS e simili</p>
+        </part>
+        <part name="objective">
+          <p>Prevenire l'esecuzione di codice malevolo attraverso i canali di comunicazione</p>
+        </part>
+      </control>
+      <control id="r5.8">
+        <title>Le comunicazioni devono essere protette da attacchi di tipo buffer overflow</title>
+        <part name="statement">
+          <p>Implementare controlli per evitare scritture fuori dai limiti di memoria</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare l'uso di tecniche di controllo dei limiti e protezione della memoria</p>
+        </part>
+        <part name="guidance">
+          <p>Usare linguaggi sicuri, compilatori con protezioni attive e test di sicurezza</p>
+        </part>
+        <part name="objective">
+          <p>Evitare compromissioni del dispositivo tramite vulnerabilit� di memoria</p>
+        </part>
+      </control>
+    </group>
+    <group id="Requisito_6">
+      <title>Minimize exposed attack surfaces</title>
+      <control id="r6.1">
+        <title>Il dispositivo deve esporre solo le interfacce strettamente necessarie per il suo funzionamento</title>
+        <part name="statement">
+          <p>Limitare le interfacce esposte dal dispositivo IoT a quelle strettamente necessarie</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che non siano attive interfacce inutili o non documentate</p>
+        </part>
+        <part name="guidance">
+          <p>Disabilitare porte e protocolli non utilizzati, usare firewall o ACL</p>
+        </part>
+        <part name="objective">
+          <p>Ridurre la superficie di attacco disponibile agli attaccanti</p>
+        </part>
+      </control>
+      <control id="r6.2">
+        <title>Le interfacce devono essere protette da accessi non autorizzati</title>
+        <part name="statement">
+          <p>PRoteggere le interfacce esposte con meccanismi di autenticazione e controllo degli acccessi</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che tutte le interfacce esposte richiedano autenticazione e siano configurate</p>
+        </part>
+        <part name="guidance">
+          <p>Usare autenticazione forte, limitare gliaccessi e monitorare le connessioni</p>
+        </part>
+        <part name="objective">
+          <p>Prevenire accessi non autorizzati tramite interfacce esposte</p>
+        </part>
+      </control>
+      <control id="r6.3">
+        <title>Le interfacce di debug e sviluppo devono essere disattivate o protette nei dispositivi in produzione</title>
+        <part name="statement">
+          <p>Disattivare o proteggere le interfacce di debug nei dispositivi destinati all�uso finale</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che le interfacce di debug siano disattivate o accessibili solo con credenziali sicure</p>
+        </part>
+        <part name="guidance">
+          <p>Rimuovere o proteggere JTAG, UART, SSH e simili nei dispositivi distribuiti</p>
+        </part>
+        <part name="objective">
+          <p>Evitare che attaccanti possano sfruttare interfacce di sviluppo per compromettere il dispositivo</p>
+        </part>
+      </control>
+      <control id="r6.4">
+        <title>Le funzionalit� non necessarie devono essere disattivate</title>
+        <part name="statement">
+          <p>Disattivare funzionalit� non essenziali per il funzionamento del dispositivo</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che siano attive solo le funzionalit� richieste per l�uso previsto</p>
+        </part>
+        <part name="guidance">
+          <p>Usare configurazioni minime e modulari, disabilitare servizi non utilizzati</p>
+        </part>
+        <part name="objective">
+          <p>Ridurre il rischio di vulnerabilit� legate a funzionalit� inutili</p>
+        </part>
+      </control>
+      <control id="r6.5">
+        <title>Il dispositivo deve essere configurato per ridurre al minimo le informazioni esposte</title>
+        <part name="statement">
+          <p>Limitare le informazioni visibili o accessibili tramite interfacce pubbliche</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che non vengano esposti dati sensibili o dettagli tecnici non necessari</p>
+        </part>
+        <part name="guidance">
+          <p>Nascondere versioni software, configurazioni interne e messaggi di errore dettagliati</p>
+        </part>
+        <part name="objective">
+          <p>Evitare che attaccanti possano raccogliere informazioni utili per attacchi mirati</p>
+        </part>
+      </control>
+      <control id="r6.6">
+        <title>Il dispositivo deve essere progettato per resistere a scansioni e rilevamenti automatizzati</title>
+        <part name="statement">
+          <p>Implementare misure per rendere difficile l�identificazione automatica del dispositivo</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare la presenza di meccanismi anti-scansione e anti-fingerprinting</p>
+        </part>
+        <part name="guidance">
+          <p>Usare tecniche come rate limiting, risposte generiche e offuscamento</p>
+        </part>
+        <part name="objective">
+          <p>Ridurre la probabilit� che il dispositivo venga individuato e attaccato automaticamente</p>
+        </part>
+      </control>
+      <control id="r6.7">
+        <title>Il dispositivo deve essere progettato per resistere a tentativi di enumerazione dei servizi</title>
+        <part name="statement">
+          <p>Impedire che un attaccante possa identificare i servizi attivi sul dispositivo</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che i servizi non rispondano con informazioni dettagliate o prevedibili</p>
+        </part>
+        <part name="guidance">
+          <p>Configurare risposte generiche, limitare le informazioni nei banner e nei messaggi di errore</p>
+        </part>
+        <part name="objective">
+          <p>Prevenire la raccolta di informazioni utili per attacchi mirati</p>
+        </part>
+      </control>
+      <control id="r6.8">
+        <title>Il dispositivo deve essere progettato per resistere a tentativi di enumerazioe degli utenti</title>
+        <part name="statement">
+          <p>Evitare che un attaccante possa identificare utenti validi tramite messaggi di errore o risposte diverse</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che i messaggi di errore siano uniformi e non rivelino la validit� di un nome utente</p>
+        </part>
+        <part name="guidance">
+          <p>Usare messaggi generici per login falliti e proteggere le API di autenticazione</p>
+        </part>
+        <part name="objective">
+          <p>Impedire attacchi di enumerazione che facilitano brute force o phishing</p>
+        </part>
+      </control>
+      <control id="r6.9">
+        <title>Il dispositivo deve essere progettato per resistere a tentativi di enumerazione delle risorse</title>
+        <part name="statement">
+          <p>Proteggere le risorse interne da accessi non autorizzati e tentativi di enumerazione</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che le risorse non siano accessibili tramite URL prevedibili o directory listin</p>
+        </part>
+        <part name="guidance">
+          <p>Usare permessi corretti, URL non prevedibili e disabilitare direcotry listing</p>
+        </part>
+        <part name="objective">
+          <p>Evitare che attaccanti possano mappare le risorse disponibili sul dispositivo</p>
+        </part>
+      </control>
+    </group>
+    <group id="Requisito_7">
+      <title>Ensure software integrity</title>
+      <control id="r7.1">
+        <title>Con meccanismi di secure boot il dispositivo dovrebbe verificare l'integrit� del proprio software</title>
+        <part name="statement">
+          <p>Il dispositivo IoT dovrebbe usare meccanismi di avvio sicuro per verificare l'integrit� del software</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare la presenza di un meccanismo di secure boot e che sia supportato da componenti hardware resistenti a manomissioni</p>
+        </part>
+        <part name="guidance">
+          <p>Usare una root of trust hardware per validare il software all'avvio o adottare soluzioni software con livelli di sicurezza proporzionati al rischio e al contesto d'uso</p>
+        </part>
+        <part name="objective">
+          <p>Garantire che il software eseguito sia autentico e non sia stato alterato da malware</p>
+        </part>
+      </control>
+      <control id="r7.2">
+        <title>Il dispositivo dovrebbe avvisare l'utente o l'amministratore e limitare la connessioni a reti esterne se viene rilevata una modifica non autorizzata al software</title>
+        <part name="statement">
+          <p>Far generare un avviso e limitare la connessione a reti esterni mantenendo solo le funzionalit� necessarie per la segnalazione in caso di rilevamento di modifiche non autorizzate al software</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il dispositivo sia in grado di rilevare modifiche del software e che disponga di un meccanismo di notifica</p>
+        </part>
+        <part name="guidance">
+          <p>Implementare sistemi di logging e notifiche sicure, prevedere la possibilit� di ripristino ad una versione sicura del software</p>
+        </part>
+        <part name="objective">
+          <p>Ridurre il rischio di compromissione del dispositivo e facilitare il ripristino sicuro</p>
+        </part>
+      </control>
+    </group>
+    <group id="Requisito_8">
+      <title>Ensure that personal data is secure</title>
+      <control id="r8.1">
+        <title>I dati personali trasmessi tra il dispositivo e i servizi associati devono essere protetti con crittografia conforme alle best practice</title>
+        <part name="statement">
+          <p>Proteggere la riservatezza dei dati personali in transito tra il dispositivo IoT e i serivisi associati con crittografia adeguata</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare l'uso di protocolli sicuri e algoritmi crittografici aggiornati</p>
+        </part>
+        <part name="guidance">
+          <p>Uasre librerie crittografiche affidabili e configurazioni che garantiscono la riservatezza come protocolli del tipo TLS</p>
+        </part>
+        <part name="objective">
+          <p>Prevenire l'intercettazione o la manipolazione dei dati personali durante la trasmissione</p>
+        </part>
+      </control>
+      <control id="r8.2">
+        <title>I dati personali sensibili come video, dati di pagamento e posizione devono essere protetti con crittografia conforme alle best practice</title>
+        <part name="statement">
+          <p>Proteggere la riservatezza dei dati sensibili con crittografia robusta e appropriata</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che i dati sensibili siano identificati correttamente e protetti adeguatamente</p>
+        </part>
+        <part name="guidance">
+          <p>Eseguire valutazioni d'impatto sulla protezione dei dati per scegliere le misure pi� appropriate</p>
+        </part>
+        <part name="objective">
+          <p>Evitare danni agli utenti in caso di compromissione di dati sensibili</p>
+        </part>
+      </control>
+      <control id="r8.3">
+        <title>Il produttore deve fornire una documentazione chiara e accessibile per l'utente di tutte le capacit� di rilevamento esterno del dispositivo</title>
+        <part name="statement">
+          <p>Fornire una descrizione chiara di tutti i sensori ottici e acustici presenti sul dispositivo</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che la documentazione includa tutti i sensori e sia accessibile agli utenti</p>
+        </part>
+        <part name="guidance">
+          <p>Includere le informazioni nel manuale utente e nell'interfaccia di configurazione</p>
+        </part>
+        <part name="objective">
+          <p>Informare l'utente sulle capacit� di raccolta dei dati del dispositivo</p>
+        </part>
+      </control>
+    </group>
+    <group id="Requisito_9">
+      <title>Make systems resilient to outages</title>
+      <control id="r9.1">
+        <title>La resilienza dovrebbe essere integrata nei prodotti IoT tenendo conto di possibili interruzioni di rete e alimentazione</title>
+        <part name="statement">
+          <p>Progettare i dispositivi per continuare a funzionare anche in caso di interruzioni di rete o alimentazione</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare la presenza di meccanismi di ripristino automatico</p>
+        </part>
+        <part name="guidance">
+          <p>Implementare batterie di backup, modalit� offline e sistemi di ripristino</p>
+        </part>
+        <part name="objective">
+          <p>Garantire continuit� operativa dei dispositivi in scenari critici</p>
+        </part>
+      </control>
+      <control id="r9.2">
+        <title>I dispositivi IoT dovrebbero rimanere operativi a livello locale in caso di perdita di rete e riprendersi correttamente dopo un'interruzione di alimentazione</title>
+        <part name="statement">
+          <p>Far s� che il dispositivo mantenga le funzionalit� locali e possa eseguire il ripristino allo stato operativo dopo un'interruzione</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il dispositivo riprenda automaticamente le funzioni dopo il ripristino della rete o dell'alimentazione</p>
+        </part>
+        <part name="guidance">
+          <p>Usare meccanismi di salvataggio dello stato e di riconnessione</p>
+        </part>
+        <part name="objective">
+          <p>Evitare malfunzionamenti prolungati e garantire un'esperienza stabile all'utente</p>
+        </part>
+      </control>
+      <control id="r9.3">
+        <title>Il dispositivo dovrebbe riconnettersi alla rete in modo ordinato e stabile tenendo conto delle capacit� dell'infrastruttura</title>
+        <part name="statement">
+          <p>Far s� che dopo un'interruzione il dispositivo si riconnetti evitando il sovraccarico o comportamenti instabili</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare l'uso di meccanismi come ritardi randomizzati o back-off incrementali</p>
+        </part>
+        <part name="guidance">
+          <p>Coordinare la riconnessione dei dispositivi con aggiornamenti distribuiti o pianificati</p>
+        </part>
+        <part name="objective">
+          <p>Prevenire congestioni di rete e garantire una ripresa controllata dei servizi</p>
+        </part>
+      </control>
+    </group>
+    <group id="Requisito_10">
+      <title>Examine system telemetry data</title>
+      <control id="r10.1">
+        <title>Nel caso in cui vengano raccolti,i dati di telemetria devono essere analizzati per rilevare anomalie di sicurezza</title>
+        <part name="statement">
+          <p>Monitorare per identificare i comportamenti anomali i dati di telemetria come i log</p>
+        </part>
+        <part name="assessment">
+          <p>Verficare che esistano sistemi di analisi automatica e che siano configurati per rilevare comportamenti diversi dal normale</p>
+        </part>
+        <part name="guidance">
+          <p>Usare strumenti di monitoraggio dei log per identificare tentativi di attacco o problemi di integrit�</p>
+        </part>
+        <part name="objective">
+          <p>Rilevare tempestivamente potenziali minacce o malfunzionamenti</p>
+        </part>
+      </control>
+    </group>
+    <group id="Requisito_11">
+      <title>Make it easy for users to delete user data</title>
+      <control id="r11.1">
+        <title>Gli utenti devono poter cancellare tutti i propri dati dal dispositivo IoT in modo semplie</title>
+        <part name="statement">
+          <p>Offire funzionalit� per cancellare tutti i dati personali, le configurazioni e le credenziali in modo semplice</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che la funzione di cancellazione sia accessibile, docuementata e che rimuova tutti i dati dell'utente</p>
+        </part>
+        <part name="guidance">
+          <p>Implementare una funzione di reset che cancelli i dati dell'utente senza compromettere il funzionamento del dispositivo</p>
+        </part>
+        <part name="objective">
+          <p>L'utente deve poter controllare i propri dati e cancellarli facilmente</p>
+        </part>
+      </control>
+      <control id="r11.2">
+        <title>Il dispositivo deve permette di cancellare i dati personali anche dai servizi associati</title>
+        <part name="statement">
+          <p>L'utente deve poter cancellare i propri dati personali dai servizi di cloud o app associate al dispositivo</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che esista un meccanismo per richiedere la cancellazione dei dati dai servizi associati</p>
+        </part>
+        <part name="guidance">
+          <p>Integrare la cancellazione remota con app o interfacce web in conformit� al GDPR</p>
+        </part>
+        <part name="objective">
+          <p>Esentere il controllo dell'utente anche ai dati archiviati esternamente</p>
+        </part>
+      </control>
+      <control id="r11.3">
+        <title>Gli utenti dovrebbero ricevere istruzioni chiare su come cancellare i propri dati dal dispositivo e dai servizi associati</title>
+        <part name="statement">
+          <p>Fornire istruzioni chiare per la cancellazione dei dati dal dispositivo e dai servizi associati</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che le istruzioni siano presenti nel manuale, nell'interfaccia utente o online</p>
+        </part>
+        <part name="guidance">
+          <p>Usare un linguaggio chiaro e fornire esempi pratici</p>
+        </part>
+        <part name="objective">
+          <p>Facilitare l'uso corretto delle funzioni di cancellazione da parte dell'utente</p>
+        </part>
+      </control>
+      <control id="r11.4">
+        <title>Dopo la cancellazione il dispositivo o il servizio associato dovrebbe fornire una conferma visibile all'utente</title>
+        <part name="statement">
+          <p>Confermare agli utenti che i dati personali sono stati cancellati o sovrascritti</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che venga mostrata la conferma di cancellazione dei dati in modo esplicito</p>
+        </part>
+        <part name="guidance">
+          <p>Usare notifiche, email o messaggi nell'interfaccio per confermare la cancellazione dei dati</p>
+        </part>
+        <part name="objective">
+          <p>Dare la certezza che i dati non sono pi� accessibili</p>
+        </part>
+      </control>
+    </group>
+    <group id="Requisito_12">
+      <title>Make installation and maintenance of devides easy</title>
+      <control id="r12.1">
+        <title>Installazione e manutanzione del dispositivo IoT devono richiedere poche decisioni e seguire le best practice di sicurezza</title>
+        <part name="statement">
+          <p>Il processo di installazione deve essere semplice, con opzioni predefinite e sicure e guidato</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il dispositivo offra una procedura guidata con impostazioni sicure predefinite</p>
+        </part>
+        <part name="guidance">
+          <p>Usare procedure guidate di configurazioni, documentazioni chiare e interfacce intuitive</p>
+        </part>
+        <part name="objective">
+          <p>Ridurre il rischio di configurazioni errate</p>
+        </part>
+      </control>
+      <control id="r12.2">
+        <title>Devono essere disponibili istruzioni per aiutare l'utente a impostare il dispositivo in modo sicuro</title>
+        <part name="statement">
+          <p>Fornire all'utente indicazioni su come configurare il dispositivo correttamente</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che le istruzioni di configurazione siano accessibili e aggiornate</p>
+        </part>
+        <part name="guidance">
+          <p>Fornire linee guida pratiche, cheklist e strumenti di verifica della configurazione</p>
+        </part>
+        <part name="objective">
+          <p>Promuovere una configurazione inziaale che riduce i rischi di sicurezza</p>
+        </part>
+      </control>
+      <control id="r12.3">
+        <title>Devono essere disponibili strumenti o istruzioni per controllare lo stato di sicurezza del dispositivo</title>
+        <part name="statement">
+          <p>Fornire indicazioni su come verificare che il dispositivo sia configurato e mantenuto correttamente</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che siano presenti funzionalit� di controllo dello stato di sicurezza</p>
+        </part>
+        <part name="guidance">
+          <p>Integrare pannelli di controllo, notifiche e report di sicurezza accessibili all'utente</p>
+        </part>
+        <part name="objective">
+          <p>Permettere all'utente di monitorare e mantenere la sicurezza</p>
+        </part>
+      </control>
+    </group>
+    <group id="Requisito_13">
+      <title>Validate input data</title>
+      <control id="r13.1">
+        <title>I dati inseriti da interfacce utente devono essere validati per prevenire manipolazioni e malfunzionamenti</title>
+        <part name="statement">
+          <p>Controllare che i dati ricevuti sono nel formato previsto e non contengono codice malevolo</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che sono implementati controlli di validazione lato dispositivo</p>
+        </part>
+        <part name="guidance">
+          <p>Usare tecniche di sanitizzazione e validazione dei dati in ingresso</p>
+        </part>
+        <part name="objective">
+          <p>Prevenire attacchi come SQL injection e garantire la stabilit� del sistema</p>
+        </part>
+      </control>
+    </group>
+  </group>
+  <group id="B_Data_Protection_Provisions">
+    <title>Requisiti per la protezione dei dati personali nei dispositivi IoT consumer, in conformità con i principi di minimizzazione, trasparenza, consenso e sicurezza del trattamento</title>
+    <group id="Requisito_14">
+      <title>Data protection provisions for consumer IoT</title>
+      <control id="r14.1">
+        <title>Il produttore deve fornire informazioni chiare e accessibili sul trattamento dei dati personali</title>
+        <part name="statement">
+          <p>Informare l'utente su quali dati personali vengono raccolti, come vengono trattati e per quali finalit�</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che le informazioni siano disponibili prima dell'attivazione del dispositivo'</p>
+        </part>
+        <part name="guidance">
+          <p>Usare linguaggio semplice e accessibile, conforme al GDPR e alle normative locali</p>
+        </part>
+        <part name="objective">
+          <p>Garantire trasparenza e consapevolezza nell'uso dei dati personali</p>
+        </part>
+      </control>
+      <control id="r14.2">
+        <title>Il produttore deve fornire informazioni su dove vengono trattati i dati personali</title>
+        <part name="statement">
+          <p>Comunicare se i dati vengono trattati localmente, nel cloud o da terze parti</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che l�informativa includa la localizzazione e i responsabili del trattamento</p>
+        </part>
+        <part name="guidance">
+          <p>Specificare chiaramente se i dati sono trasferiti fuori dall�UE e con quali garanzie</p>
+        </part>
+        <part name="objective">
+          <p>Consentire agli utenti di valutare i rischi legati alla localizzazione del trattamento</p>
+        </part>
+      </control>
+      <control id="r14.3">
+        <title>Il produttore deve fornire informazioni su come vengono protetti i dati personali</title>
+        <part name="statement">
+          <p>Descrivere le misure tecniche e organizzative adottate per proteggere i dati personali</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che siano indicate le tecnologie di protezione e le politiche di sicurezza</p>
+        </part>
+        <part name="guidance">
+          <p>Includere riferimenti a crittografia, accessi controllati e audit</p>
+        </part>
+        <part name="objective">
+          <p>Dimostrare l'impegno del produttore nella protezione dei dati</p>
+        </part>
+      </control>
+      <control id="r14.4">
+        <title>Il produttore deve fornire informazioni su come l�utente pu� esercitare i propri diritti</title>
+        <part name="statement">
+          <p>Informare l�utente su come accedere, modificare o cancellare i propri dati</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che siano presenti istruzioni chiare per l�esercizio dei diritti</p>
+        </part>
+        <part name="guidance">
+          <p>Includere link, contatti e procedure per richieste di accesso o cancellazione</p>
+        </part>
+        <part name="objective">
+          <p>Garantire il controllo dell�utente sui propri dati personali</p>
+        </part>
+      </control>
+      <control id="r14.5">
+        <title>Il dispositivo deve raccogliere solo i dati strettamente necessari per la sua funzionalit�</title>
+        <part name="statement">
+          <p>Applicare il principio di minimizzazione nella raccolta dei dati</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che non vengano raccolti dati superflui o non pertinenti</p>
+        </part>
+        <part name="guidance">
+          <p>Limitare la raccolta ai dati funzionali e documentare le finalit�</p>
+        </part>
+        <part name="objective">
+          <p>Ridurre il rischio di esposizione e trattamento eccessivo</p>
+        </part>
+      </control>
+      <control id="r14.6">
+        <title>I dati personali devono essere anonimizzati o aggregati quando possibile</title>
+        <part name="statement">
+          <p>Adottare tecniche di anonimizzazione o aggregazione per ridurre i rischi</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che i dati siano trattati in modo da non identificare direttamente l�utente</p>
+        </part>
+        <part name="guidance">
+          <p>Usare pseudonimizzazione, hash, o aggregazione statistica</p>
+        </part>
+        <part name="objective">
+          <p>Proteggere la privacy degli utenti anche in caso di accesso ai dati</p>
+        </part>
+      </control>
+      <control id="r14.7">
+        <title>Il dispositivo deve richiedere il consenso esplicito per la raccolta dei dati personali</title>
+        <part name="statement">
+          <p>Ottenere il consenso informato e documentato prima della raccolta dei dati</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che il consenso sia richiesto in modo chiaro e non implicito</p>
+        </part>
+        <part name="guidance">
+          <p>Usare interfacce trasparenti e opzioni granulari per il consenso</p>
+        </part>
+        <part name="objective">
+          <p>Rispettare il diritto dell�utente a decidere sul trattamento dei propri dati</p>
+        </part>
+      </control>
+      <control id="r14.8">
+        <title>L'utente deve poter revocare il consenso in qualsiasi momento</title>
+        <part name="statement">
+          <p>Consentire all'utente di revocare facilmente il consenso al trattamento dei dati</p>
+        </part>
+        <part name="assessment">
+          <p>Verificare che la revoca sia semplice, documentata e senza penalizzazioni</p>
+        </part>
+        <part name="guidance">
+          <p>Includere opzioni di revoca nelle impostazioni del dispositivo o dell'app</p>
+        </part>
+        <part name="objective">
+          <p>Garantire il controllo continuo dell'utente sui propri dati</p>
+        </part>
+      </control>
+    </group>
+  </group>
+</catalog>
