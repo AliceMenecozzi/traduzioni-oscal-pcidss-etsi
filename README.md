@@ -18,6 +18,6 @@ Le traduzioni rappresentano la trasposizione strutturata dei requisiti di due st
 - La validazione e la conversione tra formati sono state eseguite con lo strumento [oscal-cli] come descritto nel documento della tesi.
 
 ## Autore
-Alice Menecozzi
-Corso di Laurea in Ingegneria Informatica
+Alice Menecozzi, 
+Corso di Laurea in Ingegneria Informatica, 
 Anno Accademico 2024-2025
